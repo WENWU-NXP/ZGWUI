@@ -1,0 +1,15 @@
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\bin\Release\ZGWUI.exe
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\bin\Release\ZGWUI.pdb
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\obj\x86\Release\ZGWUI.csprojAssemblyReference.cache
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\obj\x86\Release\ListManagement.ListManager.resources
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\obj\x86\Release\ZGWUI.Form1.resources
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\obj\x86\Release\PortSet.PortSettings.resources
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\obj\x86\Release\ZGWUI.Properties.Resources.resources
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\obj\x86\Release\ZGWUI.csproj.GenerateResource.cache
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\obj\x86\Release\ZGWUI.csproj.CoreCompileInputs.cache
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\obj\x86\Release\ZGWUI.exe
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\obj\x86\Release\ZGWUI.pdb
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\bin\Release\FTD2XX_NET.dll
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\bin\Release\FTD2XX_NET.xml
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\obj\x86\Release\ZGWUI.FlashProgram.resources
+C:\nxp\bstudio_nxp\workspace\JN-AN-1216-Zigbee-3-0-IoT-ControlBridge\Tools\TestGUI\TestGUI\Source\obj\x86\Release\ZGWUI.csproj.CopyComplete

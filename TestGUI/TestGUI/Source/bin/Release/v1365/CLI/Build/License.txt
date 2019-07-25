@@ -1,0 +1,40 @@
+
+IMPORTANT: Before installing this software carefully read the following terms and conditions. This Software End-User License Agreement is a binding agreement between you, the end-user, and NXP B.V. regarding the use of the software accompanying this Agreement, which includes computer software, source code and provided documentation (together "SOFTWARE"). By in-stalling, copying or otherwise using the SOFTWARE, you agree to be bound by the terms of this Agreement. 
+
+End User License Agreement
+
+THIS SOFTWARE IS THE PROPERTY OF NXP B.V. (hereinafter referred to as ”NXP”), and COPYRIGHT NXP  2014, ALL RIGHTS RESERVED.
+
+UNDER NO CIRCUMSTANCES IS THIS SOFTWARE OR ANY DERIVATIVE WORKS THEREOF TO BE EXPOSED TO OR PLACED UNDER AN OPEN SOURCE LICENSE OF ANY TYPE WITHOUT THE EXPRESSED WRITTEN PERMISSION OF NXP B.V.
+
+1. OBJECT AND SCOPE OF THE AGREEMENT
+
+This SOFTWARE is made available by NXP for the following purposes only:
+a)  to install all components of the SOFTWARE on a hard disk or other storage medium or on a network fileserver; 
+b)  to create backup copies of the SOFTWARE; 
+c)  to install and use the SOFTWARE in-house;
+d)  to modify the source code and create derivative works thereof;
+e)  to develop, sell, distribute or otherwise dispose of applications based on the source code.
+
+Neither the SOFTWARE, the source code of the SOFTWARE nor the source code of any derivative works thereof may be distributed to any third party without the prior written permission of NXP.
+
+The SOFTWARE and any derivative works thereof may only be used in conjunction with devices that are developed, produced, sold and marketed to be used with Wireless Microcontroller  ICs and network stacks manufactured by NXP or under license of NXP.  “Wireless Microcontroller ICs and network stacks” shall mean any of the following: JN5168; JN5164; JN5161; JN5148; JN5142; JN5139; JN5121; JenNet; JenNet-IP.]
+
+Nothing in this agreement shall be construed as the grant of a license under any patent or patent application or other intellectual property rights owned or controlled by NXP.
+
+2. DISCLAIMER OF WARRANTIES: 
+YOU AGREE THAT NXP HAS MADE NO EXPRESS WARRANTIES TO YOU REGARDING THE SOFTWARE AND THAT THE SOFTWARE IS BEING PROVIDED TO YOU "AS IS" WITHOUT WARRANTY OF ANY KIND.
+NXP DISCLAIMS ALL WARRANTIES WITH REGARD TO THE SOFTWARE, EXPRESS OR IM-PLIED, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, MERCHANTABLE QUALITY OR NONIN-FRINGEMENT OF THIRD PARTY RIGHTS.
+Some states or jurisdictions do not allow the exclusion of implied warranties so the above limita-tions or parts of it may apply only to the extent legally permitted to you.
+
+3. LIMITATION OF LIABILITY: 
+IN NO EVENT WILL NXP BE LIABLE TO YOU FOR ANY LOSS OF USE, INTERRUPTION OF BUSINESS, OR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY KIND (INCLUDING LOST PROFITS) REGARDLESS OF THE FORM OF ACTION WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT PRODUCT LIABILITY OR OTHERWISE, EVEN IF END-USER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+Some states or jurisdictions do not allow the exclusion or limitation of incidental or consequential damages, so the above limitation, exclusion or parts of it may apply only to the extent legally permitted to you.
+
+4. USAGE
+ANY SOFTWARE MADE AVAILABLE IN FORM OF THIS PACKAGE IS MADE AVAILABLE FOR USE BY END USERS ONLY AND ANY FURTHER COPYING, REPRODUCTION OR REDIS-TRIBUTION OF THIS PACKAGE OR PARTS OF IT IS EXPRESSLY PROHIBITED. WE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION WILL BE UNINTERRUPTED OR ERROR FREE. THEY ARE NOT OP-TIMISED IN TERMS OF SPEED OR SIZE. THE ENTIRE RISK AS TO THE RESULTS AND PERFORMANCE OF USE IS ASSUMED BY YOU.
+
+YOU ARE EXPRESSLY PROHIBITED FROM USING THE SOFTWARE IN THE OPERATION OF NUCLEAR FACILITIES, IN AIRCRAFT NAVIGATION. IN AIRCRAFT COMMUNICATION, IN AIRCRAFT CONTROL IN MILITARY, AIRCRAFT, SPACE OR LIFE SUPPORT EQUIPMENT, NOR IN APPLICATIONS WHERE FAILURE OR MALFUNCTION OF THE SOFTWARE CAN REASONABLY BE EXPECTED TO RESULT IN PERSONAL INJURY, DEATH OR SEVERE PROPERTY OR ENVIRONMENTAL DAMAGE.
+
+5. THIRD PARTIES (INCLUDING OPEN SOURCE)
+THE USE OF THIS SOFTWARE MAY REQUIRE YOU TO RESPECT THE RIGHTS OF OTHER THIRD PARTIES, INCLUDING BUT NOT EXCLUSIVELY, GNU GENERAL PUBLIC LICENSE AND THE ZIGBEE ALLIANCE. NXP IS NOT RESPONSIBLE AND SHALL NOT BE HELD RE-SPONSIBLE IN ANY MANNER FOR YOUR FAILURE TO SEEK LICENSES AND RESPECT THE RIGHTS OF THIRD PARTIES.
