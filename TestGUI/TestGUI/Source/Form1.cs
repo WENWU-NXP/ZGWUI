@@ -6511,6 +6511,7 @@ namespace ZGWUI
                 {
                     serialPort2.Close();
                     buttonLNTGWDBGPORT.Text = "Open GW Dbg Port";
+                    bDBGPortConfigured = false;
                 }
                 catch (System.Exception ex)
                 {
@@ -6552,10 +6553,7 @@ namespace ZGWUI
                     MessageBox.Show("Error - openDBGPort: " + ex);
                 }
             }
-            else
-            {
-                MessageBox.Show("No Port Selected");
-            }
+
         }
 
         #endregion
@@ -8780,10 +8778,78 @@ namespace ZGWUI
         SocketSeverReceiveMessageCommand socketSeverReceiveMessageCommand;
 
 
-        public void mylntGWDisplayInfo(string Info)
+        public void mylntGWDisplayInfo(string DBGInfo)
         {
+            if (DBGInfo.Contains("AddressMapTable"))
+            {
+                string[] sArry;
+                if (!DBGInfo.Contains("Empty"))
+                {
+                    sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
+                    for (int i = 2; i < sArry.Length; i++)
+                    {
+                        //1:SAddr:a51e,ExtAddr:00158d00011db4a7
+                        string[] eArry = Regex.Split(sArry[i], ",", RegexOptions.IgnoreCase);
+
+                        //1:SAddr:a51e
+                        string[] SAddr = Regex.Split(eArry[0], ":", RegexOptions.IgnoreCase);
+
+                        //ExtAddr:00158d00011db4a7
+                        string[] ExtAddr = Regex.Split(eArry[1], ":", RegexOptions.IgnoreCase);
+                       
+                        //INFO list
+                        ListViewItem item = new ListViewItem((i-1).ToString());//index
+                        item.SubItems.Add(SAddr[2]);  //NwkAddr
+                        item.SubItems.Add(ExtAddr[1]);  // MACAddr 
+                        item.SubItems.Add("");  //Channel
+                        item.SubItems.Add("");   //Type
+                        item.SubItems.Add(""); //Ver            
+                        item.SubItems.Add(""); //Chip
+                        item.SubItems.Add(""); //profile                      
+                        item.SubItems.Add(""); //panid
+                        listViewLNTGWINFO.Items.Insert(i-2, item);
+
+                        //GROUPINFO list
+                        ListViewItem item1 = new ListViewItem((i - 1).ToString() +"."+ SAddr[2]); //index+ nwkaddr
+                        item1.SubItems.Add(""); //status
+                        listViewLNTGWGROUPINFO.Items.Insert(i - 2, item1);
+                    }
+                }
+                richTextBoxMessageView.Text += DBGInfo;
+            }
+
+            if (DBGInfo.Contains("NeighbourTable"))
+            {
+                string[] sArry;
+                if (!DBGInfo.Contains("Empty"))
+                {
+                    sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
+                    for (int i = 1; i < sArry.Length; i++)
+                    {
+                        string[] eArry = Regex.Split(sArry[i], ",", RegexOptions.IgnoreCase);
+
+                    }
+                }
+                richTextBoxMessageView.Text += DBGInfo;
+            }
 
 
+
+            if (DBGInfo.Contains("RoutingTable"))
+            {
+                string[] sArry;
+                if (!DBGInfo.Contains("Empty"))
+                {
+                    sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
+                    for (int i = 1; i < sArry.Length; i++)
+                    {
+                        string[] eArry = Regex.Split(sArry[i], ",", RegexOptions.IgnoreCase);
+
+                    }
+                }
+                richTextBoxMessageView.Text += DBGInfo;
+            }
+          
         }
 
         public void mysocketClearCOMCheckedList()
@@ -13517,16 +13583,18 @@ namespace ZGWUI
         private void serialPort2_DataReceivedHandler(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
             lntGWDisplayInfo = new LNTGWDisplayInfo(mylntGWDisplayInfo);
-           
-            while (serialPort2.BytesToRead > 0)
+            string Info = string.Empty;
+            if (serialPort2.BytesToRead > 0)
             {
+                Thread.Sleep(200);
                 char[] output = new char[serialPort2.BytesToRead];
                 // Console.WriteLine("receive data length:{0}", serialPorttemp.BytesToRead);
                 serialPort2.Read(output, 0, serialPort2.BytesToRead);
-                string Info = new string(output);
+                Info = new string(output);
 
                 this.Invoke(lntGWDisplayInfo, Info);
             }
+            
         }
 
         // Serial port event handlder 
