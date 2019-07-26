@@ -6510,6 +6510,8 @@ namespace ZGWUI
                 try
                 {
                     serialPort2.Close();
+                    listViewLNTGWINFO.Items.Clear();
+                    listViewLNTGWGROUPINFO.Items.Clear();
                     buttonLNTGWDBGPORT.Text = "Open GW Dbg Port";
                     bDBGPortConfigured = false;
                 }
@@ -8782,9 +8784,12 @@ namespace ZGWUI
         {
             if (DBGInfo.Contains("AddressMapTable"))
             {
+                listViewLNTGWINFO.Items.Clear();
+                listViewLNTGWGROUPINFO.Items.Clear();
                 string[] sArry;
                 if (!DBGInfo.Contains("Empty"))
                 {
+                    
                     sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
                     for (int i = 2; i < sArry.Length; i++)
                     {
@@ -8801,11 +8806,9 @@ namespace ZGWUI
                         ListViewItem item = new ListViewItem((i-1).ToString());//index
                         item.SubItems.Add(SAddr[2]);  //NwkAddr
                         item.SubItems.Add(ExtAddr[1]);  // MACAddr 
+                        item.SubItems.Add("");  // NxtHop 
                         item.SubItems.Add("");  //Channel
-                        item.SubItems.Add("");   //Type
-                        item.SubItems.Add(""); //Ver            
-                        item.SubItems.Add(""); //Chip
-                        item.SubItems.Add(""); //profile                      
+                        item.SubItems.Add("");   //Type                    
                         item.SubItems.Add(""); //panid
                         listViewLNTGWINFO.Items.Insert(i-2, item);
 
@@ -8820,13 +8823,38 @@ namespace ZGWUI
 
             if (DBGInfo.Contains("NeighbourTable"))
             {
+                listViewLNTGWINFO.Items.Clear();
+                listViewLNTGWGROUPINFO.Items.Clear();
                 string[] sArry;
                 if (!DBGInfo.Contains("Empty"))
                 {
                     sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
-                    for (int i = 1; i < sArry.Length; i++)
+                    for (int i = 2; i < sArry.Length; i++)
                     {
                         string[] eArry = Regex.Split(sArry[i], ",", RegexOptions.IgnoreCase);
+
+                        //1:ZED-SAddr:6e69
+                        string[] SAddr = Regex.Split(eArry[0], ":", RegexOptions.IgnoreCase);
+                        //ZED - SAddr
+                        string[] type = Regex.Split(SAddr[1], "-", RegexOptions.IgnoreCase);
+                       
+                        //ExtAddr:0x00158d00011db654
+                        string[] ExtAddr = Regex.Split(eArry[1], ":", RegexOptions.IgnoreCase);
+
+                        //INFO list
+                        ListViewItem item = new ListViewItem((i - 1).ToString());//index
+                        item.SubItems.Add(SAddr[2]);  //NwkAddr
+                        item.SubItems.Add(ExtAddr[1]);  // MACAddr 
+                        item.SubItems.Add("");  // NxtHop 
+                        item.SubItems.Add("");  //Channel
+                        item.SubItems.Add(type[0]);   //Type                    
+                        item.SubItems.Add(""); //panid
+                        listViewLNTGWINFO.Items.Insert(i - 2, item);
+
+                        //GROUPINFO list
+                        ListViewItem item1 = new ListViewItem((i - 1).ToString() + "." + SAddr[2]); //index+ nwkaddr
+                        item1.SubItems.Add(""); //status
+                        listViewLNTGWGROUPINFO.Items.Insert(i - 2, item1);
 
                     }
                 }
@@ -8837,13 +8865,37 @@ namespace ZGWUI
 
             if (DBGInfo.Contains("RoutingTable"))
             {
+                listViewLNTGWINFO.Items.Clear();
+                listViewLNTGWGROUPINFO.Items.Clear();
                 string[] sArry;
                 if (!DBGInfo.Contains("Empty"))
                 {
                     sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
-                    for (int i = 1; i < sArry.Length; i++)
+                    for (int i = 2; i < sArry.Length; i++)
                     {
                         string[] eArry = Regex.Split(sArry[i], ",", RegexOptions.IgnoreCase);
+                        
+                        //SAddr:0c70
+                        string[] SAddr = Regex.Split(eArry[1], ":", RegexOptions.IgnoreCase);
+
+                        //Next Hop:0c70
+                        string[] NxtHop = Regex.Split(eArry[2], ":", RegexOptions.IgnoreCase);
+                        
+                        //INFO list
+                        ListViewItem item = new ListViewItem((i - 1).ToString());//index
+                        item.SubItems.Add(SAddr[1]);  //NwkAddr
+                        item.SubItems.Add("");  // MACAddr 
+                        item.SubItems.Add(NxtHop[1]);  // NxtHop 
+                        item.SubItems.Add("");  //Channel
+                        item.SubItems.Add("");   //Type                    
+                        item.SubItems.Add(""); //panid
+                        listViewLNTGWINFO.Items.Insert(i - 2, item);
+
+                        //GROUPINFO list
+                        ListViewItem item1 = new ListViewItem((i - 1).ToString() + "." + SAddr[1]); //index+ nwkaddr
+                        item1.SubItems.Add(""); //status
+                        listViewLNTGWGROUPINFO.Items.Insert(i - 2, item1);
+
 
                     }
                 }

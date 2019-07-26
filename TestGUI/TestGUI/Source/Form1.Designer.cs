@@ -732,9 +732,6 @@
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonLNTGWDBGPORT = new System.Windows.Forms.Button();
             this.buttonLNTFGWDISPERMIT = new System.Windows.Forms.Button();
@@ -821,6 +818,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerReadAttribute = new System.Windows.Forms.Timer(this.components);
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -8792,14 +8790,14 @@
             // 
             // textBoxLNTGWSENDCMD
             // 
-            this.textBoxLNTGWSENDCMD.Location = new System.Drawing.Point(543, 38);
+            this.textBoxLNTGWSENDCMD.Location = new System.Drawing.Point(482, 40);
             this.textBoxLNTGWSENDCMD.Name = "textBoxLNTGWSENDCMD";
             this.textBoxLNTGWSENDCMD.Size = new System.Drawing.Size(163, 20);
             this.textBoxLNTGWSENDCMD.TabIndex = 303;
             // 
             // buttonLNTGWSENDCMD
             // 
-            this.buttonLNTGWSENDCMD.Location = new System.Drawing.Point(457, 37);
+            this.buttonLNTGWSENDCMD.Location = new System.Drawing.Point(384, 38);
             this.buttonLNTGWSENDCMD.Name = "buttonLNTGWSENDCMD";
             this.buttonLNTGWSENDCMD.Size = new System.Drawing.Size(80, 23);
             this.buttonLNTGWSENDCMD.TabIndex = 302;
@@ -8817,16 +8815,14 @@
             this.Index,
             this.columnHeader12,
             this.columnHeader13,
+            this.columnHeader11,
             this.columnHeader14,
             this.columnHeader15,
-            this.columnHeader16,
-            this.columnHeader18,
-            this.columnHeader19,
             this.columnHeader21});
             this.listViewLNTGWINFO.FullRowSelect = true;
             this.listViewLNTGWINFO.Location = new System.Drawing.Point(17, 93);
             this.listViewLNTGWINFO.Name = "listViewLNTGWINFO";
-            this.listViewLNTGWINFO.Size = new System.Drawing.Size(756, 472);
+            this.listViewLNTGWINFO.Size = new System.Drawing.Size(628, 472);
             this.listViewLNTGWINFO.TabIndex = 301;
             this.listViewLNTGWINFO.UseCompatibleStateImageBehavior = false;
             this.listViewLNTGWINFO.View = System.Windows.Forms.View.Details;
@@ -8859,21 +8855,6 @@
             this.columnHeader15.Text = "Type";
             this.columnHeader15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader15.Width = 98;
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "Ver";
-            this.columnHeader16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader16.Width = 57;
-            // 
-            // columnHeader18
-            // 
-            this.columnHeader18.Text = "Chip";
-            this.columnHeader18.Width = 65;
-            // 
-            // columnHeader19
-            // 
-            this.columnHeader19.Text = "Profile";
             // 
             // columnHeader21
             // 
@@ -9542,6 +9523,10 @@
             // 
             this.timerReadAttribute.Interval = 60;
             this.timerReadAttribute.Tick += new System.EventHandler(this.timerReadAttribute_Tick);
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "NxtHop";
             // 
             // Form1
             // 
@@ -10326,9 +10311,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;
-        private System.Windows.Forms.ColumnHeader columnHeader16;
-        private System.Windows.Forms.ColumnHeader columnHeader18;
-        private System.Windows.Forms.ColumnHeader columnHeader19;
         private System.Windows.Forms.ColumnHeader columnHeader21;
         private System.Windows.Forms.Button buttonLNTGWDBGPORT;
         private System.Windows.Forms.Button buttonLNTFGWDISPERMIT;
@@ -10411,6 +10393,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.TextBox textBoxLNTGWSENDCMD;
         private System.Windows.Forms.Button buttonLNTGWSENDCMD;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
     }
 }
 
