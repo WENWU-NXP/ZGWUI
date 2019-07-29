@@ -6481,6 +6481,24 @@ namespace ZGWUI
         #endregion
 
         #region LNT GW
+        private void checkBoxLNTGWALL_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxLNTGWALL.Checked)
+            {
+                for (int i = 0; i < listViewLNTGWGROUPINFO.Items.Count; i++)
+                {
+                    listViewLNTGWGROUPINFO.Items[i].Checked = true;
+                }
+
+            }
+            else
+            {
+                for (int i = 0; i < listViewLNTGWGROUPINFO.Items.Count; i++)
+                {
+                    listViewLNTGWGROUPINFO.Items[i].Checked = false;
+                }
+            }
+        }
 
         private void buttonLNTGWSENDCMD_Click(object sender, EventArgs e)
         {
@@ -6555,6 +6573,362 @@ namespace ZGWUI
                     MessageBox.Show("Error - openDBGPort: " + ex);
                 }
             }
+
+        }
+
+        private void buttonLNTGWSET_Click(object sender, EventArgs e)
+        {
+            UInt16 u16TimerLoop;
+            UInt16 u16TimerInterval;
+            UInt16 u16TimerIntervalMax;
+
+
+            if (bStringToUint16Decimal(textBoxLNTGWSETLOOP.Text, out u16TimerLoop) == true)
+            {
+                if (bStringToUint16Decimal(textBoxLNTGWTIMERINTERVAL.Text, out u16TimerInterval) == true)
+                {
+
+                    if (bStringToUint16Decimal(textBoxLNTGWSETINTERVALMAX.Text, out u16TimerIntervalMax) == true)
+                    {
+
+                        msCountMax = u16TimerIntervalMax;
+                        readAttributeLoop = u16TimerLoop;
+                        msCountMin = u16TimerInterval;
+                        if (msCountMax < msCountMin)
+                        {
+                            MessageBox.Show("Loop parameter is error");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Loop parameter has set");
+                        }
+                    }
+                }
+            }
+        }
+
+        private void buttonLNTGWRESET_Click(object sender, EventArgs e)
+        {
+            UInt16 u16TargetAddr;
+            byte u8SrcEndPoint = 1;
+            byte u8DstEndPoint = 1;
+            for (int i = 0; i < listViewLNTGWGROUPINFO.CheckedItems.Count; i++)
+            {
+                int index = listViewLNTGWGROUPINFO.CheckedIndices[i];
+                string s = listViewLNTGWGROUPINFO.Items[index].SubItems[0].Text;
+                if (bStringToUint16(s.Remove(0, s.Length - 4), out u16TargetAddr) == true)
+                {
+
+                    sendBasicResetFactoryDefaultCommand(2, u16TargetAddr, u8SrcEndPoint, u8DstEndPoint);
+                }
+            }
+        }
+
+        private void buttonLNTGWPERMMIT_Click(object sender, EventArgs e)
+        {
+            UInt16 u16TargetAddr;
+            byte u8Interval;
+            u8Interval = 0xff;
+            for (int i = 0; i < listViewLNTGWGROUPINFO.CheckedItems.Count; i++)
+            {
+                int index = listViewLNTGWGROUPINFO.CheckedIndices[i];
+                string s = listViewLNTGWGROUPINFO.Items[index].SubItems[0].Text;
+                if (bStringToUint16(s.Remove(0, s.Length - 4), out u16TargetAddr) == true)
+                {
+                    string str = s.Remove(0, s.Length - 6);
+                    for (int j = 0; j < listViewLNTGWINFO.Items.Count; j++)
+                    {
+                        if (listViewLNTGWINFO.Items[j].SubItems[1].Text == str)
+                        {
+                            if (!permitIsZED(listViewLNTGWINFO.Items[j].SubItems[5].Text))
+                            {
+                                setPermitJoin((UInt16)u16TargetAddr, u8Interval, 0);
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void buttonLNTFGWDISPERMIT_Click(object sender, EventArgs e)
+        {
+            UInt16 u16TargetAddr;
+            byte u8Interval;
+            u8Interval = 0x00;
+            for (int i = 0; i < listViewLNTGWGROUPINFO.CheckedItems.Count; i++)
+            {
+                int index = listViewLNTGWGROUPINFO.CheckedIndices[i];
+                string s = listViewLNTGWGROUPINFO.Items[index].SubItems[0].Text;
+                if (bStringToUint16(s.Remove(0, s.Length - 4), out u16TargetAddr) == true)
+                {
+                    string str = s.Remove(0, s.Length - 6);
+                    for (int j = 0; j < listViewLNTGWINFO.Items.Count; j++)
+                    {
+                        if (listViewLNTGWINFO.Items[j].SubItems[1].Text == str)
+                        {
+                            if (!permitIsZED(listViewLNTGWINFO.Items[j].SubItems[5].Text))
+                            {
+                                setPermitJoin((UInt16)u16TargetAddr, u8Interval, 0);
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void buttonLNTGWREAD_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+                if (listViewLNTGWGROUPINFO.CheckedItems.Count > 0)
+                {
+                    if (textBoxLNTGWSETLOOP.Text != "")
+                    {
+                        bStringToUint16Decimal(textBoxLNTGWSETLOOP.Text, out readAttributeLoop);
+                    }
+                    LNTReadFlag = false;
+                    Thread timerReadAttributeThread = new Thread(customertimer);
+                    readAttributeThreadStop = false;
+                    timerReadAttributeThread.Priority = ThreadPriority.Normal;
+
+                    syncEventPort1 = true;
+                    syncEvent.Reset();
+                    timeBeginPeriod(1);
+                    timerReadAttributeThread.Start();
+
+                }
+                else
+                {
+                    MessageBox.Show("None joined node has been choosen");
+                }
+            }
+        }
+
+        private void buttonLNTGWSTOPREAD_Click(object sender, EventArgs e)
+        {
+            readAttributeThreadStop = true;
+            timeEndPeriod(1);
+        }
+
+        private void buttonLNTGWWRITE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWON_Click(object sender, EventArgs e)
+        {
+
+            UInt16 u16ShortAddr;
+
+            for (int i = 0; i < listViewLNTGWGROUPINFO.CheckedItems.Count; i++)
+            {
+                int index = listViewLNTGWGROUPINFO.CheckedIndices[i];
+                string s = listViewLNTGWGROUPINFO.Items[index].SubItems[0].Text;
+                if (bStringToUint16(s.Remove(0, s.Length - 4), out u16ShortAddr) == true)
+                {
+                    sendClusterOnOff(2, u16ShortAddr, 1, 1, 1);
+                }
+            }
+        }
+
+        private void buttonLNTGWOFF_Click(object sender, EventArgs e)
+        {
+            UInt16 u16ShortAddr;
+
+            for (int i = 0; i < listViewLNTGWGROUPINFO.CheckedItems.Count; i++)
+            {
+                int index = listViewLNTGWGROUPINFO.CheckedIndices[i];
+                string s = listViewLNTGWGROUPINFO.Items[index].SubItems[0].Text;
+                if (bStringToUint16(s.Remove(0, s.Length - 4), out u16ShortAddr) == true)
+                {
+                    sendClusterOnOff(2, u16ShortAddr, 1, 1, 0);
+                }
+            }
+        }
+
+        private void buttonLNTGWTONGGLE_Click(object sender, EventArgs e)
+        {
+
+            if (serialPort1.IsOpen)
+            {
+                if (listViewLNTGWGROUPINFO.CheckedItems.Count > 0)
+                {
+                    if (textBoxLNTGWSETLOOP.Text != "")
+                    {
+                        bStringToUint16Decimal(textBoxLNTGWSETLOOP.Text, out readAttributeLoop);
+                    }
+                    Thread timerTonggleThread = new Thread(customertimerTonggle);
+                    tonggleThreadStop = false;
+                    timerTonggleThread.Priority = ThreadPriority.Normal;
+
+                    syncEventPort1 = true;
+                    syncEvent.Reset();
+                    timeBeginPeriod(1);
+                    timerTonggleThread.Start();
+                }
+                else
+                {
+                    MessageBox.Show("None joined node has been choosen");
+                }
+            }
+        }
+
+        private void buttonLNTGWSTOPTONGGLE_Click(object sender, EventArgs e)
+        {
+            tonggleThreadStop = true;
+            timeEndPeriod(1);
+        }
+
+        private void buttonLNTGWBROADON_Click(object sender, EventArgs e)
+        {
+            UInt16 u16ShortAddr = 0xfffc;
+
+
+            sendClusterOnOff(4, u16ShortAddr, 1, 1, 1);
+        }
+
+        private void buttonLNTGWBROADOFF_Click(object sender, EventArgs e)
+        {
+            UInt16 u16ShortAddr = 0xfffc;
+
+
+
+            sendClusterOnOff(4, u16ShortAddr, 1, 1, 0);
+        }
+
+        private void buttonLNTGWBROADTONGGLE_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+           
+                {
+                    if (textBoxLNTGWSETLOOP.Text != "")
+                    {
+                        bStringToUint16Decimal(textBoxLNTGWSETLOOP.Text, out readAttributeLoop);
+                    }
+                    Thread timerBoardTonggleThread = new Thread(customertimerBoardTonggle);
+                    boardTonggleThreadStop = false;
+                    timerBoardTonggleThread.Priority = ThreadPriority.Normal;
+
+                    syncEventPort1 = true;
+                    syncEvent.Reset();
+                    timeBeginPeriod(1);
+                    timerBoardTonggleThread.Start();
+                }
+
+            }
+        }
+
+        private void buttonLNTGWBROADSTOPTONGGLE_Click(object sender, EventArgs e)
+        {
+            boardTonggleThreadStop = true;
+            timeEndPeriod(1);
+        }
+
+        private void buttonLNTGWBIND_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWUNBIND_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWLEAVE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWCONFIGRPRT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWREADRPRT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWIDENTIFY_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWSTOPIDENTIFY_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWADDGROUP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWREMOVEGROUP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWVIEWGROUP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWREMOVEGROUPALL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWMOVELEVEL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWSTOPMOVELEVEL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWMOVEHUE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWSTOPMOVEHUE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWMOVECOLOR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWSTOPMOVECOLOR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWMOVESAT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWSTOPMOVESAT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWMOVETEMP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLNTGWSTOPMOVETEMP_Click(object sender, EventArgs e)
+        {
 
         }
 
@@ -8789,7 +9163,7 @@ namespace ZGWUI
                 string[] sArry;
                 if (!DBGInfo.Contains("Empty"))
                 {
-                    
+
                     sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
                     for (int i = 2; i < sArry.Length; i++)
                     {
@@ -8801,19 +9175,19 @@ namespace ZGWUI
 
                         //ExtAddr:00158d00011db4a7
                         string[] ExtAddr = Regex.Split(eArry[1], ":", RegexOptions.IgnoreCase);
-                       
+
                         //INFO list
-                        ListViewItem item = new ListViewItem((i-1).ToString());//index
-                        item.SubItems.Add(SAddr[2]);  //NwkAddr
+                        ListViewItem item = new ListViewItem((i - 1).ToString());//index
+                        item.SubItems.Add("0x"+SAddr[2]);  //NwkAddr
                         item.SubItems.Add(ExtAddr[1]);  // MACAddr 
                         item.SubItems.Add("");  // NxtHop 
                         item.SubItems.Add("");  //Channel
                         item.SubItems.Add("");   //Type                    
                         item.SubItems.Add(""); //panid
-                        listViewLNTGWINFO.Items.Insert(i-2, item);
+                        listViewLNTGWINFO.Items.Insert(i - 2, item);
 
                         //GROUPINFO list
-                        ListViewItem item1 = new ListViewItem((i - 1).ToString() +"."+ SAddr[2]); //index+ nwkaddr
+                        ListViewItem item1 = new ListViewItem((i - 1).ToString() + ". " +"0x"+ SAddr[2]); //index+ nwkaddr
                         item1.SubItems.Add(""); //status
                         listViewLNTGWGROUPINFO.Items.Insert(i - 2, item1);
                     }
@@ -8843,7 +9217,7 @@ namespace ZGWUI
 
                         //INFO list
                         ListViewItem item = new ListViewItem((i - 1).ToString());//index
-                        item.SubItems.Add(SAddr[2]);  //NwkAddr
+                        item.SubItems.Add("0x" + SAddr[2]);  //NwkAddr
                         item.SubItems.Add(ExtAddr[1]);  // MACAddr 
                         item.SubItems.Add("");  // NxtHop 
                         item.SubItems.Add("");  //Channel
@@ -8852,7 +9226,7 @@ namespace ZGWUI
                         listViewLNTGWINFO.Items.Insert(i - 2, item);
 
                         //GROUPINFO list
-                        ListViewItem item1 = new ListViewItem((i - 1).ToString() + "." + SAddr[2]); //index+ nwkaddr
+                        ListViewItem item1 = new ListViewItem((i - 1).ToString() + ". " + "0x" + SAddr[2]); //index+ nwkaddr
                         item1.SubItems.Add(""); //status
                         listViewLNTGWGROUPINFO.Items.Insert(i - 2, item1);
 
@@ -8883,7 +9257,7 @@ namespace ZGWUI
                         
                         //INFO list
                         ListViewItem item = new ListViewItem((i - 1).ToString());//index
-                        item.SubItems.Add(SAddr[1]);  //NwkAddr
+                        item.SubItems.Add("0x" + SAddr[1]);  //NwkAddr
                         item.SubItems.Add("");  // MACAddr 
                         item.SubItems.Add(NxtHop[1]);  // NxtHop 
                         item.SubItems.Add("");  //Channel
@@ -8892,7 +9266,7 @@ namespace ZGWUI
                         listViewLNTGWINFO.Items.Insert(i - 2, item);
 
                         //GROUPINFO list
-                        ListViewItem item1 = new ListViewItem((i - 1).ToString() + "." + SAddr[1]); //index+ nwkaddr
+                        ListViewItem item1 = new ListViewItem((i - 1).ToString() + ". " + "0x" + SAddr[1]); //index+ nwkaddr
                         item1.SubItems.Add(""); //status
                         listViewLNTGWGROUPINFO.Items.Insert(i - 2, item1);
 
@@ -8901,7 +9275,17 @@ namespace ZGWUI
                 }
                 richTextBoxMessageView.Text += DBGInfo;
             }
-          
+
+            for (int i = 0; i < listViewLNTGWINFO.Items.Count; i++)
+            {
+                listViewLNTGWINFO.Items[i].Checked = true;
+            }
+
+            for (int i = 0; i < listViewLNTGWGROUPINFO.Items.Count; i++)
+            {
+                listViewLNTGWGROUPINFO.Items[i].Checked = true;
+            }
+
         }
 
         public void mysocketClearCOMCheckedList()
@@ -9305,109 +9689,218 @@ namespace ZGWUI
 
             if (!LNTReadFlag)
             {
-                if (bStringToUint16(textBoxEZLNTREADCLUSTERID.Text, out u16ClusterID) == true)
+                if (pageIndex == 19)   //LNT Local
                 {
-
-                    // if (bStringToUint8(textBoxEZLNTATTRIBUTECOUNT.Text, out u8AttribCount) == true)
+                    if (bStringToUint16(textBoxEZLNTREADCLUSTERID.Text, out u16ClusterID) == true)
                     {
-                        if (bStringToUint16(textBoxEZLNTATTRIBUTEID.Text, out u16AttribID1) == true)
+
+                        // if (bStringToUint8(textBoxEZLNTATTRIBUTECOUNT.Text, out u8AttribCount) == true)
                         {
-
-                            byte[] specialCharacter = null;
-                            specialCharacter = new byte[1];
-
-                            byte[] commandData = null;
-                            commandData = new byte[14];
-
-                            byte[] commandDataheader = new byte[5];
-
-                            byte u8Len = 0;
-
-                            if (serialPort1.IsOpen)
+                            if (bStringToUint16(textBoxEZLNTATTRIBUTEID.Text, out u16AttribID1) == true)
                             {
-                                //Build command header 
-                                commandDataheader[0] = (byte)(iCommand >> 8);
-                                commandDataheader[1] = (byte)(iCommand);
-                                commandDataheader[2] = (byte)(iLength >> 8);
-                                commandDataheader[3] = (byte)(iLength);
 
-                                csum ^= commandDataheader[0];
-                                csum ^= commandDataheader[1];
-                                csum ^= commandDataheader[2];
-                                csum ^= commandDataheader[3];
+                                byte[] specialCharacter = null;
+                                specialCharacter = new byte[1];
 
-                                // Build command payload   
-                                commandData[u8Len++] = 0x02; // Short address mode
-                                commandData[u8Len++] = (byte)(u16ShortAddr >> 8);
-                                commandData[u8Len++] = (byte)u16ShortAddr;
-                                commandData[u8Len++] = u8SrcEndPoint;
-                                commandData[u8Len++] = u8DstEndPoint;
-                                commandData[u8Len++] = (byte)(u16ClusterID >> 8);
-                                commandData[u8Len++] = (byte)u16ClusterID;
-                                commandData[u8Len++] = u8Direction;
-                                commandData[u8Len++] = u8ManuSpecific;
-                                commandData[u8Len++] = (byte)(u16ManuID >> 8);
-                                commandData[u8Len++] = (byte)u16ManuID;
-                                commandData[u8Len++] = u8AttribCount;
-                                commandData[u8Len++] = (byte)(u16AttribID1 >> 8);
-                                commandData[u8Len++] = (byte)u16AttribID1;
+                                byte[] commandData = null;
+                                commandData = new byte[14];
 
-                                for (int i = 0; i < iLength; i++)
+                                byte[] commandDataheader = new byte[5];
+
+                                byte u8Len = 0;
+
+                                if (serialPort1.IsOpen)
                                 {
-                                    csum ^= commandData[i];
-                                }
-                                commandDataheader[4] = csum;
+                                    //Build command header 
+                                    commandDataheader[0] = (byte)(iCommand >> 8);
+                                    commandDataheader[1] = (byte)(iCommand);
+                                    commandDataheader[2] = (byte)(iLength >> 8);
+                                    commandDataheader[3] = (byte)(iLength);
 
-                                // Transmit the message, send start character first
-                                specialCharacter[0] = 1;
-                                // Write data byte to serial port
-                                serialPort1.Write(specialCharacter, 0, 1);
+                                    csum ^= commandDataheader[0];
+                                    csum ^= commandDataheader[1];
+                                    csum ^= commandDataheader[2];
+                                    csum ^= commandDataheader[3];
 
-                                for (int i = 0; i < 5; i++)
-                                {
-                                    if (commandDataheader[i] < 0x10)
+                                    // Build command payload   
+                                    commandData[u8Len++] = 0x02; // Short address mode
+                                    commandData[u8Len++] = (byte)(u16ShortAddr >> 8);
+                                    commandData[u8Len++] = (byte)u16ShortAddr;
+                                    commandData[u8Len++] = u8SrcEndPoint;
+                                    commandData[u8Len++] = u8DstEndPoint;
+                                    commandData[u8Len++] = (byte)(u16ClusterID >> 8);
+                                    commandData[u8Len++] = (byte)u16ClusterID;
+                                    commandData[u8Len++] = u8Direction;
+                                    commandData[u8Len++] = u8ManuSpecific;
+                                    commandData[u8Len++] = (byte)(u16ManuID >> 8);
+                                    commandData[u8Len++] = (byte)u16ManuID;
+                                    commandData[u8Len++] = u8AttribCount;
+                                    commandData[u8Len++] = (byte)(u16AttribID1 >> 8);
+                                    commandData[u8Len++] = (byte)u16AttribID1;
+
+                                    for (int i = 0; i < iLength; i++)
                                     {
-                                        specialCharacter[0] = 2;
-                                        serialPort1.Write(specialCharacter, 0, 1);
-
-                                        int temp = commandDataheader[i];
-                                        temp = temp ^ (0x10);
-                                        commandDataheader[i] = (byte)temp;
+                                        csum ^= commandData[i];
                                     }
-                                    byte[] data = new byte[1];
-                                    data[0] = commandDataheader[i];
-                                    serialPort1.Write(data, 0, 1);
-                                }
+                                    commandDataheader[4] = csum;
 
+                                    // Transmit the message, send start character first
+                                    specialCharacter[0] = 1;
+                                    // Write data byte to serial port
+                                    serialPort1.Write(specialCharacter, 0, 1);
 
-                                for (int i = 0; i < iLength; i++)
-                                {
-                                    if (commandData[i] < 0x10)
+                                    for (int i = 0; i < 5; i++)
                                     {
-                                        specialCharacter[0] = 2;
-                                        serialPort1.Write(specialCharacter, 0, 1);
+                                        if (commandDataheader[i] < 0x10)
+                                        {
+                                            specialCharacter[0] = 2;
+                                            serialPort1.Write(specialCharacter, 0, 1);
 
-                                        int temp = commandData[i];
-                                        temp = temp ^ (0x10);
-                                        commandData[i] = (byte)temp;
+                                            int temp = commandDataheader[i];
+                                            temp = temp ^ (0x10);
+                                            commandDataheader[i] = (byte)temp;
+                                        }
+                                        byte[] data = new byte[1];
+                                        data[0] = commandDataheader[i];
+                                        serialPort1.Write(data, 0, 1);
                                     }
-                                    byte[] data = new byte[1];
-                                    data[0] = commandData[i];
-                                    serialPort1.Write(data, 0, 1);
+
+
+                                    for (int i = 0; i < iLength; i++)
+                                    {
+                                        if (commandData[i] < 0x10)
+                                        {
+                                            specialCharacter[0] = 2;
+                                            serialPort1.Write(specialCharacter, 0, 1);
+
+                                            int temp = commandData[i];
+                                            temp = temp ^ (0x10);
+                                            commandData[i] = (byte)temp;
+                                        }
+                                        byte[] data = new byte[1];
+                                        data[0] = commandData[i];
+                                        serialPort1.Write(data, 0, 1);
+                                    }
+
+
+                                    // Send end character
+                                    specialCharacter[0] = 3;
+                                    // Write data byte to serial port           
+                                    serialPort1.Write(specialCharacter, 0, 1);
                                 }
-
-
-                                // Send end character
-                                specialCharacter[0] = 3;
-                                // Write data byte to serial port           
-                                serialPort1.Write(specialCharacter, 0, 1);
                             }
                         }
                     }
                 }
+
+                if (pageIndex == 21)  //LNT GW
+                {
+                    if (bStringToUint16(textBoxLNTGWREADCLUSTERID.Text, out u16ClusterID) == true)
+                    {
+
+                        // if (bStringToUint8(textBoxEZLNTATTRIBUTECOUNT.Text, out u8AttribCount) == true)
+                        {
+                            if (bStringToUint16(textBoxLNTGWATTRIBUTEID.Text, out u16AttribID1) == true)
+                            {
+
+                                byte[] specialCharacter = null;
+                                specialCharacter = new byte[1];
+
+                                byte[] commandData = null;
+                                commandData = new byte[14];
+
+                                byte[] commandDataheader = new byte[5];
+
+                                byte u8Len = 0;
+
+                                if (serialPort1.IsOpen)
+                                {
+                                    //Build command header 
+                                    commandDataheader[0] = (byte)(iCommand >> 8);
+                                    commandDataheader[1] = (byte)(iCommand);
+                                    commandDataheader[2] = (byte)(iLength >> 8);
+                                    commandDataheader[3] = (byte)(iLength);
+
+                                    csum ^= commandDataheader[0];
+                                    csum ^= commandDataheader[1];
+                                    csum ^= commandDataheader[2];
+                                    csum ^= commandDataheader[3];
+
+                                    // Build command payload   
+                                    commandData[u8Len++] = 0x02; // Short address mode
+                                    commandData[u8Len++] = (byte)(u16ShortAddr >> 8);
+                                    commandData[u8Len++] = (byte)u16ShortAddr;
+                                    commandData[u8Len++] = u8SrcEndPoint;
+                                    commandData[u8Len++] = u8DstEndPoint;
+                                    commandData[u8Len++] = (byte)(u16ClusterID >> 8);
+                                    commandData[u8Len++] = (byte)u16ClusterID;
+                                    commandData[u8Len++] = u8Direction;
+                                    commandData[u8Len++] = u8ManuSpecific;
+                                    commandData[u8Len++] = (byte)(u16ManuID >> 8);
+                                    commandData[u8Len++] = (byte)u16ManuID;
+                                    commandData[u8Len++] = u8AttribCount;
+                                    commandData[u8Len++] = (byte)(u16AttribID1 >> 8);
+                                    commandData[u8Len++] = (byte)u16AttribID1;
+
+                                    for (int i = 0; i < iLength; i++)
+                                    {
+                                        csum ^= commandData[i];
+                                    }
+                                    commandDataheader[4] = csum;
+
+                                    // Transmit the message, send start character first
+                                    specialCharacter[0] = 1;
+                                    // Write data byte to serial port
+                                    serialPort1.Write(specialCharacter, 0, 1);
+
+                                    for (int i = 0; i < 5; i++)
+                                    {
+                                        if (commandDataheader[i] < 0x10)
+                                        {
+                                            specialCharacter[0] = 2;
+                                            serialPort1.Write(specialCharacter, 0, 1);
+
+                                            int temp = commandDataheader[i];
+                                            temp = temp ^ (0x10);
+                                            commandDataheader[i] = (byte)temp;
+                                        }
+                                        byte[] data = new byte[1];
+                                        data[0] = commandDataheader[i];
+                                        serialPort1.Write(data, 0, 1);
+                                    }
+
+
+                                    for (int i = 0; i < iLength; i++)
+                                    {
+                                        if (commandData[i] < 0x10)
+                                        {
+                                            specialCharacter[0] = 2;
+                                            serialPort1.Write(specialCharacter, 0, 1);
+
+                                            int temp = commandData[i];
+                                            temp = temp ^ (0x10);
+                                            commandData[i] = (byte)temp;
+                                        }
+                                        byte[] data = new byte[1];
+                                        data[0] = commandData[i];
+                                        serialPort1.Write(data, 0, 1);
+                                    }
+
+
+                                    // Send end character
+                                    specialCharacter[0] = 3;
+                                    // Write data byte to serial port           
+                                    serialPort1.Write(specialCharacter, 0, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+
+
             }
 
-            else
+            else       //LNT Remote
             {
                 if (bStringToUint16(textBoxLNTREADATTRCLUSTERID.Text, out u16ClusterID) == true)
                 {
@@ -12919,7 +13412,7 @@ namespace ZGWUI
         {
             UInt16 u16ShortAddr;
             uint tempNodeJoined;
-            if (pageIndex == 19)
+            if (pageIndex == 19 || pageIndex == 21)
             {
                 tempNodeJoined = checkedNodeJoined;
 
@@ -13038,7 +13531,7 @@ namespace ZGWUI
         {
             UInt16 u16ShortAddr;
             uint tempNodeJoined;
-            if (pageIndex == 19)
+            if (pageIndex == 19 || pageIndex == 21)
             {
                 tempNodeJoined = checkedNodeJoined;
 
@@ -25250,7 +25743,7 @@ namespace ZGWUI
 
         private void listViewEZLNTGROUP_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            // e.Item.Selected = e.Item.Checked;
+            
             if (listViewEZLNTGROUP.CheckedItems.Count != 0)
             {
                 groupCheckedIntemsCount = listViewEZLNTGROUP.CheckedItems.Count;
@@ -25264,24 +25757,11 @@ namespace ZGWUI
                     nwkAddrJoinedNodeChecked.Add(s);
                 }
 
-                //richTextBoxMessageView.Text += "\r\n";
-                //richTextBoxMessageView.Text += "Group Selected COM: \r\n";
-                //for (int i = 0; i < listViewEZLNTGROUP.CheckedItems.Count; i++)
-                //{
-                //    int index = listViewEZLNTGROUP.CheckedIndices[i];
-
-                //    {
-                //        richTextBoxMessageView.Text += index;
-                //        richTextBoxMessageView.Text += ", ";
-                //    }
-
-                //}
-                //richTextBoxMessageView.Text += "\r\n";
-
+           
             }
             else
             {
-              //  richTextBoxMessageView.Text += "Group None COM Selected! \r\n";
+
 
             }
         }
@@ -25552,56 +26032,87 @@ namespace ZGWUI
             if (pageIndex == 20)
             {
                 if (textBoxLNTSETLOOP.Text != "")
-                { 
+                {
                     inputString = textBoxLNTSETLOOP.Text;
                     UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out readAttributeLoop);
                 }
                 if (textBoxLNTSETPARAMININTERVAL.Text != "")
-                { 
+                {
                     inputString = textBoxLNTSETPARAMININTERVAL.Text;
                     UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out msCountMin);
                 }
                 if (textBoxLNTSETLOOP.Text != "")
-                { 
+                {
                     inputString = textBoxLNTSETPARAMAXINTERVAL.Text;
                     UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out msCountMax);
                 }
                 if (textBoxLNTSETLOOP.Text != "")
-                { 
+                {
                     inputString = textBoxLNTSETPARASTEP.Text;
                     UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out step);
                 }
                 if (textBoxLNTSETLOOP.Text != "")
-                { 
+                {
                     inputString = textBoxLNTSETPARADIR.Text;
                     UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out setDir);
                 }
             }
-            else if(pageIndex == 19)
+            else if (pageIndex == 19)
             {
                 if (textBoxEZLNTSETLOOP.Text != "")
-                { 
+                {
                     inputString = textBoxEZLNTSETLOOP.Text;
                     UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out readAttributeLoop);
                 }
                 if (textBoxEZLNTTIMERINTERVAL.Text != "")
-                { 
+                {
                     inputString = textBoxEZLNTTIMERINTERVAL.Text;
                     UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out msCountMin);
                 }
                 if (textBoxEZLNTSETINTERVALMAX.Text != "")
-                { 
+                {
                     inputString = textBoxEZLNTSETINTERVALMAX.Text;
                     UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out msCountMax);
                 }
                 if (textBoxEZLNTSETSTEP.Text != "")
-                { 
+                {
                     inputString = textBoxEZLNTSETSTEP.Text;
                     UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out step);
                 }
                 if (textBoxEZLNTSETDIR.Text != "")
                 {
                     inputString = textBoxEZLNTSETDIR.Text;
+                    UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out setDir);
+                }
+
+            }
+
+            else if (pageIndex == 21)
+            {
+
+                if (textBoxLNTGWSETLOOP.Text != "")
+                {
+                    inputString = textBoxLNTGWSETLOOP.Text;
+                    UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out readAttributeLoop);
+                }
+                if (textBoxLNTGWTIMERINTERVAL.Text != "")
+                {
+                    inputString = textBoxLNTGWTIMERINTERVAL.Text;
+                    UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out msCountMin);
+                }
+                if (textBoxLNTGWSETINTERVALMAX.Text != "")
+                {
+                    inputString = textBoxLNTGWSETINTERVALMAX.Text;
+                    UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out msCountMax);
+                }
+                if (textBoxLNTGWSETSTEP.Text != "")
+                {
+                    inputString = textBoxLNTGWSETSTEP.Text;
+                    UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out step);
+                }
+                if (textBoxLNTGWSETDIR.Text != "")
+                {
+                    inputString = textBoxLNTGWSETDIR.Text;
                     UInt16.TryParse(inputString, NumberStyles.Integer, CultureInfo.CurrentCulture, out setDir);
                 }
 
@@ -25736,6 +26247,28 @@ namespace ZGWUI
         private void listViewEZLNTINFO_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void listViewLNTGWGROUPINFO_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            if (listViewLNTGWGROUPINFO.CheckedItems.Count != 0)
+            {
+                groupCheckedIntemsCount = listViewLNTGWGROUPINFO.CheckedItems.Count;
+                nwkAddrJoinedNodeChecked.Clear();
+                checkedNodeJoined = (uint)listViewLNTGWGROUPINFO.CheckedItems.Count;
+                NodeJoined = (uint)listViewLNTGWGROUPINFO.Items.Count;
+                for (int i = 0; i < checkedNodeJoined; i++)
+                {
+                    int index = listViewLNTGWGROUPINFO.CheckedIndices[i];
+                    string s = listViewLNTGWGROUPINFO.Items[index].SubItems[0].Text;
+                    nwkAddrJoinedNodeChecked.Add(s);
+                }
+
+            }
+            else
+            {
+
+            }
         }
     }
 }

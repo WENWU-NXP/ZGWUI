@@ -737,47 +737,46 @@
             this.buttonLNTFGWDISPERMIT = new System.Windows.Forms.Button();
             this.buttonLNTGWPERMMIT = new System.Windows.Forms.Button();
             this.checkBoxLNTGWALL = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWSETINTERVALMAX = new System.Windows.Forms.TextBox();
             this.buttonLNTGWSTOPMOVETEMP = new System.Windows.Forms.Button();
             this.buttonLNTGWSTOPMOVESAT = new System.Windows.Forms.Button();
             this.buttonLNTGWSTOPMOVECOLOR = new System.Windows.Forms.Button();
             this.buttonLNTGWSTOPMOVEHUE = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBoxLNTGWSETDIR = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWSETSTEP = new System.Windows.Forms.TextBox();
+            this.comboBoxLNTGWLEVELWITHONOFF = new System.Windows.Forms.ComboBox();
             this.buttonLNTGWSTOPMOVELEVEL = new System.Windows.Forms.Button();
             this.buttonLNTGWSTOPIDENTIFY = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWTEMPTIME = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWTEMP = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWSATTIME = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWSAT = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWCOLORTIME = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWCOLORY = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWCOLORX = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWHUETIME = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWHUEDIR = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWHUE = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWLEVELTIME = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWLEVEL = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWIDENTIFYTIME = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWREADRPRTATTRIBUTEID = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWREADRPRTCLUSTERID = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWCONFIGRPRTCHANGE = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWCONFIGRPRTTIMEOUT = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWCONFIGRPRTMAXINTERVAL = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWCONFIGRPRTMININTERVAL = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWCONFIGRPRTTYPE = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWCONFIGRPRTATTRIBID = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWCONFIGRPRTCLUSTERID = new System.Windows.Forms.TextBox();
+            this.comboBoxLNTGWLEAVECHILDREN = new System.Windows.Forms.ComboBox();
+            this.comboBoxLNTGWLEAVEREJOIN = new System.Windows.Forms.ComboBox();
+            this.textBoxLNTGWWRITEATTRIBUTEDATA = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWWRITEATTRIBUTECLUSTERID = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWATTRIBUTEID = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWREADCLUSTERID = new System.Windows.Forms.TextBox();
             this.buttonLNTGWMOVETEMP = new System.Windows.Forms.Button();
             this.buttonLNTGWMOVESAT = new System.Windows.Forms.Button();
             this.buttonLNTGWMOVECOLOR = new System.Windows.Forms.Button();
@@ -789,24 +788,24 @@
             this.buttonLNTGWCONFIGRPRT = new System.Windows.Forms.Button();
             this.buttonLNTGWLEAVE = new System.Windows.Forms.Button();
             this.buttonLNTGWWRITE = new System.Windows.Forms.Button();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWUNBINDCLUSTERID = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWBINDCLUSTERID = new System.Windows.Forms.TextBox();
             this.buttonLNTGWUNBIND = new System.Windows.Forms.Button();
             this.buttonLNTGWBIND = new System.Windows.Forms.Button();
             this.buttonLNTGWSTOPTONGGLE = new System.Windows.Forms.Button();
             this.buttonLNTGWTONGGLE = new System.Windows.Forms.Button();
             this.buttonLNTGWOFF = new System.Windows.Forms.Button();
             this.buttonLNTGWON = new System.Windows.Forms.Button();
-            this.textBox35 = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWSETLOOP = new System.Windows.Forms.TextBox();
             this.buttonLNTGWSET = new System.Windows.Forms.Button();
             this.buttonLNTGWSTOPREAD = new System.Windows.Forms.Button();
-            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWTIMERINTERVAL = new System.Windows.Forms.TextBox();
             this.buttonLNTGWREAD = new System.Windows.Forms.Button();
-            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWVIEW = new System.Windows.Forms.TextBox();
             this.buttonLNTGWREMOVEGROUPALL = new System.Windows.Forms.Button();
             this.buttonLNTGWVIEWGROUP = new System.Windows.Forms.Button();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWREMOVEGROUP = new System.Windows.Forms.TextBox();
+            this.textBoxLNTGWADDGROUP = new System.Windows.Forms.TextBox();
             this.buttonLNTGWREMOVEGROUP = new System.Windows.Forms.Button();
             this.buttonLNTGWADDGROUP = new System.Windows.Forms.Button();
             this.listViewLNTGWGROUPINFO = new System.Windows.Forms.ListView();
@@ -819,6 +818,13 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerReadAttribute = new System.Windows.Forms.Timer(this.components);
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBoxLNTGWUNICAST = new System.Windows.Forms.ComboBox();
+            this.labelLNTGWBROADCAST = new System.Windows.Forms.Label();
+            this.buttonLNTGWBROADSTOPTONGGLE = new System.Windows.Forms.Button();
+            this.buttonLNTGWBROADTONGGLE = new System.Windows.Forms.Button();
+            this.buttonLNTGWBROADOFF = new System.Windows.Forms.Button();
+            this.buttonLNTGWBROADON = new System.Windows.Forms.Button();
+            this.labelLNTGWUNICAST = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -8701,6 +8707,13 @@
             // tabPage18
             // 
             this.tabPage18.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage18.Controls.Add(this.labelLNTGWUNICAST);
+            this.tabPage18.Controls.Add(this.labelLNTGWBROADCAST);
+            this.tabPage18.Controls.Add(this.buttonLNTGWBROADSTOPTONGGLE);
+            this.tabPage18.Controls.Add(this.buttonLNTGWBROADTONGGLE);
+            this.tabPage18.Controls.Add(this.buttonLNTGWBROADOFF);
+            this.tabPage18.Controls.Add(this.buttonLNTGWBROADON);
+            this.tabPage18.Controls.Add(this.comboBoxLNTGWUNICAST);
             this.tabPage18.Controls.Add(this.textBoxLNTGWSENDCMD);
             this.tabPage18.Controls.Add(this.buttonLNTGWSENDCMD);
             this.tabPage18.Controls.Add(this.listViewLNTGWINFO);
@@ -8708,47 +8721,46 @@
             this.tabPage18.Controls.Add(this.buttonLNTFGWDISPERMIT);
             this.tabPage18.Controls.Add(this.buttonLNTGWPERMMIT);
             this.tabPage18.Controls.Add(this.checkBoxLNTGWALL);
-            this.tabPage18.Controls.Add(this.textBox1);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWSETINTERVALMAX);
             this.tabPage18.Controls.Add(this.buttonLNTGWSTOPMOVETEMP);
             this.tabPage18.Controls.Add(this.buttonLNTGWSTOPMOVESAT);
             this.tabPage18.Controls.Add(this.buttonLNTGWSTOPMOVECOLOR);
             this.tabPage18.Controls.Add(this.buttonLNTGWSTOPMOVEHUE);
-            this.tabPage18.Controls.Add(this.textBox2);
-            this.tabPage18.Controls.Add(this.textBox3);
-            this.tabPage18.Controls.Add(this.comboBox1);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWSETDIR);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWSETSTEP);
+            this.tabPage18.Controls.Add(this.comboBoxLNTGWLEVELWITHONOFF);
             this.tabPage18.Controls.Add(this.buttonLNTGWSTOPMOVELEVEL);
             this.tabPage18.Controls.Add(this.buttonLNTGWSTOPIDENTIFY);
-            this.tabPage18.Controls.Add(this.textBox4);
-            this.tabPage18.Controls.Add(this.textBox5);
-            this.tabPage18.Controls.Add(this.textBox6);
-            this.tabPage18.Controls.Add(this.textBox7);
-            this.tabPage18.Controls.Add(this.textBox8);
-            this.tabPage18.Controls.Add(this.textBox9);
-            this.tabPage18.Controls.Add(this.textBox10);
-            this.tabPage18.Controls.Add(this.textBox11);
-            this.tabPage18.Controls.Add(this.textBox12);
-            this.tabPage18.Controls.Add(this.textBox13);
-            this.tabPage18.Controls.Add(this.textBox14);
-            this.tabPage18.Controls.Add(this.textBox15);
-            this.tabPage18.Controls.Add(this.textBox16);
-            this.tabPage18.Controls.Add(this.textBox17);
-            this.tabPage18.Controls.Add(this.textBox18);
-            this.tabPage18.Controls.Add(this.textBox19);
-            this.tabPage18.Controls.Add(this.textBox20);
-            this.tabPage18.Controls.Add(this.textBox21);
-            this.tabPage18.Controls.Add(this.textBox22);
-            this.tabPage18.Controls.Add(this.textBox23);
-            this.tabPage18.Controls.Add(this.textBox24);
-            this.tabPage18.Controls.Add(this.textBox25);
-            this.tabPage18.Controls.Add(this.comboBox2);
-            this.tabPage18.Controls.Add(this.comboBox3);
-            this.tabPage18.Controls.Add(this.textBox26);
-            this.tabPage18.Controls.Add(this.textBox27);
-            this.tabPage18.Controls.Add(this.textBox28);
-            this.tabPage18.Controls.Add(this.textBox29);
-            this.tabPage18.Controls.Add(this.textBox30);
-            this.tabPage18.Controls.Add(this.textBox31);
-            this.tabPage18.Controls.Add(this.textBox32);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWTEMPTIME);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWTEMP);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWSATTIME);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWSAT);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWCOLORTIME);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWCOLORY);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWCOLORX);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWHUETIME);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWHUEDIR);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWHUE);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWLEVELTIME);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWLEVEL);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWIDENTIFYTIME);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWREADRPRTATTRIBUTEID);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWREADRPRTCLUSTERID);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWCONFIGRPRTCHANGE);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWCONFIGRPRTTIMEOUT);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWCONFIGRPRTMAXINTERVAL);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWCONFIGRPRTMININTERVAL);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWCONFIGRPRTTYPE);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWCONFIGRPRTATTRIBID);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWCONFIGRPRTCLUSTERID);
+            this.tabPage18.Controls.Add(this.comboBoxLNTGWLEAVECHILDREN);
+            this.tabPage18.Controls.Add(this.comboBoxLNTGWLEAVEREJOIN);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWWRITEATTRIBUTEDATA);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWWRITEATTRIBUTECLUSTERID);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWATTRIBUTEID);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWREADCLUSTERID);
             this.tabPage18.Controls.Add(this.buttonLNTGWMOVETEMP);
             this.tabPage18.Controls.Add(this.buttonLNTGWMOVESAT);
             this.tabPage18.Controls.Add(this.buttonLNTGWMOVECOLOR);
@@ -8760,24 +8772,24 @@
             this.tabPage18.Controls.Add(this.buttonLNTGWCONFIGRPRT);
             this.tabPage18.Controls.Add(this.buttonLNTGWLEAVE);
             this.tabPage18.Controls.Add(this.buttonLNTGWWRITE);
-            this.tabPage18.Controls.Add(this.textBox33);
-            this.tabPage18.Controls.Add(this.textBox34);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWUNBINDCLUSTERID);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWBINDCLUSTERID);
             this.tabPage18.Controls.Add(this.buttonLNTGWUNBIND);
             this.tabPage18.Controls.Add(this.buttonLNTGWBIND);
             this.tabPage18.Controls.Add(this.buttonLNTGWSTOPTONGGLE);
             this.tabPage18.Controls.Add(this.buttonLNTGWTONGGLE);
             this.tabPage18.Controls.Add(this.buttonLNTGWOFF);
             this.tabPage18.Controls.Add(this.buttonLNTGWON);
-            this.tabPage18.Controls.Add(this.textBox35);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWSETLOOP);
             this.tabPage18.Controls.Add(this.buttonLNTGWSET);
             this.tabPage18.Controls.Add(this.buttonLNTGWSTOPREAD);
-            this.tabPage18.Controls.Add(this.textBox36);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWTIMERINTERVAL);
             this.tabPage18.Controls.Add(this.buttonLNTGWREAD);
-            this.tabPage18.Controls.Add(this.textBox37);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWVIEW);
             this.tabPage18.Controls.Add(this.buttonLNTGWREMOVEGROUPALL);
             this.tabPage18.Controls.Add(this.buttonLNTGWVIEWGROUP);
-            this.tabPage18.Controls.Add(this.textBox38);
-            this.tabPage18.Controls.Add(this.textBox39);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWREMOVEGROUP);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWADDGROUP);
             this.tabPage18.Controls.Add(this.buttonLNTGWREMOVEGROUP);
             this.tabPage18.Controls.Add(this.buttonLNTGWADDGROUP);
             this.tabPage18.Controls.Add(this.listViewLNTGWGROUPINFO);
@@ -8878,6 +8890,7 @@
             this.buttonLNTFGWDISPERMIT.TabIndex = 298;
             this.buttonLNTFGWDISPERMIT.Text = "Disable Permit Join";
             this.buttonLNTFGWDISPERMIT.UseVisualStyleBackColor = true;
+            this.buttonLNTFGWDISPERMIT.Click += new System.EventHandler(this.buttonLNTFGWDISPERMIT_Click);
             // 
             // buttonLNTGWPERMMIT
             // 
@@ -8887,6 +8900,7 @@
             this.buttonLNTGWPERMMIT.TabIndex = 297;
             this.buttonLNTGWPERMMIT.Text = "Permit Join";
             this.buttonLNTGWPERMMIT.UseVisualStyleBackColor = true;
+            this.buttonLNTGWPERMMIT.Click += new System.EventHandler(this.buttonLNTGWPERMMIT_Click);
             // 
             // checkBoxLNTGWALL
             // 
@@ -8897,375 +8911,380 @@
             this.checkBoxLNTGWALL.TabIndex = 296;
             this.checkBoxLNTGWALL.Text = "ALL";
             this.checkBoxLNTGWALL.UseVisualStyleBackColor = true;
+            this.checkBoxLNTGWALL.CheckedChanged += new System.EventHandler(this.checkBoxLNTGWALL_CheckedChanged);
             // 
-            // textBox1
+            // textBoxLNTGWSETINTERVALMAX
             // 
-            this.textBox1.Location = new System.Drawing.Point(1331, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(71, 20);
-            this.textBox1.TabIndex = 295;
+            this.textBoxLNTGWSETINTERVALMAX.Location = new System.Drawing.Point(1331, 36);
+            this.textBoxLNTGWSETINTERVALMAX.Name = "textBoxLNTGWSETINTERVALMAX";
+            this.textBoxLNTGWSETINTERVALMAX.Size = new System.Drawing.Size(71, 20);
+            this.textBoxLNTGWSETINTERVALMAX.TabIndex = 295;
             // 
             // buttonLNTGWSTOPMOVETEMP
             // 
-            this.buttonLNTGWSTOPMOVETEMP.Location = new System.Drawing.Point(1398, 477);
+            this.buttonLNTGWSTOPMOVETEMP.Location = new System.Drawing.Point(1399, 520);
             this.buttonLNTGWSTOPMOVETEMP.Name = "buttonLNTGWSTOPMOVETEMP";
             this.buttonLNTGWSTOPMOVETEMP.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWSTOPMOVETEMP.TabIndex = 294;
             this.buttonLNTGWSTOPMOVETEMP.Text = "Stop Loop";
             this.buttonLNTGWSTOPMOVETEMP.UseVisualStyleBackColor = true;
+            this.buttonLNTGWSTOPMOVETEMP.Click += new System.EventHandler(this.buttonLNTGWSTOPMOVETEMP_Click);
             // 
             // buttonLNTGWSTOPMOVESAT
             // 
-            this.buttonLNTGWSTOPMOVESAT.Location = new System.Drawing.Point(1398, 446);
+            this.buttonLNTGWSTOPMOVESAT.Location = new System.Drawing.Point(1399, 489);
             this.buttonLNTGWSTOPMOVESAT.Name = "buttonLNTGWSTOPMOVESAT";
             this.buttonLNTGWSTOPMOVESAT.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWSTOPMOVESAT.TabIndex = 293;
             this.buttonLNTGWSTOPMOVESAT.Text = "Stop Loop";
             this.buttonLNTGWSTOPMOVESAT.UseVisualStyleBackColor = true;
+            this.buttonLNTGWSTOPMOVESAT.Click += new System.EventHandler(this.buttonLNTGWSTOPMOVESAT_Click);
             // 
             // buttonLNTGWSTOPMOVECOLOR
             // 
-            this.buttonLNTGWSTOPMOVECOLOR.Location = new System.Drawing.Point(1508, 421);
+            this.buttonLNTGWSTOPMOVECOLOR.Location = new System.Drawing.Point(1509, 464);
             this.buttonLNTGWSTOPMOVECOLOR.Name = "buttonLNTGWSTOPMOVECOLOR";
             this.buttonLNTGWSTOPMOVECOLOR.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWSTOPMOVECOLOR.TabIndex = 292;
             this.buttonLNTGWSTOPMOVECOLOR.Text = "Stop Loop";
             this.buttonLNTGWSTOPMOVECOLOR.UseVisualStyleBackColor = true;
+            this.buttonLNTGWSTOPMOVECOLOR.Click += new System.EventHandler(this.buttonLNTGWSTOPMOVECOLOR_Click);
             // 
             // buttonLNTGWSTOPMOVEHUE
             // 
-            this.buttonLNTGWSTOPMOVEHUE.Location = new System.Drawing.Point(1508, 390);
+            this.buttonLNTGWSTOPMOVEHUE.Location = new System.Drawing.Point(1509, 433);
             this.buttonLNTGWSTOPMOVEHUE.Name = "buttonLNTGWSTOPMOVEHUE";
             this.buttonLNTGWSTOPMOVEHUE.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWSTOPMOVEHUE.TabIndex = 291;
             this.buttonLNTGWSTOPMOVEHUE.Text = "Stop Loop";
             this.buttonLNTGWSTOPMOVEHUE.UseVisualStyleBackColor = true;
+            this.buttonLNTGWSTOPMOVEHUE.Click += new System.EventHandler(this.buttonLNTGWSTOPMOVEHUE_Click);
             // 
-            // textBox2
+            // textBoxLNTGWSETDIR
             // 
-            this.textBox2.Location = new System.Drawing.Point(1471, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(58, 20);
-            this.textBox2.TabIndex = 290;
+            this.textBoxLNTGWSETDIR.Location = new System.Drawing.Point(1471, 36);
+            this.textBoxLNTGWSETDIR.Name = "textBoxLNTGWSETDIR";
+            this.textBoxLNTGWSETDIR.Size = new System.Drawing.Size(58, 20);
+            this.textBoxLNTGWSETDIR.TabIndex = 290;
             // 
-            // textBox3
+            // textBoxLNTGWSETSTEP
             // 
-            this.textBox3.Location = new System.Drawing.Point(1408, 36);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(57, 20);
-            this.textBox3.TabIndex = 289;
+            this.textBoxLNTGWSETSTEP.Location = new System.Drawing.Point(1408, 36);
+            this.textBoxLNTGWSETSTEP.Name = "textBoxLNTGWSETSTEP";
+            this.textBoxLNTGWSETSTEP.Size = new System.Drawing.Size(57, 20);
+            this.textBoxLNTGWSETSTEP.TabIndex = 289;
             // 
-            // comboBox1
+            // comboBoxLNTGWLEVELWITHONOFF
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxLNTGWLEVELWITHONOFF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLNTGWLEVELWITHONOFF.FormattingEnabled = true;
+            this.comboBoxLNTGWLEVELWITHONOFF.Items.AddRange(new object[] {
             "WITHOUT ON/OFF",
             "WITH ON/OFF"});
-            this.comboBox1.Location = new System.Drawing.Point(1396, 362);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(106, 21);
-            this.comboBox1.TabIndex = 288;
+            this.comboBoxLNTGWLEVELWITHONOFF.Location = new System.Drawing.Point(1505, 404);
+            this.comboBoxLNTGWLEVELWITHONOFF.Name = "comboBoxLNTGWLEVELWITHONOFF";
+            this.comboBoxLNTGWLEVELWITHONOFF.Size = new System.Drawing.Size(106, 21);
+            this.comboBoxLNTGWLEVELWITHONOFF.TabIndex = 288;
             // 
             // buttonLNTGWSTOPMOVELEVEL
             // 
-            this.buttonLNTGWSTOPMOVELEVEL.Location = new System.Drawing.Point(1508, 360);
+            this.buttonLNTGWSTOPMOVELEVEL.Location = new System.Drawing.Point(1617, 402);
             this.buttonLNTGWSTOPMOVELEVEL.Name = "buttonLNTGWSTOPMOVELEVEL";
             this.buttonLNTGWSTOPMOVELEVEL.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWSTOPMOVELEVEL.TabIndex = 287;
             this.buttonLNTGWSTOPMOVELEVEL.Text = "Stop Loop";
             this.buttonLNTGWSTOPMOVELEVEL.UseVisualStyleBackColor = true;
+            this.buttonLNTGWSTOPMOVELEVEL.Click += new System.EventHandler(this.buttonLNTGWSTOPMOVELEVEL_Click);
             // 
             // buttonLNTGWSTOPIDENTIFY
             // 
-            this.buttonLNTGWSTOPIDENTIFY.Location = new System.Drawing.Point(1287, 304);
+            this.buttonLNTGWSTOPIDENTIFY.Location = new System.Drawing.Point(1288, 347);
             this.buttonLNTGWSTOPIDENTIFY.Name = "buttonLNTGWSTOPIDENTIFY";
             this.buttonLNTGWSTOPIDENTIFY.Size = new System.Drawing.Size(99, 23);
             this.buttonLNTGWSTOPIDENTIFY.TabIndex = 286;
             this.buttonLNTGWSTOPIDENTIFY.Text = "Stop Identify Loop";
             this.buttonLNTGWSTOPIDENTIFY.UseVisualStyleBackColor = true;
+            this.buttonLNTGWSTOPIDENTIFY.Click += new System.EventHandler(this.buttonLNTGWSTOPIDENTIFY_Click);
             // 
-            // textBox4
+            // textBoxLNTGWTEMPTIME
             // 
-            this.textBox4.Location = new System.Drawing.Point(1288, 479);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 285;
+            this.textBoxLNTGWTEMPTIME.Location = new System.Drawing.Point(1289, 522);
+            this.textBoxLNTGWTEMPTIME.Name = "textBoxLNTGWTEMPTIME";
+            this.textBoxLNTGWTEMPTIME.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWTEMPTIME.TabIndex = 285;
             // 
-            // textBox5
+            // textBoxLNTGWTEMP
             // 
-            this.textBox5.Location = new System.Drawing.Point(1182, 479);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 284;
+            this.textBoxLNTGWTEMP.Location = new System.Drawing.Point(1183, 522);
+            this.textBoxLNTGWTEMP.Name = "textBoxLNTGWTEMP";
+            this.textBoxLNTGWTEMP.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWTEMP.TabIndex = 284;
             // 
-            // textBox6
+            // textBoxLNTGWSATTIME
             // 
-            this.textBox6.Location = new System.Drawing.Point(1288, 449);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 283;
+            this.textBoxLNTGWSATTIME.Location = new System.Drawing.Point(1289, 492);
+            this.textBoxLNTGWSATTIME.Name = "textBoxLNTGWSATTIME";
+            this.textBoxLNTGWSATTIME.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWSATTIME.TabIndex = 283;
             // 
-            // textBox7
+            // textBoxLNTGWSAT
             // 
-            this.textBox7.Location = new System.Drawing.Point(1182, 449);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 282;
+            this.textBoxLNTGWSAT.Location = new System.Drawing.Point(1183, 492);
+            this.textBoxLNTGWSAT.Name = "textBoxLNTGWSAT";
+            this.textBoxLNTGWSAT.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWSAT.TabIndex = 282;
             // 
-            // textBox8
+            // textBoxLNTGWCOLORTIME
             // 
-            this.textBox8.Location = new System.Drawing.Point(1398, 421);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 281;
+            this.textBoxLNTGWCOLORTIME.Location = new System.Drawing.Point(1399, 464);
+            this.textBoxLNTGWCOLORTIME.Name = "textBoxLNTGWCOLORTIME";
+            this.textBoxLNTGWCOLORTIME.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWCOLORTIME.TabIndex = 281;
             // 
-            // textBox9
+            // textBoxLNTGWCOLORY
             // 
-            this.textBox9.Location = new System.Drawing.Point(1291, 419);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 280;
+            this.textBoxLNTGWCOLORY.Location = new System.Drawing.Point(1292, 462);
+            this.textBoxLNTGWCOLORY.Name = "textBoxLNTGWCOLORY";
+            this.textBoxLNTGWCOLORY.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWCOLORY.TabIndex = 280;
             // 
-            // textBox10
+            // textBoxLNTGWCOLORX
             // 
-            this.textBox10.Location = new System.Drawing.Point(1183, 421);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 279;
+            this.textBoxLNTGWCOLORX.Location = new System.Drawing.Point(1184, 464);
+            this.textBoxLNTGWCOLORX.Name = "textBoxLNTGWCOLORX";
+            this.textBoxLNTGWCOLORX.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWCOLORX.TabIndex = 279;
             // 
-            // textBox11
+            // textBoxLNTGWHUETIME
             // 
-            this.textBox11.Location = new System.Drawing.Point(1398, 393);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 278;
+            this.textBoxLNTGWHUETIME.Location = new System.Drawing.Point(1399, 436);
+            this.textBoxLNTGWHUETIME.Name = "textBoxLNTGWHUETIME";
+            this.textBoxLNTGWHUETIME.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWHUETIME.TabIndex = 278;
             // 
-            // textBox12
+            // textBoxLNTGWHUEDIR
             // 
-            this.textBox12.Location = new System.Drawing.Point(1291, 393);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 277;
+            this.textBoxLNTGWHUEDIR.Location = new System.Drawing.Point(1292, 436);
+            this.textBoxLNTGWHUEDIR.Name = "textBoxLNTGWHUEDIR";
+            this.textBoxLNTGWHUEDIR.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWHUEDIR.TabIndex = 277;
             // 
-            // textBox13
+            // textBoxLNTGWHUE
             // 
-            this.textBox13.Location = new System.Drawing.Point(1181, 393);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 20);
-            this.textBox13.TabIndex = 276;
+            this.textBoxLNTGWHUE.Location = new System.Drawing.Point(1182, 436);
+            this.textBoxLNTGWHUE.Name = "textBoxLNTGWHUE";
+            this.textBoxLNTGWHUE.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWHUE.TabIndex = 276;
             // 
-            // textBox14
+            // textBoxLNTGWLEVELTIME
             // 
-            this.textBox14.Location = new System.Drawing.Point(1290, 363);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 275;
+            this.textBoxLNTGWLEVELTIME.Location = new System.Drawing.Point(1399, 405);
+            this.textBoxLNTGWLEVELTIME.Name = "textBoxLNTGWLEVELTIME";
+            this.textBoxLNTGWLEVELTIME.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWLEVELTIME.TabIndex = 275;
             // 
-            // textBox15
+            // textBoxLNTGWLEVEL
             // 
-            this.textBox15.Location = new System.Drawing.Point(1183, 364);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
-            this.textBox15.TabIndex = 274;
+            this.textBoxLNTGWLEVEL.Location = new System.Drawing.Point(1292, 406);
+            this.textBoxLNTGWLEVEL.Name = "textBoxLNTGWLEVEL";
+            this.textBoxLNTGWLEVEL.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWLEVEL.TabIndex = 274;
             // 
-            // textBox16
+            // textBoxLNTGWIDENTIFYTIME
             // 
-            this.textBox16.Location = new System.Drawing.Point(1181, 304);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 273;
+            this.textBoxLNTGWIDENTIFYTIME.Location = new System.Drawing.Point(1182, 347);
+            this.textBoxLNTGWIDENTIFYTIME.Name = "textBoxLNTGWIDENTIFYTIME";
+            this.textBoxLNTGWIDENTIFYTIME.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWIDENTIFYTIME.TabIndex = 273;
             // 
-            // textBox17
+            // textBoxLNTGWREADRPRTATTRIBUTEID
             // 
-            this.textBox17.Location = new System.Drawing.Point(1245, 274);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(63, 20);
-            this.textBox17.TabIndex = 272;
+            this.textBoxLNTGWREADRPRTATTRIBUTEID.Location = new System.Drawing.Point(1246, 317);
+            this.textBoxLNTGWREADRPRTATTRIBUTEID.Name = "textBoxLNTGWREADRPRTATTRIBUTEID";
+            this.textBoxLNTGWREADRPRTATTRIBUTEID.Size = new System.Drawing.Size(63, 20);
+            this.textBoxLNTGWREADRPRTATTRIBUTEID.TabIndex = 272;
             // 
-            // textBox18
+            // textBoxLNTGWREADRPRTCLUSTERID
             // 
-            this.textBox18.Location = new System.Drawing.Point(1169, 274);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(70, 20);
-            this.textBox18.TabIndex = 271;
+            this.textBoxLNTGWREADRPRTCLUSTERID.Location = new System.Drawing.Point(1170, 317);
+            this.textBoxLNTGWREADRPRTCLUSTERID.Name = "textBoxLNTGWREADRPRTCLUSTERID";
+            this.textBoxLNTGWREADRPRTCLUSTERID.Size = new System.Drawing.Size(70, 20);
+            this.textBoxLNTGWREADRPRTCLUSTERID.TabIndex = 271;
             // 
-            // textBox19
+            // textBoxLNTGWCONFIGRPRTCHANGE
             // 
-            this.textBox19.Location = new System.Drawing.Point(1579, 244);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(58, 20);
-            this.textBox19.TabIndex = 270;
+            this.textBoxLNTGWCONFIGRPRTCHANGE.Location = new System.Drawing.Point(1580, 287);
+            this.textBoxLNTGWCONFIGRPRTCHANGE.Name = "textBoxLNTGWCONFIGRPRTCHANGE";
+            this.textBoxLNTGWCONFIGRPRTCHANGE.Size = new System.Drawing.Size(58, 20);
+            this.textBoxLNTGWCONFIGRPRTCHANGE.TabIndex = 270;
             // 
-            // textBox20
+            // textBoxLNTGWCONFIGRPRTTIMEOUT
             // 
-            this.textBox20.Location = new System.Drawing.Point(1504, 243);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(69, 20);
-            this.textBox20.TabIndex = 269;
+            this.textBoxLNTGWCONFIGRPRTTIMEOUT.Location = new System.Drawing.Point(1505, 286);
+            this.textBoxLNTGWCONFIGRPRTTIMEOUT.Name = "textBoxLNTGWCONFIGRPRTTIMEOUT";
+            this.textBoxLNTGWCONFIGRPRTTIMEOUT.Size = new System.Drawing.Size(69, 20);
+            this.textBoxLNTGWCONFIGRPRTTIMEOUT.TabIndex = 269;
             // 
-            // textBox21
+            // textBoxLNTGWCONFIGRPRTMAXINTERVAL
             // 
-            this.textBox21.Location = new System.Drawing.Point(1432, 243);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(66, 20);
-            this.textBox21.TabIndex = 268;
+            this.textBoxLNTGWCONFIGRPRTMAXINTERVAL.Location = new System.Drawing.Point(1433, 286);
+            this.textBoxLNTGWCONFIGRPRTMAXINTERVAL.Name = "textBoxLNTGWCONFIGRPRTMAXINTERVAL";
+            this.textBoxLNTGWCONFIGRPRTMAXINTERVAL.Size = new System.Drawing.Size(66, 20);
+            this.textBoxLNTGWCONFIGRPRTMAXINTERVAL.TabIndex = 268;
             // 
-            // textBox22
+            // textBoxLNTGWCONFIGRPRTMININTERVAL
             // 
-            this.textBox22.Location = new System.Drawing.Point(1367, 243);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(58, 20);
-            this.textBox22.TabIndex = 267;
+            this.textBoxLNTGWCONFIGRPRTMININTERVAL.Location = new System.Drawing.Point(1368, 286);
+            this.textBoxLNTGWCONFIGRPRTMININTERVAL.Name = "textBoxLNTGWCONFIGRPRTMININTERVAL";
+            this.textBoxLNTGWCONFIGRPRTMININTERVAL.Size = new System.Drawing.Size(58, 20);
+            this.textBoxLNTGWCONFIGRPRTMININTERVAL.TabIndex = 267;
             // 
-            // textBox23
+            // textBoxLNTGWCONFIGRPRTTYPE
             // 
-            this.textBox23.Location = new System.Drawing.Point(1243, 245);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(57, 20);
-            this.textBox23.TabIndex = 266;
+            this.textBoxLNTGWCONFIGRPRTTYPE.Location = new System.Drawing.Point(1244, 288);
+            this.textBoxLNTGWCONFIGRPRTTYPE.Name = "textBoxLNTGWCONFIGRPRTTYPE";
+            this.textBoxLNTGWCONFIGRPRTTYPE.Size = new System.Drawing.Size(57, 20);
+            this.textBoxLNTGWCONFIGRPRTTYPE.TabIndex = 266;
             // 
-            // textBox24
+            // textBoxLNTGWCONFIGRPRTATTRIBID
             // 
-            this.textBox24.Location = new System.Drawing.Point(1308, 244);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(53, 20);
-            this.textBox24.TabIndex = 265;
+            this.textBoxLNTGWCONFIGRPRTATTRIBID.Location = new System.Drawing.Point(1309, 287);
+            this.textBoxLNTGWCONFIGRPRTATTRIBID.Name = "textBoxLNTGWCONFIGRPRTATTRIBID";
+            this.textBoxLNTGWCONFIGRPRTATTRIBID.Size = new System.Drawing.Size(53, 20);
+            this.textBoxLNTGWCONFIGRPRTATTRIBID.TabIndex = 265;
             // 
-            // textBox25
+            // textBoxLNTGWCONFIGRPRTCLUSTERID
             // 
-            this.textBox25.Location = new System.Drawing.Point(1170, 244);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(67, 20);
-            this.textBox25.TabIndex = 264;
+            this.textBoxLNTGWCONFIGRPRTCLUSTERID.Location = new System.Drawing.Point(1171, 287);
+            this.textBoxLNTGWCONFIGRPRTCLUSTERID.Name = "textBoxLNTGWCONFIGRPRTCLUSTERID";
+            this.textBoxLNTGWCONFIGRPRTCLUSTERID.Size = new System.Drawing.Size(67, 20);
+            this.textBoxLNTGWCONFIGRPRTCLUSTERID.TabIndex = 264;
             // 
-            // comboBox2
+            // comboBoxLNTGWLEAVECHILDREN
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxLNTGWLEAVECHILDREN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLNTGWLEAVECHILDREN.FormattingEnabled = true;
+            this.comboBoxLNTGWLEAVECHILDREN.Items.AddRange(new object[] {
             "DO NOT REMOVE CHILDREN",
             "REMOVE CHILDREN"});
-            this.comboBox2.Location = new System.Drawing.Point(1291, 214);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(159, 21);
-            this.comboBox2.TabIndex = 263;
+            this.comboBoxLNTGWLEAVECHILDREN.Location = new System.Drawing.Point(1292, 257);
+            this.comboBoxLNTGWLEAVECHILDREN.Name = "comboBoxLNTGWLEAVECHILDREN";
+            this.comboBoxLNTGWLEAVECHILDREN.Size = new System.Drawing.Size(159, 21);
+            this.comboBoxLNTGWLEAVECHILDREN.TabIndex = 263;
             // 
-            // comboBox3
+            // comboBoxLNTGWLEAVEREJOIN
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.comboBoxLNTGWLEAVEREJOIN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLNTGWLEAVEREJOIN.FormattingEnabled = true;
+            this.comboBoxLNTGWLEAVEREJOIN.Items.AddRange(new object[] {
             "DO NOT REJOIN",
             "REJOIN"});
-            this.comboBox3.Location = new System.Drawing.Point(1164, 214);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 262;
+            this.comboBoxLNTGWLEAVEREJOIN.Location = new System.Drawing.Point(1165, 257);
+            this.comboBoxLNTGWLEAVEREJOIN.Name = "comboBoxLNTGWLEAVEREJOIN";
+            this.comboBoxLNTGWLEAVEREJOIN.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxLNTGWLEAVEREJOIN.TabIndex = 262;
             // 
-            // textBox26
+            // textBoxLNTGWWRITEATTRIBUTEDATA
             // 
-            this.textBox26.Location = new System.Drawing.Point(1394, 126);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(137, 20);
-            this.textBox26.TabIndex = 261;
+            this.textBoxLNTGWWRITEATTRIBUTEDATA.Location = new System.Drawing.Point(1394, 126);
+            this.textBoxLNTGWWRITEATTRIBUTEDATA.Name = "textBoxLNTGWWRITEATTRIBUTEDATA";
+            this.textBoxLNTGWWRITEATTRIBUTEDATA.Size = new System.Drawing.Size(137, 20);
+            this.textBoxLNTGWWRITEATTRIBUTEDATA.TabIndex = 261;
             // 
-            // textBox27
+            // textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE
             // 
-            this.textBox27.Location = new System.Drawing.Point(1326, 125);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(62, 20);
-            this.textBox27.TabIndex = 260;
+            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE.Location = new System.Drawing.Point(1326, 125);
+            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE.Name = "textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE";
+            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE.Size = new System.Drawing.Size(62, 20);
+            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE.TabIndex = 260;
             // 
-            // textBox28
+            // textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID
             // 
-            this.textBox28.Location = new System.Drawing.Point(1251, 125);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(69, 20);
-            this.textBox28.TabIndex = 259;
+            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID.Location = new System.Drawing.Point(1251, 125);
+            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID.Name = "textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID";
+            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID.Size = new System.Drawing.Size(69, 20);
+            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID.TabIndex = 259;
             // 
-            // textBox29
+            // textBoxLNTGWWRITEATTRIBUTECLUSTERID
             // 
-            this.textBox29.Location = new System.Drawing.Point(1182, 125);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(63, 20);
-            this.textBox29.TabIndex = 258;
+            this.textBoxLNTGWWRITEATTRIBUTECLUSTERID.Location = new System.Drawing.Point(1182, 125);
+            this.textBoxLNTGWWRITEATTRIBUTECLUSTERID.Name = "textBoxLNTGWWRITEATTRIBUTECLUSTERID";
+            this.textBoxLNTGWWRITEATTRIBUTECLUSTERID.Size = new System.Drawing.Size(63, 20);
+            this.textBoxLNTGWWRITEATTRIBUTECLUSTERID.TabIndex = 258;
             // 
-            // textBox30
+            // textBoxLNTGWATTRIBUTEID
             // 
-            this.textBox30.Location = new System.Drawing.Point(1326, 95);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(62, 20);
-            this.textBox30.TabIndex = 257;
+            this.textBoxLNTGWATTRIBUTEID.Location = new System.Drawing.Point(1251, 95);
+            this.textBoxLNTGWATTRIBUTEID.Name = "textBoxLNTGWATTRIBUTEID";
+            this.textBoxLNTGWATTRIBUTEID.Size = new System.Drawing.Size(69, 20);
+            this.textBoxLNTGWATTRIBUTEID.TabIndex = 256;
             // 
-            // textBox31
+            // textBoxLNTGWREADCLUSTERID
             // 
-            this.textBox31.Location = new System.Drawing.Point(1251, 95);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(69, 20);
-            this.textBox31.TabIndex = 256;
-            // 
-            // textBox32
-            // 
-            this.textBox32.Location = new System.Drawing.Point(1182, 95);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(63, 20);
-            this.textBox32.TabIndex = 255;
+            this.textBoxLNTGWREADCLUSTERID.Location = new System.Drawing.Point(1182, 95);
+            this.textBoxLNTGWREADCLUSTERID.Name = "textBoxLNTGWREADCLUSTERID";
+            this.textBoxLNTGWREADCLUSTERID.Size = new System.Drawing.Size(63, 20);
+            this.textBoxLNTGWREADCLUSTERID.TabIndex = 255;
             // 
             // buttonLNTGWMOVETEMP
             // 
-            this.buttonLNTGWMOVETEMP.Location = new System.Drawing.Point(1078, 475);
+            this.buttonLNTGWMOVETEMP.Location = new System.Drawing.Point(1079, 518);
             this.buttonLNTGWMOVETEMP.Name = "buttonLNTGWMOVETEMP";
             this.buttonLNTGWMOVETEMP.Size = new System.Drawing.Size(90, 22);
             this.buttonLNTGWMOVETEMP.TabIndex = 254;
             this.buttonLNTGWMOVETEMP.Text = "MoveToTemp";
             this.buttonLNTGWMOVETEMP.UseVisualStyleBackColor = true;
+            this.buttonLNTGWMOVETEMP.Click += new System.EventHandler(this.buttonLNTGWMOVETEMP_Click);
             // 
             // buttonLNTGWMOVESAT
             // 
-            this.buttonLNTGWMOVESAT.Location = new System.Drawing.Point(1082, 447);
+            this.buttonLNTGWMOVESAT.Location = new System.Drawing.Point(1083, 490);
             this.buttonLNTGWMOVESAT.Name = "buttonLNTGWMOVESAT";
             this.buttonLNTGWMOVESAT.Size = new System.Drawing.Size(90, 22);
             this.buttonLNTGWMOVESAT.TabIndex = 253;
             this.buttonLNTGWMOVESAT.Text = "MoveToSat";
             this.buttonLNTGWMOVESAT.UseVisualStyleBackColor = true;
+            this.buttonLNTGWMOVESAT.Click += new System.EventHandler(this.buttonLNTGWMOVESAT_Click);
             // 
             // buttonLNTGWMOVECOLOR
             // 
-            this.buttonLNTGWMOVECOLOR.Location = new System.Drawing.Point(1082, 419);
+            this.buttonLNTGWMOVECOLOR.Location = new System.Drawing.Point(1083, 462);
             this.buttonLNTGWMOVECOLOR.Name = "buttonLNTGWMOVECOLOR";
             this.buttonLNTGWMOVECOLOR.Size = new System.Drawing.Size(90, 22);
             this.buttonLNTGWMOVECOLOR.TabIndex = 252;
             this.buttonLNTGWMOVECOLOR.Text = "MoveToColor";
             this.buttonLNTGWMOVECOLOR.UseVisualStyleBackColor = true;
+            this.buttonLNTGWMOVECOLOR.Click += new System.EventHandler(this.buttonLNTGWMOVECOLOR_Click);
             // 
             // buttonLNTGWMOVEHUE
             // 
-            this.buttonLNTGWMOVEHUE.Location = new System.Drawing.Point(1083, 391);
+            this.buttonLNTGWMOVEHUE.Location = new System.Drawing.Point(1084, 434);
             this.buttonLNTGWMOVEHUE.Name = "buttonLNTGWMOVEHUE";
             this.buttonLNTGWMOVEHUE.Size = new System.Drawing.Size(90, 22);
             this.buttonLNTGWMOVEHUE.TabIndex = 251;
             this.buttonLNTGWMOVEHUE.Text = "MoveToHue";
             this.buttonLNTGWMOVEHUE.UseVisualStyleBackColor = true;
-            this.buttonLNTGWMOVEHUE.Click += new System.EventHandler(this.listViewEZLNTINFO_SelectedIndexChanged);
+            this.buttonLNTGWMOVEHUE.Click += new System.EventHandler(this.buttonLNTGWMOVEHUE_Click);
             // 
             // buttonLNTGWMOVELEVEL
             // 
-            this.buttonLNTGWMOVELEVEL.Location = new System.Drawing.Point(1083, 362);
+            this.buttonLNTGWMOVELEVEL.Location = new System.Drawing.Point(1084, 405);
             this.buttonLNTGWMOVELEVEL.Name = "buttonLNTGWMOVELEVEL";
             this.buttonLNTGWMOVELEVEL.Size = new System.Drawing.Size(93, 23);
             this.buttonLNTGWMOVELEVEL.TabIndex = 250;
             this.buttonLNTGWMOVELEVEL.Text = "Move to level";
             this.buttonLNTGWMOVELEVEL.UseVisualStyleBackColor = true;
+            this.buttonLNTGWMOVELEVEL.Click += new System.EventHandler(this.buttonLNTGWMOVELEVEL_Click);
             // 
             // buttonLNTGWIDENTIFY
             // 
-            this.buttonLNTGWIDENTIFY.Location = new System.Drawing.Point(1083, 301);
+            this.buttonLNTGWIDENTIFY.Location = new System.Drawing.Point(1084, 344);
             this.buttonLNTGWIDENTIFY.Name = "buttonLNTGWIDENTIFY";
             this.buttonLNTGWIDENTIFY.Size = new System.Drawing.Size(93, 23);
             this.buttonLNTGWIDENTIFY.TabIndex = 249;
             this.buttonLNTGWIDENTIFY.Text = "Identify Send";
             this.buttonLNTGWIDENTIFY.UseVisualStyleBackColor = true;
+            this.buttonLNTGWIDENTIFY.Click += new System.EventHandler(this.buttonLNTGWIDENTIFY_Click);
             // 
             // buttonLNTGWRESET
             // 
@@ -9275,33 +9294,37 @@
             this.buttonLNTGWRESET.TabIndex = 248;
             this.buttonLNTGWRESET.Text = "Reset To FD";
             this.buttonLNTGWRESET.UseVisualStyleBackColor = true;
+            this.buttonLNTGWRESET.Click += new System.EventHandler(this.buttonLNTGWRESET_Click);
             // 
             // buttonLNTGWREADRPRT
             // 
-            this.buttonLNTGWREADRPRT.Location = new System.Drawing.Point(1083, 271);
+            this.buttonLNTGWREADRPRT.Location = new System.Drawing.Point(1084, 314);
             this.buttonLNTGWREADRPRT.Name = "buttonLNTGWREADRPRT";
             this.buttonLNTGWREADRPRT.Size = new System.Drawing.Size(80, 24);
             this.buttonLNTGWREADRPRT.TabIndex = 247;
             this.buttonLNTGWREADRPRT.Text = "Read Rprt";
             this.buttonLNTGWREADRPRT.UseVisualStyleBackColor = true;
+            this.buttonLNTGWREADRPRT.Click += new System.EventHandler(this.buttonLNTGWREADRPRT_Click);
             // 
             // buttonLNTGWCONFIGRPRT
             // 
-            this.buttonLNTGWCONFIGRPRT.Location = new System.Drawing.Point(1083, 241);
+            this.buttonLNTGWCONFIGRPRT.Location = new System.Drawing.Point(1084, 284);
             this.buttonLNTGWCONFIGRPRT.Name = "buttonLNTGWCONFIGRPRT";
             this.buttonLNTGWCONFIGRPRT.Size = new System.Drawing.Size(80, 24);
             this.buttonLNTGWCONFIGRPRT.TabIndex = 246;
             this.buttonLNTGWCONFIGRPRT.Text = "Config Rprt";
             this.buttonLNTGWCONFIGRPRT.UseVisualStyleBackColor = true;
+            this.buttonLNTGWCONFIGRPRT.Click += new System.EventHandler(this.buttonLNTGWCONFIGRPRT_Click);
             // 
             // buttonLNTGWLEAVE
             // 
-            this.buttonLNTGWLEAVE.Location = new System.Drawing.Point(1083, 212);
+            this.buttonLNTGWLEAVE.Location = new System.Drawing.Point(1084, 255);
             this.buttonLNTGWLEAVE.Name = "buttonLNTGWLEAVE";
             this.buttonLNTGWLEAVE.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWLEAVE.TabIndex = 245;
             this.buttonLNTGWLEAVE.Text = "Leave";
             this.buttonLNTGWLEAVE.UseVisualStyleBackColor = true;
+            this.buttonLNTGWLEAVE.Click += new System.EventHandler(this.buttonLNTGWLEAVE_Click);
             // 
             // buttonLNTGWWRITE
             // 
@@ -9311,81 +9334,88 @@
             this.buttonLNTGWWRITE.TabIndex = 244;
             this.buttonLNTGWWRITE.Text = "Write Attribute";
             this.buttonLNTGWWRITE.UseVisualStyleBackColor = true;
+            this.buttonLNTGWWRITE.Click += new System.EventHandler(this.buttonLNTGWWRITE_Click);
             // 
-            // textBox33
+            // textBoxLNTGWUNBINDCLUSTERID
             // 
-            this.textBox33.Location = new System.Drawing.Point(1350, 185);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(100, 20);
-            this.textBox33.TabIndex = 243;
+            this.textBoxLNTGWUNBINDCLUSTERID.Location = new System.Drawing.Point(1351, 228);
+            this.textBoxLNTGWUNBINDCLUSTERID.Name = "textBoxLNTGWUNBINDCLUSTERID";
+            this.textBoxLNTGWUNBINDCLUSTERID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWUNBINDCLUSTERID.TabIndex = 243;
             // 
-            // textBox34
+            // textBoxLNTGWBINDCLUSTERID
             // 
-            this.textBox34.Location = new System.Drawing.Point(1163, 184);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(100, 20);
-            this.textBox34.TabIndex = 242;
+            this.textBoxLNTGWBINDCLUSTERID.Location = new System.Drawing.Point(1164, 227);
+            this.textBoxLNTGWBINDCLUSTERID.Name = "textBoxLNTGWBINDCLUSTERID";
+            this.textBoxLNTGWBINDCLUSTERID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLNTGWBINDCLUSTERID.TabIndex = 242;
             // 
             // buttonLNTGWUNBIND
             // 
-            this.buttonLNTGWUNBIND.Location = new System.Drawing.Point(1269, 183);
+            this.buttonLNTGWUNBIND.Location = new System.Drawing.Point(1270, 226);
             this.buttonLNTGWUNBIND.Name = "buttonLNTGWUNBIND";
             this.buttonLNTGWUNBIND.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWUNBIND.TabIndex = 241;
             this.buttonLNTGWUNBIND.Text = "Unbind";
             this.buttonLNTGWUNBIND.UseVisualStyleBackColor = true;
+            this.buttonLNTGWUNBIND.Click += new System.EventHandler(this.buttonLNTGWUNBIND_Click);
             // 
             // buttonLNTGWBIND
             // 
-            this.buttonLNTGWBIND.Location = new System.Drawing.Point(1082, 182);
+            this.buttonLNTGWBIND.Location = new System.Drawing.Point(1083, 225);
             this.buttonLNTGWBIND.Name = "buttonLNTGWBIND";
             this.buttonLNTGWBIND.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWBIND.TabIndex = 240;
             this.buttonLNTGWBIND.Text = "Bind";
             this.buttonLNTGWBIND.UseVisualStyleBackColor = true;
+            this.buttonLNTGWBIND.Click += new System.EventHandler(this.buttonLNTGWBIND_Click);
             // 
             // buttonLNTGWSTOPTONGGLE
             // 
-            this.buttonLNTGWSTOPTONGGLE.Location = new System.Drawing.Point(1326, 153);
+            this.buttonLNTGWSTOPTONGGLE.Location = new System.Drawing.Point(1396, 155);
             this.buttonLNTGWSTOPTONGGLE.Name = "buttonLNTGWSTOPTONGGLE";
             this.buttonLNTGWSTOPTONGGLE.Size = new System.Drawing.Size(137, 23);
             this.buttonLNTGWSTOPTONGGLE.TabIndex = 239;
             this.buttonLNTGWSTOPTONGGLE.Text = "Stop Tonggle Loop";
             this.buttonLNTGWSTOPTONGGLE.UseVisualStyleBackColor = true;
+            this.buttonLNTGWSTOPTONGGLE.Click += new System.EventHandler(this.buttonLNTGWSTOPTONGGLE_Click);
             // 
             // buttonLNTGWTONGGLE
             // 
-            this.buttonLNTGWTONGGLE.Location = new System.Drawing.Point(1245, 153);
+            this.buttonLNTGWTONGGLE.Location = new System.Drawing.Point(1315, 155);
             this.buttonLNTGWTONGGLE.Name = "buttonLNTGWTONGGLE";
             this.buttonLNTGWTONGGLE.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWTONGGLE.TabIndex = 238;
             this.buttonLNTGWTONGGLE.Text = "Tonggle";
             this.buttonLNTGWTONGGLE.UseVisualStyleBackColor = true;
+            this.buttonLNTGWTONGGLE.Click += new System.EventHandler(this.buttonLNTGWTONGGLE_Click);
             // 
             // buttonLNTGWOFF
             // 
-            this.buttonLNTGWOFF.Location = new System.Drawing.Point(1164, 153);
+            this.buttonLNTGWOFF.Location = new System.Drawing.Point(1234, 155);
             this.buttonLNTGWOFF.Name = "buttonLNTGWOFF";
             this.buttonLNTGWOFF.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWOFF.TabIndex = 237;
             this.buttonLNTGWOFF.Text = "Off";
             this.buttonLNTGWOFF.UseVisualStyleBackColor = true;
+            this.buttonLNTGWOFF.Click += new System.EventHandler(this.buttonLNTGWOFF_Click);
             // 
             // buttonLNTGWON
             // 
-            this.buttonLNTGWON.Location = new System.Drawing.Point(1083, 153);
+            this.buttonLNTGWON.Location = new System.Drawing.Point(1153, 155);
             this.buttonLNTGWON.Name = "buttonLNTGWON";
             this.buttonLNTGWON.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWON.TabIndex = 236;
             this.buttonLNTGWON.Text = "On";
             this.buttonLNTGWON.UseVisualStyleBackColor = true;
+            this.buttonLNTGWON.Click += new System.EventHandler(this.buttonLNTGWON_Click);
             // 
-            // textBox35
+            // textBoxLNTGWSETLOOP
             // 
-            this.textBox35.Location = new System.Drawing.Point(1179, 36);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(66, 20);
-            this.textBox35.TabIndex = 235;
+            this.textBoxLNTGWSETLOOP.Location = new System.Drawing.Point(1179, 36);
+            this.textBoxLNTGWSETLOOP.Name = "textBoxLNTGWSETLOOP";
+            this.textBoxLNTGWSETLOOP.Size = new System.Drawing.Size(66, 20);
+            this.textBoxLNTGWSETLOOP.TabIndex = 235;
             // 
             // buttonLNTGWSET
             // 
@@ -9395,22 +9425,24 @@
             this.buttonLNTGWSET.TabIndex = 234;
             this.buttonLNTGWSET.Text = "Set  Parameter";
             this.buttonLNTGWSET.UseVisualStyleBackColor = true;
+            this.buttonLNTGWSET.Click += new System.EventHandler(this.buttonLNTGWSET_Click);
             // 
             // buttonLNTGWSTOPREAD
             // 
-            this.buttonLNTGWSTOPREAD.Location = new System.Drawing.Point(1394, 93);
+            this.buttonLNTGWSTOPREAD.Location = new System.Drawing.Point(1326, 95);
             this.buttonLNTGWSTOPREAD.Name = "buttonLNTGWSTOPREAD";
             this.buttonLNTGWSTOPREAD.Size = new System.Drawing.Size(115, 23);
             this.buttonLNTGWSTOPREAD.TabIndex = 233;
             this.buttonLNTGWSTOPREAD.Text = "Stop Read Loop";
             this.buttonLNTGWSTOPREAD.UseVisualStyleBackColor = true;
+            this.buttonLNTGWSTOPREAD.Click += new System.EventHandler(this.buttonLNTGWSTOPREAD_Click);
             // 
-            // textBox36
+            // textBoxLNTGWTIMERINTERVAL
             // 
-            this.textBox36.Location = new System.Drawing.Point(1251, 36);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(74, 20);
-            this.textBox36.TabIndex = 232;
+            this.textBoxLNTGWTIMERINTERVAL.Location = new System.Drawing.Point(1251, 36);
+            this.textBoxLNTGWTIMERINTERVAL.Name = "textBoxLNTGWTIMERINTERVAL";
+            this.textBoxLNTGWTIMERINTERVAL.Size = new System.Drawing.Size(74, 20);
+            this.textBoxLNTGWTIMERINTERVAL.TabIndex = 232;
             // 
             // buttonLNTGWREAD
             // 
@@ -9420,63 +9452,68 @@
             this.buttonLNTGWREAD.TabIndex = 231;
             this.buttonLNTGWREAD.Text = "Read Attribute";
             this.buttonLNTGWREAD.UseVisualStyleBackColor = true;
+            this.buttonLNTGWREAD.Click += new System.EventHandler(this.buttonLNTGWREAD_Click);
             // 
-            // textBox37
+            // textBoxLNTGWVIEW
             // 
-            this.textBox37.Location = new System.Drawing.Point(1527, 333);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(79, 20);
-            this.textBox37.TabIndex = 230;
+            this.textBoxLNTGWVIEW.Location = new System.Drawing.Point(1528, 376);
+            this.textBoxLNTGWVIEW.Name = "textBoxLNTGWVIEW";
+            this.textBoxLNTGWVIEW.Size = new System.Drawing.Size(79, 20);
+            this.textBoxLNTGWVIEW.TabIndex = 230;
             // 
             // buttonLNTGWREMOVEGROUPALL
             // 
-            this.buttonLNTGWREMOVEGROUPALL.Location = new System.Drawing.Point(1612, 331);
+            this.buttonLNTGWREMOVEGROUPALL.Location = new System.Drawing.Point(1613, 374);
             this.buttonLNTGWREMOVEGROUPALL.Name = "buttonLNTGWREMOVEGROUPALL";
             this.buttonLNTGWREMOVEGROUPALL.Size = new System.Drawing.Size(109, 23);
             this.buttonLNTGWREMOVEGROUPALL.TabIndex = 229;
             this.buttonLNTGWREMOVEGROUPALL.Text = "Remove Group All";
             this.buttonLNTGWREMOVEGROUPALL.UseVisualStyleBackColor = true;
+            this.buttonLNTGWREMOVEGROUPALL.Click += new System.EventHandler(this.buttonLNTGWREMOVEGROUPALL_Click);
             // 
             // buttonLNTGWVIEWGROUP
             // 
-            this.buttonLNTGWVIEWGROUP.Location = new System.Drawing.Point(1446, 331);
+            this.buttonLNTGWVIEWGROUP.Location = new System.Drawing.Point(1447, 374);
             this.buttonLNTGWVIEWGROUP.Name = "buttonLNTGWVIEWGROUP";
             this.buttonLNTGWVIEWGROUP.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWVIEWGROUP.TabIndex = 228;
             this.buttonLNTGWVIEWGROUP.Text = "View Group";
             this.buttonLNTGWVIEWGROUP.UseVisualStyleBackColor = true;
+            this.buttonLNTGWVIEWGROUP.Click += new System.EventHandler(this.buttonLNTGWVIEWGROUP_Click);
             // 
-            // textBox38
+            // textBoxLNTGWREMOVEGROUP
             // 
-            this.textBox38.Location = new System.Drawing.Point(1366, 333);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(74, 20);
-            this.textBox38.TabIndex = 227;
+            this.textBoxLNTGWREMOVEGROUP.Location = new System.Drawing.Point(1367, 376);
+            this.textBoxLNTGWREMOVEGROUP.Name = "textBoxLNTGWREMOVEGROUP";
+            this.textBoxLNTGWREMOVEGROUP.Size = new System.Drawing.Size(74, 20);
+            this.textBoxLNTGWREMOVEGROUP.TabIndex = 227;
             // 
-            // textBox39
+            // textBoxLNTGWADDGROUP
             // 
-            this.textBox39.Location = new System.Drawing.Point(1164, 330);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(79, 20);
-            this.textBox39.TabIndex = 226;
+            this.textBoxLNTGWADDGROUP.Location = new System.Drawing.Point(1165, 373);
+            this.textBoxLNTGWADDGROUP.Name = "textBoxLNTGWADDGROUP";
+            this.textBoxLNTGWADDGROUP.Size = new System.Drawing.Size(79, 20);
+            this.textBoxLNTGWADDGROUP.TabIndex = 226;
             // 
             // buttonLNTGWREMOVEGROUP
             // 
-            this.buttonLNTGWREMOVEGROUP.Location = new System.Drawing.Point(1249, 330);
+            this.buttonLNTGWREMOVEGROUP.Location = new System.Drawing.Point(1250, 373);
             this.buttonLNTGWREMOVEGROUP.Name = "buttonLNTGWREMOVEGROUP";
             this.buttonLNTGWREMOVEGROUP.Size = new System.Drawing.Size(109, 23);
             this.buttonLNTGWREMOVEGROUP.TabIndex = 225;
             this.buttonLNTGWREMOVEGROUP.Text = "Remove Group";
             this.buttonLNTGWREMOVEGROUP.UseVisualStyleBackColor = true;
+            this.buttonLNTGWREMOVEGROUP.Click += new System.EventHandler(this.buttonLNTGWREMOVEGROUP_Click);
             // 
             // buttonLNTGWADDGROUP
             // 
-            this.buttonLNTGWADDGROUP.Location = new System.Drawing.Point(1083, 330);
+            this.buttonLNTGWADDGROUP.Location = new System.Drawing.Point(1084, 373);
             this.buttonLNTGWADDGROUP.Name = "buttonLNTGWADDGROUP";
             this.buttonLNTGWADDGROUP.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWADDGROUP.TabIndex = 224;
             this.buttonLNTGWADDGROUP.Text = "Add Group";
             this.buttonLNTGWADDGROUP.UseVisualStyleBackColor = true;
+            this.buttonLNTGWADDGROUP.Click += new System.EventHandler(this.buttonLNTGWADDGROUP_Click);
             // 
             // listViewLNTGWGROUPINFO
             // 
@@ -9492,6 +9529,7 @@
             this.listViewLNTGWGROUPINFO.TabIndex = 223;
             this.listViewLNTGWGROUPINFO.UseCompatibleStateImageBehavior = false;
             this.listViewLNTGWGROUPINFO.View = System.Windows.Forms.View.Details;
+            this.listViewLNTGWGROUPINFO.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.listViewLNTGWGROUPINFO_ItemChecked);
             // 
             // columnHeader9
             // 
@@ -9527,6 +9565,76 @@
             // columnHeader11
             // 
             this.columnHeader11.Text = "NxtHop";
+            // 
+            // comboBoxLNTGWUNICAST
+            // 
+            this.comboBoxLNTGWUNICAST.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLNTGWUNICAST.FormattingEnabled = true;
+            this.comboBoxLNTGWUNICAST.Items.AddRange(new object[] {
+            "Unicast",
+            "Broadcast"});
+            this.comboBoxLNTGWUNICAST.Location = new System.Drawing.Point(1182, 405);
+            this.comboBoxLNTGWUNICAST.Name = "comboBoxLNTGWUNICAST";
+            this.comboBoxLNTGWUNICAST.Size = new System.Drawing.Size(93, 21);
+            this.comboBoxLNTGWUNICAST.TabIndex = 304;
+            // 
+            // labelLNTGWBROADCAST
+            // 
+            this.labelLNTGWBROADCAST.AutoSize = true;
+            this.labelLNTGWBROADCAST.Location = new System.Drawing.Point(1092, 189);
+            this.labelLNTGWBROADCAST.Name = "labelLNTGWBROADCAST";
+            this.labelLNTGWBROADCAST.Size = new System.Drawing.Size(55, 13);
+            this.labelLNTGWBROADCAST.TabIndex = 309;
+            this.labelLNTGWBROADCAST.Text = "Broadcast";
+            // 
+            // buttonLNTGWBROADSTOPTONGGLE
+            // 
+            this.buttonLNTGWBROADSTOPTONGGLE.Location = new System.Drawing.Point(1396, 184);
+            this.buttonLNTGWBROADSTOPTONGGLE.Name = "buttonLNTGWBROADSTOPTONGGLE";
+            this.buttonLNTGWBROADSTOPTONGGLE.Size = new System.Drawing.Size(137, 23);
+            this.buttonLNTGWBROADSTOPTONGGLE.TabIndex = 308;
+            this.buttonLNTGWBROADSTOPTONGGLE.Text = "Stop Tonggle Loop";
+            this.buttonLNTGWBROADSTOPTONGGLE.UseVisualStyleBackColor = true;
+            this.buttonLNTGWBROADSTOPTONGGLE.Click += new System.EventHandler(this.buttonLNTGWBROADSTOPTONGGLE_Click);
+            // 
+            // buttonLNTGWBROADTONGGLE
+            // 
+            this.buttonLNTGWBROADTONGGLE.Location = new System.Drawing.Point(1314, 184);
+            this.buttonLNTGWBROADTONGGLE.Name = "buttonLNTGWBROADTONGGLE";
+            this.buttonLNTGWBROADTONGGLE.Size = new System.Drawing.Size(75, 23);
+            this.buttonLNTGWBROADTONGGLE.TabIndex = 307;
+            this.buttonLNTGWBROADTONGGLE.Text = "Tonggle";
+            this.buttonLNTGWBROADTONGGLE.UseVisualStyleBackColor = true;
+            this.buttonLNTGWBROADTONGGLE.Click += new System.EventHandler(this.buttonLNTGWBROADTONGGLE_Click);
+            // 
+            // buttonLNTGWBROADOFF
+            // 
+            this.buttonLNTGWBROADOFF.Location = new System.Drawing.Point(1234, 184);
+            this.buttonLNTGWBROADOFF.Name = "buttonLNTGWBROADOFF";
+            this.buttonLNTGWBROADOFF.Size = new System.Drawing.Size(75, 23);
+            this.buttonLNTGWBROADOFF.TabIndex = 306;
+            this.buttonLNTGWBROADOFF.Text = "Off";
+            this.buttonLNTGWBROADOFF.UseVisualStyleBackColor = true;
+            this.buttonLNTGWBROADOFF.Click += new System.EventHandler(this.buttonLNTGWBROADOFF_Click);
+            // 
+            // buttonLNTGWBROADON
+            // 
+            this.buttonLNTGWBROADON.Location = new System.Drawing.Point(1153, 184);
+            this.buttonLNTGWBROADON.Name = "buttonLNTGWBROADON";
+            this.buttonLNTGWBROADON.Size = new System.Drawing.Size(75, 23);
+            this.buttonLNTGWBROADON.TabIndex = 305;
+            this.buttonLNTGWBROADON.Text = "On";
+            this.buttonLNTGWBROADON.UseVisualStyleBackColor = true;
+            this.buttonLNTGWBROADON.Click += new System.EventHandler(this.buttonLNTGWBROADON_Click);
+            // 
+            // labelLNTGWUNICAST
+            // 
+            this.labelLNTGWUNICAST.AutoSize = true;
+            this.labelLNTGWUNICAST.Location = new System.Drawing.Point(1092, 160);
+            this.labelLNTGWUNICAST.Name = "labelLNTGWUNICAST";
+            this.labelLNTGWUNICAST.Size = new System.Drawing.Size(43, 13);
+            this.labelLNTGWUNICAST.TabIndex = 310;
+            this.labelLNTGWUNICAST.Text = "Unicast";
             // 
             // Form1
             // 
@@ -10316,47 +10424,46 @@
         private System.Windows.Forms.Button buttonLNTFGWDISPERMIT;
         private System.Windows.Forms.Button buttonLNTGWPERMMIT;
         private System.Windows.Forms.CheckBox checkBoxLNTGWALL;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxLNTGWSETINTERVALMAX;
         private System.Windows.Forms.Button buttonLNTGWSTOPMOVETEMP;
         private System.Windows.Forms.Button buttonLNTGWSTOPMOVESAT;
         private System.Windows.Forms.Button buttonLNTGWSTOPMOVECOLOR;
         private System.Windows.Forms.Button buttonLNTGWSTOPMOVEHUE;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBoxLNTGWSETDIR;
+        private System.Windows.Forms.TextBox textBoxLNTGWSETSTEP;
+        private System.Windows.Forms.ComboBox comboBoxLNTGWLEVELWITHONOFF;
         private System.Windows.Forms.Button buttonLNTGWSTOPMOVELEVEL;
         private System.Windows.Forms.Button buttonLNTGWSTOPIDENTIFY;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox32;
+        private System.Windows.Forms.TextBox textBoxLNTGWTEMPTIME;
+        private System.Windows.Forms.TextBox textBoxLNTGWTEMP;
+        private System.Windows.Forms.TextBox textBoxLNTGWSATTIME;
+        private System.Windows.Forms.TextBox textBoxLNTGWSAT;
+        private System.Windows.Forms.TextBox textBoxLNTGWCOLORTIME;
+        private System.Windows.Forms.TextBox textBoxLNTGWCOLORY;
+        private System.Windows.Forms.TextBox textBoxLNTGWCOLORX;
+        private System.Windows.Forms.TextBox textBoxLNTGWHUETIME;
+        private System.Windows.Forms.TextBox textBoxLNTGWHUEDIR;
+        private System.Windows.Forms.TextBox textBoxLNTGWHUE;
+        private System.Windows.Forms.TextBox textBoxLNTGWLEVELTIME;
+        private System.Windows.Forms.TextBox textBoxLNTGWLEVEL;
+        private System.Windows.Forms.TextBox textBoxLNTGWIDENTIFYTIME;
+        private System.Windows.Forms.TextBox textBoxLNTGWREADRPRTATTRIBUTEID;
+        private System.Windows.Forms.TextBox textBoxLNTGWREADRPRTCLUSTERID;
+        private System.Windows.Forms.TextBox textBoxLNTGWCONFIGRPRTCHANGE;
+        private System.Windows.Forms.TextBox textBoxLNTGWCONFIGRPRTTIMEOUT;
+        private System.Windows.Forms.TextBox textBoxLNTGWCONFIGRPRTMAXINTERVAL;
+        private System.Windows.Forms.TextBox textBoxLNTGWCONFIGRPRTMININTERVAL;
+        private System.Windows.Forms.TextBox textBoxLNTGWCONFIGRPRTTYPE;
+        private System.Windows.Forms.TextBox textBoxLNTGWCONFIGRPRTATTRIBID;
+        private System.Windows.Forms.TextBox textBoxLNTGWCONFIGRPRTCLUSTERID;
+        private System.Windows.Forms.ComboBox comboBoxLNTGWLEAVECHILDREN;
+        private System.Windows.Forms.ComboBox comboBoxLNTGWLEAVEREJOIN;
+        private System.Windows.Forms.TextBox textBoxLNTGWWRITEATTRIBUTEDATA;
+        private System.Windows.Forms.TextBox textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE;
+        private System.Windows.Forms.TextBox textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID;
+        private System.Windows.Forms.TextBox textBoxLNTGWWRITEATTRIBUTECLUSTERID;
+        private System.Windows.Forms.TextBox textBoxLNTGWATTRIBUTEID;
+        private System.Windows.Forms.TextBox textBoxLNTGWREADCLUSTERID;
         private System.Windows.Forms.Button buttonLNTGWMOVETEMP;
         private System.Windows.Forms.Button buttonLNTGWMOVESAT;
         private System.Windows.Forms.Button buttonLNTGWMOVECOLOR;
@@ -10368,24 +10475,24 @@
         private System.Windows.Forms.Button buttonLNTGWCONFIGRPRT;
         private System.Windows.Forms.Button buttonLNTGWLEAVE;
         private System.Windows.Forms.Button buttonLNTGWWRITE;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.TextBox textBox34;
+        private System.Windows.Forms.TextBox textBoxLNTGWUNBINDCLUSTERID;
+        private System.Windows.Forms.TextBox textBoxLNTGWBINDCLUSTERID;
         private System.Windows.Forms.Button buttonLNTGWUNBIND;
         private System.Windows.Forms.Button buttonLNTGWBIND;
         private System.Windows.Forms.Button buttonLNTGWSTOPTONGGLE;
         private System.Windows.Forms.Button buttonLNTGWTONGGLE;
         private System.Windows.Forms.Button buttonLNTGWOFF;
         private System.Windows.Forms.Button buttonLNTGWON;
-        private System.Windows.Forms.TextBox textBox35;
+        private System.Windows.Forms.TextBox textBoxLNTGWSETLOOP;
         private System.Windows.Forms.Button buttonLNTGWSET;
         private System.Windows.Forms.Button buttonLNTGWSTOPREAD;
-        private System.Windows.Forms.TextBox textBox36;
+        private System.Windows.Forms.TextBox textBoxLNTGWTIMERINTERVAL;
         private System.Windows.Forms.Button buttonLNTGWREAD;
-        private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.TextBox textBoxLNTGWVIEW;
         private System.Windows.Forms.Button buttonLNTGWREMOVEGROUPALL;
         private System.Windows.Forms.Button buttonLNTGWVIEWGROUP;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.TextBox textBox39;
+        private System.Windows.Forms.TextBox textBoxLNTGWREMOVEGROUP;
+        private System.Windows.Forms.TextBox textBoxLNTGWADDGROUP;
         private System.Windows.Forms.Button buttonLNTGWREMOVEGROUP;
         private System.Windows.Forms.Button buttonLNTGWADDGROUP;
         private System.Windows.Forms.ListView listViewLNTGWGROUPINFO;
@@ -10394,6 +10501,13 @@
         private System.Windows.Forms.TextBox textBoxLNTGWSENDCMD;
         private System.Windows.Forms.Button buttonLNTGWSENDCMD;
         private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ComboBox comboBoxLNTGWUNICAST;
+        private System.Windows.Forms.Label labelLNTGWUNICAST;
+        private System.Windows.Forms.Label labelLNTGWBROADCAST;
+        private System.Windows.Forms.Button buttonLNTGWBROADSTOPTONGGLE;
+        private System.Windows.Forms.Button buttonLNTGWBROADTONGGLE;
+        private System.Windows.Forms.Button buttonLNTGWBROADOFF;
+        private System.Windows.Forms.Button buttonLNTGWBROADON;
     }
 }
 
