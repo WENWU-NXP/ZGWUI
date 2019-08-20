@@ -3662,7 +3662,7 @@ namespace ZGWUI
                         dataArray[0] = u8command;
                         sendCommand = dataArray[0];
 
-                        if (sendCommand == 0x66)
+                        if (sendCommand == 0x66)   //f
                         {
 
                             if (checkedAddress.Count > 0)
@@ -3682,8 +3682,11 @@ namespace ZGWUI
                                     {
                                         if (multiUSBport[((int)indexComInMultiPortHashTable[COM])].IsOpen)
                                         {
-
-                                            multiUSBport[((int)indexComInMultiPortHashTable[COM])].Write(dataArray, 0, 1);
+                                            if (sendCommand == 0x66)
+                                            {
+                                                Thread.Sleep(1000);
+                                            }
+                                                multiUSBport[((int)indexComInMultiPortHashTable[COM])].Write(dataArray, 0, 1);
                                             //   Console.WriteLine("Write success");
                                         }
                                     }
@@ -4685,6 +4688,7 @@ namespace ZGWUI
 
                         msCountMax = u16TimerIntervalMax;
                         readAttributeLoop = u16TimerLoop;
+                        textBoxEZLNTLOOPREMAIN.Text = readAttributeLoop.ToString();
                         msCountMin = u16TimerInterval;
                         if (msCountMax < msCountMin)
                         {
@@ -4781,6 +4785,39 @@ namespace ZGWUI
                     sendClusterOnOff(2, u16ShortAddr, 1, 1, 0);
                 }
             }
+        }
+
+        private void buttonEZLNTONOFFLOOP_Click(object sender, EventArgs e)
+        {
+
+            if (serialPort1.IsOpen)
+            {
+                if (listViewEZLNTGROUP.CheckedItems.Count > 0)
+                {
+                    if (textBoxEZLNTSETLOOP.Text != "")
+                    {
+                        bStringToUint16Decimal(textBoxEZLNTSETLOOP.Text, out readAttributeLoop);
+                    }
+                    Thread timerOnOffThread = new Thread(customertimerOnOff);
+                    onOffThreadStop = false;
+                    timerOnOffThread.Priority = ThreadPriority.Normal;
+
+                    syncEventPort1 = true;
+                    syncEvent.Reset();
+                    timeBeginPeriod(1);
+                    timerOnOffThread.Start();
+                }
+                else
+                {
+                    MessageBox.Show("None joined node has been choosen");
+                }
+            }
+        }
+
+        private void buttonEZLNTSTOPONOFFLOOP_Click(object sender, EventArgs e)
+        {
+            onOffThreadStop = true;
+            timeEndPeriod(1);
         }
 
         private void buttonEZLNTTONGGLE_Click(object sender, EventArgs e)
@@ -5699,6 +5736,7 @@ namespace ZGWUI
                         msCountMax = u16TimerIntervalMax;
                     }
                     readAttributeLoop = u16TimerLoop;
+                    textBoxLNTGWLOOPREMAIN.Text = readAttributeLoop.ToString();
                     msCountMin = u16TimerInterval;
 
 
@@ -6593,6 +6631,7 @@ namespace ZGWUI
 
                         msCountMax = u16TimerIntervalMax;
                         readAttributeLoop = u16TimerLoop;
+                        textBoxLNTGWLOOPREMAIN.Text = readAttributeLoop.ToString();
                         msCountMin = u16TimerInterval;
                         if (msCountMax < msCountMin)
                         {
@@ -6746,6 +6785,38 @@ namespace ZGWUI
                     sendClusterOnOff(2, u16ShortAddr, 1, 1, 0);
                 }
             }
+        }
+
+        private void buttonLNTGWONOFFLOOP_Click(object sender, EventArgs e)
+        {
+            if (serialPort1.IsOpen)
+            {
+                if (listViewLNTGWGROUPINFO.CheckedItems.Count > 0)
+                {
+                    if (textBoxLNTGWSETLOOP.Text != "")
+                    {
+                        bStringToUint16Decimal(textBoxLNTGWSETLOOP.Text, out readAttributeLoop);
+                    }
+                    Thread timerOnOffThread = new Thread(customertimerOnOff);
+                    onOffThreadStop = false;
+                    timerOnOffThread.Priority = ThreadPriority.Normal;
+
+                    syncEventPort1 = true;
+                    syncEvent.Reset();
+                    timeBeginPeriod(1);
+                    timerOnOffThread.Start();
+                }
+                else
+                {
+                    MessageBox.Show("None joined node has been choosen");
+                }
+            }
+        }
+
+        private void buttonLNTGWSTOPONOFFLOOP_Click(object sender, EventArgs e)
+        {
+            onOffThreadStop = true;
+            timeEndPeriod(1);
         }
 
         private void buttonLNTGWTONGGLE_Click(object sender, EventArgs e)
@@ -9114,6 +9185,7 @@ namespace ZGWUI
 
         public delegate void ReadAttributeThreadSendCommand(UInt16 u16ShortAddr);
         public delegate void TonggleThreadSendCommand(UInt16 u16ShortAddr);
+        public delegate void OnOffThreadSendCommand(UInt16 u16ShortAddr,bool onOffCommand);
         public delegate void BoardTonggleThreadSendCommand(UInt16 u16ShortAddr);
         public delegate void IdentifyThreadSendCommand(UInt16 u16ShortAddr);
         public delegate void LevelThreadSendCommand(UInt16 u16ShortAddr);
@@ -9121,6 +9193,7 @@ namespace ZGWUI
         public delegate void ColorThreadSendCommand(UInt16 u16ShortAddr);
         public delegate void SatThreadSendCommand(UInt16 u16ShortAddr);
         public delegate void TempThreadSendCommand(UInt16 u16ShortAddr);
+        public delegate void LoopRemain();
 
         public delegate void SocketSeverReceiveMessageCommand(string output);
         public delegate void SocketRefreshCOMList(string MACAddress,string IPAddress);
@@ -9143,6 +9216,7 @@ namespace ZGWUI
 
         ReadAttributeThreadSendCommand readAttributeThreadSendCommand;
         TonggleThreadSendCommand tonggleThreadSendCommand;
+        OnOffThreadSendCommand onOffThreadSendCommand;
         BoardTonggleThreadSendCommand boardTonggleThreadSendCommand;
         IdentifyThreadSendCommand identifyThreadSendCommand;
         LevelThreadSendCommand levelThreadSendCommand;
@@ -9150,9 +9224,21 @@ namespace ZGWUI
         ColorThreadSendCommand colorThreadSendCommand;
         SatThreadSendCommand satThreadSendCommand;
         TempThreadSendCommand tempThreadSendCommand;
+        LoopRemain loopRemain;
 
         SocketSeverReceiveMessageCommand socketSeverReceiveMessageCommand;
 
+        public void myloopRemain()
+        {
+            if (pageIndex == 19)
+            {
+                textBoxEZLNTLOOPREMAIN.Text = readAttributeLoop.ToString();
+            }
+            if (pageIndex == 21)
+            {
+                textBoxLNTGWLOOPREMAIN.Text = readAttributeLoop.ToString();
+            }
+        }
 
         public void mylntGWDisplayInfo(string DBGInfo)
         {
@@ -9163,8 +9249,15 @@ namespace ZGWUI
                 string[] sArry;
                 if (!DBGInfo.Contains("Empty"))
                 {
+                    if (DBGInfo.Contains("5189"))
+                    {
+                        sArry = Regex.Split(DBGInfo, "\n", RegexOptions.IgnoreCase);
+                    }
+                    else
+                    {
+                        sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
+                    }
 
-                    sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
                     for (int i = 2; i < sArry.Length; i++)
                     {
                         //1:SAddr:a51e,ExtAddr:00158d00011db4a7
@@ -9202,7 +9295,15 @@ namespace ZGWUI
                 string[] sArry;
                 if (!DBGInfo.Contains("Empty"))
                 {
-                    sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
+                    if (DBGInfo.Contains("5189"))
+                    {
+                        sArry = Regex.Split(DBGInfo, "\n", RegexOptions.IgnoreCase);
+                    }
+                    else
+                    {
+                        sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
+                    }
+                   
                     for (int i = 2; i < sArry.Length; i++)
                     {
                         string[] eArry = Regex.Split(sArry[i], ",", RegexOptions.IgnoreCase);
@@ -9244,7 +9345,15 @@ namespace ZGWUI
                 string[] sArry;
                 if (!DBGInfo.Contains("Empty"))
                 {
-                    sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
+                    if (DBGInfo.Contains("5189"))
+                    {
+                        sArry = Regex.Split(DBGInfo, "\n", RegexOptions.IgnoreCase);
+                    }
+                    else
+                    {
+                        sArry = Regex.Split(DBGInfo, "\r\n", RegexOptions.IgnoreCase);
+                    }
+               
                     for (int i = 2; i < sArry.Length; i++)
                     {
                         string[] eArry = Regex.Split(sArry[i], ",", RegexOptions.IgnoreCase);
@@ -10004,6 +10113,18 @@ namespace ZGWUI
                 }
             }
 
+        }
+
+        public void myOnOffThreadSendCommand(UInt16 u16ShortAddr,bool onOffCommand)
+        {
+            byte u8CommandID = 1;
+            if (onOffCommand){
+                u8CommandID = 1;
+            }
+            else {
+                u8CommandID = 2;
+            }
+            sendClusterOnOff(2, u16ShortAddr, 1, 1, u8CommandID);
         }
 
         public void myTonggleThreadSendCommand(UInt16 u16ShortAddr)
@@ -13223,6 +13344,7 @@ namespace ZGWUI
         /*LNT variable*/
         UInt16 readAttributeLoop = 0;
         int readAttributeCount = 0;
+        bool onOffCommand = true;
         byte currentLevel = 0;
         byte currentHue = 0;
         UInt16 currentX = 0;
@@ -13236,6 +13358,7 @@ namespace ZGWUI
 
         bool readAttributeThreadStop = true;
         bool tonggleThreadStop = true;
+        bool onOffThreadStop = true;
         bool boardTonggleThreadStop = true;
         bool identifyThreadStop = true;
         bool levelThreadStop = true;
@@ -13449,6 +13572,8 @@ namespace ZGWUI
                 if (readAttributeCount == tempNodeJoined)
                 {
                     readAttributeLoop--;
+                    loopRemain = new LoopRemain(myloopRemain);
+                    this.Invoke(loopRemain);
                     readAttributeCount = 0;
                 }
             }
@@ -13502,7 +13627,9 @@ namespace ZGWUI
                 this.Invoke(boardTonggleThreadSendCommand, u16ShortAddr);
                 Console.WriteLine("tonggle count: {0}", readAttributeLoop);
                 readAttributeLoop--;
-                                
+                loopRemain = new LoopRemain(myloopRemain);
+                this.Invoke(loopRemain);
+
             }
            
         }
@@ -13569,6 +13696,8 @@ namespace ZGWUI
                 if (readAttributeCount == tempNodeJoined)
                 {
                     readAttributeLoop--;
+                    loopRemain = new LoopRemain(myloopRemain);
+                    this.Invoke(loopRemain);
                     readAttributeCount = 0;
                 }
             }
@@ -13595,6 +13724,83 @@ namespace ZGWUI
              
               
                 timerTonggleFun();
+            }
+
+            syncEvent.Set();
+            syncEventPort1 = false;
+            firstLoop = true;
+        }
+
+        private void timerOnOffFun()
+        {
+            UInt16 u16ShortAddr;
+            uint tempNodeJoined;
+            if (pageIndex == 19 || pageIndex == 21)
+            {
+                tempNodeJoined = checkedNodeJoined;
+
+            }
+            else
+            {
+                tempNodeJoined = checkedNodeJoined2;
+            }
+            if (tempNodeJoined > 0)
+            {
+                if (readAttributeLoop == 0)
+                {
+                    onOffThreadStop = true;
+                    timeEndPeriod(1);
+                    return;
+                }
+                string s;
+                if (!LNTTonggleFlag)
+                {
+                    s = nwkAddrJoinedNodeChecked[readAttributeCount] as string;
+                }
+                else
+                {
+                    s = nwkAddrJoinedNodeChecked2[readAttributeCount] as string;
+                }
+
+                if (bStringToUint16(s.Remove(0, s.Length - 4), out u16ShortAddr) == true)
+                {
+                    // instantiate the delegate to be invoked by this thread
+                    onOffThreadSendCommand = new OnOffThreadSendCommand(myOnOffThreadSendCommand);
+                    // invoke the delegate in the MainForm thread
+                    this.Invoke(onOffThreadSendCommand, u16ShortAddr, onOffCommand);
+                }
+                readAttributeCount++;
+                if (readAttributeCount == tempNodeJoined)
+                {
+                    readAttributeLoop--;
+                    onOffCommand = !onOffCommand;
+                    loopRemain = new LoopRemain(myloopRemain);
+                    this.Invoke(loopRemain);
+                    readAttributeCount = 0;
+                }
+            }
+            else
+            {
+                onOffThreadStop = true;
+                timeEndPeriod(1);
+                return;
+            }
+
+        }
+
+        private void customertimerOnOff()
+        {
+
+
+            while (!onOffThreadStop)
+            {
+                Random rd = new Random();
+                msCount = rd.Next(msCountMin, msCountMax);
+                waitTimeer();
+                Console.WriteLine("msCount: {0}", msCount);
+
+
+                timerOnOffFun();
             }
 
             syncEvent.Set();
@@ -13644,6 +13850,8 @@ namespace ZGWUI
                 if (readAttributeCount == tempNodeJoined)
                 {
                     readAttributeLoop--;
+                    loopRemain = new LoopRemain(myloopRemain);
+                    this.Invoke(loopRemain);
                     readAttributeCount = 0;
                 }
             }
@@ -13701,7 +13909,9 @@ namespace ZGWUI
                 currentLevel -= (byte)step;
             }
             readAttributeLoop--;
-                    
+            loopRemain = new LoopRemain(myloopRemain);
+            this.Invoke(loopRemain);
+
         }
 
         private void customertimerBoardLevel()
@@ -13774,6 +13984,8 @@ namespace ZGWUI
                         currentLevel -= (byte)step;
                     }
                     readAttributeLoop--;
+                    loopRemain = new LoopRemain(myloopRemain);
+                    this.Invoke(loopRemain);
                     readAttributeCount = 0;
                 }
             }
@@ -13853,6 +14065,8 @@ namespace ZGWUI
                         currentHue -= (byte)step;
                     }
                     readAttributeLoop--;
+                    loopRemain = new LoopRemain(myloopRemain);
+                    this.Invoke(loopRemain);
                     readAttributeCount = 0;
                 }
             }
@@ -13935,6 +14149,8 @@ namespace ZGWUI
                         currentY += step;
                     }
                     readAttributeLoop--;
+                    loopRemain = new LoopRemain(myloopRemain);
+                    this.Invoke(loopRemain);
                     readAttributeCount = 0;
                 }
             }
@@ -14015,6 +14231,8 @@ namespace ZGWUI
                         currentTemp -= step;
                     }
                     readAttributeLoop--;
+                    loopRemain = new LoopRemain(myloopRemain);
+                    this.Invoke(loopRemain);
                     readAttributeCount = 0;
                 }
             }
@@ -14094,6 +14312,8 @@ namespace ZGWUI
                         currentSat -= (byte)step;
                     }
                     readAttributeLoop--;
+                    loopRemain = new LoopRemain(myloopRemain);
+                    this.Invoke(loopRemain);
                     readAttributeCount = 0;
                 }
             }
@@ -25804,6 +26024,8 @@ namespace ZGWUI
                 if (readAttributeCount == listViewEZLNTGROUP.CheckedItems.Count)
                 {
                     readAttributeLoop--;
+                    loopRemain = new LoopRemain(myloopRemain);
+                    this.Invoke(loopRemain);
                     readAttributeCount = 0;
                 }
             }
@@ -26270,5 +26492,7 @@ namespace ZGWUI
 
             }
         }
+
+      
     }
 }

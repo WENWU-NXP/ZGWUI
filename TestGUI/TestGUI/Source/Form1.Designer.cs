@@ -518,6 +518,10 @@
             this.buttonGetVersion = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.buttonEZLNTSTOPONOFFLOOP = new System.Windows.Forms.Button();
+            this.buttonEZLNTONOFFLOOP = new System.Windows.Forms.Button();
+            this.labelEZLNTLOOPREMAIN = new System.Windows.Forms.Label();
+            this.textBoxEZLNTLOOPREMAIN = new System.Windows.Forms.TextBox();
             this.buttonSOCKETSEVERTEST = new System.Windows.Forms.Button();
             this.buttonSOCKETCLIENTTEST = new System.Windows.Forms.Button();
             this.textBoxEZLNTSOCKETSEVERIP = new System.Windows.Forms.TextBox();
@@ -724,12 +728,22 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonLNTREMOTELOAD = new System.Windows.Forms.Button();
             this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.labelLNTGWLOOPREMAIN = new System.Windows.Forms.Label();
+            this.textBoxLNTGWLOOPREMAIN = new System.Windows.Forms.TextBox();
+            this.labelLNTGWUNICAST = new System.Windows.Forms.Label();
+            this.labelLNTGWBROADCAST = new System.Windows.Forms.Label();
+            this.buttonLNTGWBROADSTOPTONGGLE = new System.Windows.Forms.Button();
+            this.buttonLNTGWBROADTONGGLE = new System.Windows.Forms.Button();
+            this.buttonLNTGWBROADOFF = new System.Windows.Forms.Button();
+            this.buttonLNTGWBROADON = new System.Windows.Forms.Button();
+            this.comboBoxLNTGWUNICAST = new System.Windows.Forms.ComboBox();
             this.textBoxLNTGWSENDCMD = new System.Windows.Forms.TextBox();
             this.buttonLNTGWSENDCMD = new System.Windows.Forms.Button();
             this.listViewLNTGWINFO = new System.Windows.Forms.ListView();
             this.Index = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -817,14 +831,8 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerReadAttribute = new System.Windows.Forms.Timer(this.components);
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBoxLNTGWUNICAST = new System.Windows.Forms.ComboBox();
-            this.labelLNTGWBROADCAST = new System.Windows.Forms.Label();
-            this.buttonLNTGWBROADSTOPTONGGLE = new System.Windows.Forms.Button();
-            this.buttonLNTGWBROADTONGGLE = new System.Windows.Forms.Button();
-            this.buttonLNTGWBROADOFF = new System.Windows.Forms.Button();
-            this.buttonLNTGWBROADON = new System.Windows.Forms.Button();
-            this.labelLNTGWUNICAST = new System.Windows.Forms.Label();
+            this.buttonLNTGWSTOPONOFFLOOP = new System.Windows.Forms.Button();
+            this.buttonLNTGWONOFFLOOP = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -6437,6 +6445,10 @@
             // 
             this.tabPage16.AutoScroll = true;
             this.tabPage16.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage16.Controls.Add(this.buttonEZLNTSTOPONOFFLOOP);
+            this.tabPage16.Controls.Add(this.buttonEZLNTONOFFLOOP);
+            this.tabPage16.Controls.Add(this.labelEZLNTLOOPREMAIN);
+            this.tabPage16.Controls.Add(this.textBoxEZLNTLOOPREMAIN);
             this.tabPage16.Controls.Add(this.buttonSOCKETSEVERTEST);
             this.tabPage16.Controls.Add(this.buttonSOCKETCLIENTTEST);
             this.tabPage16.Controls.Add(this.textBoxEZLNTSOCKETSEVERIP);
@@ -6542,6 +6554,42 @@
             this.tabPage16.Text = "LNT Local";
             this.tabPage16.Click += new System.EventHandler(this.tabPage16_Click);
             // 
+            // buttonEZLNTSTOPONOFFLOOP
+            // 
+            this.buttonEZLNTSTOPONOFFLOOP.Location = new System.Drawing.Point(1478, 173);
+            this.buttonEZLNTSTOPONOFFLOOP.Name = "buttonEZLNTSTOPONOFFLOOP";
+            this.buttonEZLNTSTOPONOFFLOOP.Size = new System.Drawing.Size(80, 23);
+            this.buttonEZLNTSTOPONOFFLOOP.TabIndex = 316;
+            this.buttonEZLNTSTOPONOFFLOOP.Text = "Stop On/Off";
+            this.buttonEZLNTSTOPONOFFLOOP.UseVisualStyleBackColor = true;
+            this.buttonEZLNTSTOPONOFFLOOP.Click += new System.EventHandler(this.buttonEZLNTSTOPONOFFLOOP_Click);
+            // 
+            // buttonEZLNTONOFFLOOP
+            // 
+            this.buttonEZLNTONOFFLOOP.Location = new System.Drawing.Point(1397, 173);
+            this.buttonEZLNTONOFFLOOP.Name = "buttonEZLNTONOFFLOOP";
+            this.buttonEZLNTONOFFLOOP.Size = new System.Drawing.Size(75, 23);
+            this.buttonEZLNTONOFFLOOP.TabIndex = 315;
+            this.buttonEZLNTONOFFLOOP.Text = "On/Off";
+            this.buttonEZLNTONOFFLOOP.UseVisualStyleBackColor = true;
+            this.buttonEZLNTONOFFLOOP.Click += new System.EventHandler(this.buttonEZLNTONOFFLOOP_Click);
+            // 
+            // labelEZLNTLOOPREMAIN
+            // 
+            this.labelEZLNTLOOPREMAIN.AutoSize = true;
+            this.labelEZLNTLOOPREMAIN.Location = new System.Drawing.Point(1174, 28);
+            this.labelEZLNTLOOPREMAIN.Name = "labelEZLNTLOOPREMAIN";
+            this.labelEZLNTLOOPREMAIN.Size = new System.Drawing.Size(65, 13);
+            this.labelEZLNTLOOPREMAIN.TabIndex = 314;
+            this.labelEZLNTLOOPREMAIN.Text = "Loop Timers";
+            // 
+            // textBoxEZLNTLOOPREMAIN
+            // 
+            this.textBoxEZLNTLOOPREMAIN.Location = new System.Drawing.Point(1273, 24);
+            this.textBoxEZLNTLOOPREMAIN.Name = "textBoxEZLNTLOOPREMAIN";
+            this.textBoxEZLNTLOOPREMAIN.Size = new System.Drawing.Size(61, 20);
+            this.textBoxEZLNTLOOPREMAIN.TabIndex = 313;
+            // 
             // buttonSOCKETSEVERTEST
             // 
             this.buttonSOCKETSEVERTEST.Location = new System.Drawing.Point(549, 46);
@@ -6606,7 +6654,7 @@
             this.comboBoxEZLNTUNICAST.Items.AddRange(new object[] {
             "Unicast",
             "Broadcast"});
-            this.comboBoxEZLNTUNICAST.Location = new System.Drawing.Point(1255, 394);
+            this.comboBoxEZLNTUNICAST.Location = new System.Drawing.Point(1275, 416);
             this.comboBoxEZLNTUNICAST.Name = "comboBoxEZLNTUNICAST";
             this.comboBoxEZLNTUNICAST.Size = new System.Drawing.Size(93, 21);
             this.comboBoxEZLNTUNICAST.TabIndex = 231;
@@ -6614,7 +6662,7 @@
             // labelEZLNTBROADCAST
             // 
             this.labelEZLNTBROADCAST.AutoSize = true;
-            this.labelEZLNTBROADCAST.Location = new System.Drawing.Point(1155, 185);
+            this.labelEZLNTBROADCAST.Location = new System.Drawing.Point(1175, 207);
             this.labelEZLNTBROADCAST.Name = "labelEZLNTBROADCAST";
             this.labelEZLNTBROADCAST.Size = new System.Drawing.Size(55, 13);
             this.labelEZLNTBROADCAST.TabIndex = 230;
@@ -6623,7 +6671,7 @@
             // labelEZLNTUNICAST
             // 
             this.labelEZLNTUNICAST.AutoSize = true;
-            this.labelEZLNTUNICAST.Location = new System.Drawing.Point(1155, 156);
+            this.labelEZLNTUNICAST.Location = new System.Drawing.Point(1175, 178);
             this.labelEZLNTUNICAST.Name = "labelEZLNTUNICAST";
             this.labelEZLNTUNICAST.Size = new System.Drawing.Size(43, 13);
             this.labelEZLNTUNICAST.TabIndex = 229;
@@ -6631,7 +6679,7 @@
             // 
             // buttonEZLNTBROADSTOPTONGGLE
             // 
-            this.buttonEZLNTBROADSTOPTONGGLE.Location = new System.Drawing.Point(1459, 180);
+            this.buttonEZLNTBROADSTOPTONGGLE.Location = new System.Drawing.Point(1479, 202);
             this.buttonEZLNTBROADSTOPTONGGLE.Name = "buttonEZLNTBROADSTOPTONGGLE";
             this.buttonEZLNTBROADSTOPTONGGLE.Size = new System.Drawing.Size(137, 23);
             this.buttonEZLNTBROADSTOPTONGGLE.TabIndex = 228;
@@ -6641,7 +6689,7 @@
             // 
             // buttonEZLNTBROADTONGGLE
             // 
-            this.buttonEZLNTBROADTONGGLE.Location = new System.Drawing.Point(1377, 180);
+            this.buttonEZLNTBROADTONGGLE.Location = new System.Drawing.Point(1397, 202);
             this.buttonEZLNTBROADTONGGLE.Name = "buttonEZLNTBROADTONGGLE";
             this.buttonEZLNTBROADTONGGLE.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTBROADTONGGLE.TabIndex = 227;
@@ -6651,7 +6699,7 @@
             // 
             // buttonEZLNTBROADOFF
             // 
-            this.buttonEZLNTBROADOFF.Location = new System.Drawing.Point(1297, 180);
+            this.buttonEZLNTBROADOFF.Location = new System.Drawing.Point(1317, 202);
             this.buttonEZLNTBROADOFF.Name = "buttonEZLNTBROADOFF";
             this.buttonEZLNTBROADOFF.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTBROADOFF.TabIndex = 226;
@@ -6661,7 +6709,7 @@
             // 
             // buttonEZLNTBROADON
             // 
-            this.buttonEZLNTBROADON.Location = new System.Drawing.Point(1216, 180);
+            this.buttonEZLNTBROADON.Location = new System.Drawing.Point(1236, 202);
             this.buttonEZLNTBROADON.Name = "buttonEZLNTBROADON";
             this.buttonEZLNTBROADON.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTBROADON.TabIndex = 225;
@@ -6701,7 +6749,7 @@
             // 
             // buttonEZLNTDISABLEPERMIT
             // 
-            this.buttonEZLNTDISABLEPERMIT.Location = new System.Drawing.Point(1337, 62);
+            this.buttonEZLNTDISABLEPERMIT.Location = new System.Drawing.Point(1357, 84);
             this.buttonEZLNTDISABLEPERMIT.Name = "buttonEZLNTDISABLEPERMIT";
             this.buttonEZLNTDISABLEPERMIT.Size = new System.Drawing.Size(122, 23);
             this.buttonEZLNTDISABLEPERMIT.TabIndex = 217;
@@ -6711,7 +6759,7 @@
             // 
             // buttonEZLNTPERMIT
             // 
-            this.buttonEZLNTPERMIT.Location = new System.Drawing.Point(1257, 62);
+            this.buttonEZLNTPERMIT.Location = new System.Drawing.Point(1277, 84);
             this.buttonEZLNTPERMIT.Name = "buttonEZLNTPERMIT";
             this.buttonEZLNTPERMIT.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTPERMIT.TabIndex = 216;
@@ -6732,7 +6780,7 @@
             // 
             // textBoxEZLNTSETINTERVALMAX
             // 
-            this.textBoxEZLNTSETINTERVALMAX.Location = new System.Drawing.Point(1405, 28);
+            this.textBoxEZLNTSETINTERVALMAX.Location = new System.Drawing.Point(1425, 50);
             this.textBoxEZLNTSETINTERVALMAX.Name = "textBoxEZLNTSETINTERVALMAX";
             this.textBoxEZLNTSETINTERVALMAX.Size = new System.Drawing.Size(71, 20);
             this.textBoxEZLNTSETINTERVALMAX.TabIndex = 141;
@@ -6743,7 +6791,7 @@
             // 
             // buttonTEMPLOOPSTOP
             // 
-            this.buttonTEMPLOOPSTOP.Location = new System.Drawing.Point(1472, 507);
+            this.buttonTEMPLOOPSTOP.Location = new System.Drawing.Point(1492, 529);
             this.buttonTEMPLOOPSTOP.Name = "buttonTEMPLOOPSTOP";
             this.buttonTEMPLOOPSTOP.Size = new System.Drawing.Size(75, 23);
             this.buttonTEMPLOOPSTOP.TabIndex = 140;
@@ -6753,7 +6801,7 @@
             // 
             // buttonEZLNTSATLOOPSTOP
             // 
-            this.buttonEZLNTSATLOOPSTOP.Location = new System.Drawing.Point(1472, 476);
+            this.buttonEZLNTSATLOOPSTOP.Location = new System.Drawing.Point(1492, 498);
             this.buttonEZLNTSATLOOPSTOP.Name = "buttonEZLNTSATLOOPSTOP";
             this.buttonEZLNTSATLOOPSTOP.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTSATLOOPSTOP.TabIndex = 139;
@@ -6763,7 +6811,7 @@
             // 
             // buttonEZLNTCOLORLOOPSTOP
             // 
-            this.buttonEZLNTCOLORLOOPSTOP.Location = new System.Drawing.Point(1581, 451);
+            this.buttonEZLNTCOLORLOOPSTOP.Location = new System.Drawing.Point(1601, 473);
             this.buttonEZLNTCOLORLOOPSTOP.Name = "buttonEZLNTCOLORLOOPSTOP";
             this.buttonEZLNTCOLORLOOPSTOP.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTCOLORLOOPSTOP.TabIndex = 138;
@@ -6773,7 +6821,7 @@
             // 
             // buttonEZLNTHUESTOP
             // 
-            this.buttonEZLNTHUESTOP.Location = new System.Drawing.Point(1581, 420);
+            this.buttonEZLNTHUESTOP.Location = new System.Drawing.Point(1601, 442);
             this.buttonEZLNTHUESTOP.Name = "buttonEZLNTHUESTOP";
             this.buttonEZLNTHUESTOP.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTHUESTOP.TabIndex = 137;
@@ -6783,7 +6831,7 @@
             // 
             // textBoxEZLNTSETDIR
             // 
-            this.textBoxEZLNTSETDIR.Location = new System.Drawing.Point(1545, 28);
+            this.textBoxEZLNTSETDIR.Location = new System.Drawing.Point(1565, 50);
             this.textBoxEZLNTSETDIR.Name = "textBoxEZLNTSETDIR";
             this.textBoxEZLNTSETDIR.Size = new System.Drawing.Size(58, 20);
             this.textBoxEZLNTSETDIR.TabIndex = 136;
@@ -6794,7 +6842,7 @@
             // 
             // textBoxEZLNTSETSTEP
             // 
-            this.textBoxEZLNTSETSTEP.Location = new System.Drawing.Point(1481, 28);
+            this.textBoxEZLNTSETSTEP.Location = new System.Drawing.Point(1501, 50);
             this.textBoxEZLNTSETSTEP.Name = "textBoxEZLNTSETSTEP";
             this.textBoxEZLNTSETSTEP.Size = new System.Drawing.Size(57, 20);
             this.textBoxEZLNTSETSTEP.TabIndex = 135;
@@ -6810,14 +6858,14 @@
             this.comboBoxEZLNTLEVELWITHONOFF.Items.AddRange(new object[] {
             "WITHOUT ON/OFF",
             "WITH ON/OFF"});
-            this.comboBoxEZLNTLEVELWITHONOFF.Location = new System.Drawing.Point(1568, 392);
+            this.comboBoxEZLNTLEVELWITHONOFF.Location = new System.Drawing.Point(1588, 414);
             this.comboBoxEZLNTLEVELWITHONOFF.Name = "comboBoxEZLNTLEVELWITHONOFF";
             this.comboBoxEZLNTLEVELWITHONOFF.Size = new System.Drawing.Size(106, 21);
             this.comboBoxEZLNTLEVELWITHONOFF.TabIndex = 134;
             // 
             // buttonEZLNTLEVLELSTOP
             // 
-            this.buttonEZLNTLEVLELSTOP.Location = new System.Drawing.Point(1680, 391);
+            this.buttonEZLNTLEVLELSTOP.Location = new System.Drawing.Point(1700, 413);
             this.buttonEZLNTLEVLELSTOP.Name = "buttonEZLNTLEVLELSTOP";
             this.buttonEZLNTLEVLELSTOP.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTLEVLELSTOP.TabIndex = 133;
@@ -6827,7 +6875,7 @@
             // 
             // buttonEZLNTIDENTIFYSTOP
             // 
-            this.buttonEZLNTIDENTIFYSTOP.Location = new System.Drawing.Point(1361, 337);
+            this.buttonEZLNTIDENTIFYSTOP.Location = new System.Drawing.Point(1381, 359);
             this.buttonEZLNTIDENTIFYSTOP.Name = "buttonEZLNTIDENTIFYSTOP";
             this.buttonEZLNTIDENTIFYSTOP.Size = new System.Drawing.Size(99, 23);
             this.buttonEZLNTIDENTIFYSTOP.TabIndex = 132;
@@ -6837,7 +6885,7 @@
             // 
             // textBoxEZLNTTEMPTIME
             // 
-            this.textBoxEZLNTTEMPTIME.Location = new System.Drawing.Point(1361, 509);
+            this.textBoxEZLNTTEMPTIME.Location = new System.Drawing.Point(1381, 531);
             this.textBoxEZLNTTEMPTIME.Name = "textBoxEZLNTTEMPTIME";
             this.textBoxEZLNTTEMPTIME.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTTEMPTIME.TabIndex = 131;
@@ -6848,7 +6896,7 @@
             // 
             // textBoxEZLNTTEMP
             // 
-            this.textBoxEZLNTTEMP.Location = new System.Drawing.Point(1256, 509);
+            this.textBoxEZLNTTEMP.Location = new System.Drawing.Point(1276, 531);
             this.textBoxEZLNTTEMP.Name = "textBoxEZLNTTEMP";
             this.textBoxEZLNTTEMP.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTTEMP.TabIndex = 130;
@@ -6859,7 +6907,7 @@
             // 
             // textBoxEZLNTSATTIME
             // 
-            this.textBoxEZLNTSATTIME.Location = new System.Drawing.Point(1361, 479);
+            this.textBoxEZLNTSATTIME.Location = new System.Drawing.Point(1381, 501);
             this.textBoxEZLNTSATTIME.Name = "textBoxEZLNTSATTIME";
             this.textBoxEZLNTSATTIME.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTSATTIME.TabIndex = 129;
@@ -6870,7 +6918,7 @@
             // 
             // textBoxEZLNTSAT
             // 
-            this.textBoxEZLNTSAT.Location = new System.Drawing.Point(1256, 479);
+            this.textBoxEZLNTSAT.Location = new System.Drawing.Point(1276, 501);
             this.textBoxEZLNTSAT.Name = "textBoxEZLNTSAT";
             this.textBoxEZLNTSAT.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTSAT.TabIndex = 128;
@@ -6881,7 +6929,7 @@
             // 
             // textBoxCOLORTIME
             // 
-            this.textBoxCOLORTIME.Location = new System.Drawing.Point(1472, 451);
+            this.textBoxCOLORTIME.Location = new System.Drawing.Point(1492, 473);
             this.textBoxCOLORTIME.Name = "textBoxCOLORTIME";
             this.textBoxCOLORTIME.Size = new System.Drawing.Size(100, 20);
             this.textBoxCOLORTIME.TabIndex = 127;
@@ -6892,7 +6940,7 @@
             // 
             // textBoxEZLNTCOLORY
             // 
-            this.textBoxEZLNTCOLORY.Location = new System.Drawing.Point(1365, 449);
+            this.textBoxEZLNTCOLORY.Location = new System.Drawing.Point(1385, 471);
             this.textBoxEZLNTCOLORY.Name = "textBoxEZLNTCOLORY";
             this.textBoxEZLNTCOLORY.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTCOLORY.TabIndex = 126;
@@ -6903,7 +6951,7 @@
             // 
             // textBoxEZLNTCOLORX
             // 
-            this.textBoxEZLNTCOLORX.Location = new System.Drawing.Point(1257, 451);
+            this.textBoxEZLNTCOLORX.Location = new System.Drawing.Point(1277, 473);
             this.textBoxEZLNTCOLORX.Name = "textBoxEZLNTCOLORX";
             this.textBoxEZLNTCOLORX.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTCOLORX.TabIndex = 125;
@@ -6914,7 +6962,7 @@
             // 
             // textBoxEZLNTHUETIME
             // 
-            this.textBoxEZLNTHUETIME.Location = new System.Drawing.Point(1472, 423);
+            this.textBoxEZLNTHUETIME.Location = new System.Drawing.Point(1492, 445);
             this.textBoxEZLNTHUETIME.Name = "textBoxEZLNTHUETIME";
             this.textBoxEZLNTHUETIME.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTHUETIME.TabIndex = 124;
@@ -6925,7 +6973,7 @@
             // 
             // textBoxEZLNTHUEDIR
             // 
-            this.textBoxEZLNTHUEDIR.Location = new System.Drawing.Point(1365, 423);
+            this.textBoxEZLNTHUEDIR.Location = new System.Drawing.Point(1385, 445);
             this.textBoxEZLNTHUEDIR.Name = "textBoxEZLNTHUEDIR";
             this.textBoxEZLNTHUEDIR.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTHUEDIR.TabIndex = 123;
@@ -6936,7 +6984,7 @@
             // 
             // textBoxEZLNTHUE
             // 
-            this.textBoxEZLNTHUE.Location = new System.Drawing.Point(1255, 423);
+            this.textBoxEZLNTHUE.Location = new System.Drawing.Point(1275, 445);
             this.textBoxEZLNTHUE.Name = "textBoxEZLNTHUE";
             this.textBoxEZLNTHUE.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTHUE.TabIndex = 122;
@@ -6947,7 +6995,7 @@
             // 
             // textBoxEZLNTLEVELTIME
             // 
-            this.textBoxEZLNTLEVELTIME.Location = new System.Drawing.Point(1461, 393);
+            this.textBoxEZLNTLEVELTIME.Location = new System.Drawing.Point(1481, 415);
             this.textBoxEZLNTLEVELTIME.Name = "textBoxEZLNTLEVELTIME";
             this.textBoxEZLNTLEVELTIME.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTLEVELTIME.TabIndex = 120;
@@ -6958,7 +7006,7 @@
             // 
             // textBoxEZLNTLEVEL
             // 
-            this.textBoxEZLNTLEVEL.Location = new System.Drawing.Point(1356, 394);
+            this.textBoxEZLNTLEVEL.Location = new System.Drawing.Point(1376, 416);
             this.textBoxEZLNTLEVEL.Name = "textBoxEZLNTLEVEL";
             this.textBoxEZLNTLEVEL.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTLEVEL.TabIndex = 119;
@@ -6969,7 +7017,7 @@
             // 
             // textBoxEZLNTIDENTIFYTIME
             // 
-            this.textBoxEZLNTIDENTIFYTIME.Location = new System.Drawing.Point(1256, 337);
+            this.textBoxEZLNTIDENTIFYTIME.Location = new System.Drawing.Point(1276, 359);
             this.textBoxEZLNTIDENTIFYTIME.Name = "textBoxEZLNTIDENTIFYTIME";
             this.textBoxEZLNTIDENTIFYTIME.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTIDENTIFYTIME.TabIndex = 118;
@@ -6980,7 +7028,7 @@
             // 
             // textBoxEZLNTREADRPRTATTRIBUTEID
             // 
-            this.textBoxEZLNTREADRPRTATTRIBUTEID.Location = new System.Drawing.Point(1320, 307);
+            this.textBoxEZLNTREADRPRTATTRIBUTEID.Location = new System.Drawing.Point(1340, 329);
             this.textBoxEZLNTREADRPRTATTRIBUTEID.Name = "textBoxEZLNTREADRPRTATTRIBUTEID";
             this.textBoxEZLNTREADRPRTATTRIBUTEID.Size = new System.Drawing.Size(63, 20);
             this.textBoxEZLNTREADRPRTATTRIBUTEID.TabIndex = 117;
@@ -6991,7 +7039,7 @@
             // 
             // textBoxEZLNTREADRPRTCLUSTERID
             // 
-            this.textBoxEZLNTREADRPRTCLUSTERID.Location = new System.Drawing.Point(1244, 307);
+            this.textBoxEZLNTREADRPRTCLUSTERID.Location = new System.Drawing.Point(1264, 329);
             this.textBoxEZLNTREADRPRTCLUSTERID.Name = "textBoxEZLNTREADRPRTCLUSTERID";
             this.textBoxEZLNTREADRPRTCLUSTERID.Size = new System.Drawing.Size(70, 20);
             this.textBoxEZLNTREADRPRTCLUSTERID.TabIndex = 116;
@@ -7002,7 +7050,7 @@
             // 
             // textBoxEZLNTCONFIGRPRTCHANGE
             // 
-            this.textBoxEZLNTCONFIGRPRTCHANGE.Location = new System.Drawing.Point(1653, 277);
+            this.textBoxEZLNTCONFIGRPRTCHANGE.Location = new System.Drawing.Point(1673, 299);
             this.textBoxEZLNTCONFIGRPRTCHANGE.Name = "textBoxEZLNTCONFIGRPRTCHANGE";
             this.textBoxEZLNTCONFIGRPRTCHANGE.Size = new System.Drawing.Size(58, 20);
             this.textBoxEZLNTCONFIGRPRTCHANGE.TabIndex = 115;
@@ -7013,7 +7061,7 @@
             // 
             // textBoxEZLNTCONFIGRPRTTIMEOUT
             // 
-            this.textBoxEZLNTCONFIGRPRTTIMEOUT.Location = new System.Drawing.Point(1579, 276);
+            this.textBoxEZLNTCONFIGRPRTTIMEOUT.Location = new System.Drawing.Point(1599, 298);
             this.textBoxEZLNTCONFIGRPRTTIMEOUT.Name = "textBoxEZLNTCONFIGRPRTTIMEOUT";
             this.textBoxEZLNTCONFIGRPRTTIMEOUT.Size = new System.Drawing.Size(69, 20);
             this.textBoxEZLNTCONFIGRPRTTIMEOUT.TabIndex = 114;
@@ -7024,7 +7072,7 @@
             // 
             // textBoxEZLNTCONFIGRPRTMAXINTERVAL
             // 
-            this.textBoxEZLNTCONFIGRPRTMAXINTERVAL.Location = new System.Drawing.Point(1507, 276);
+            this.textBoxEZLNTCONFIGRPRTMAXINTERVAL.Location = new System.Drawing.Point(1527, 298);
             this.textBoxEZLNTCONFIGRPRTMAXINTERVAL.Name = "textBoxEZLNTCONFIGRPRTMAXINTERVAL";
             this.textBoxEZLNTCONFIGRPRTMAXINTERVAL.Size = new System.Drawing.Size(66, 20);
             this.textBoxEZLNTCONFIGRPRTMAXINTERVAL.TabIndex = 113;
@@ -7035,7 +7083,7 @@
             // 
             // textBoxEZLNTCONFIGRPRTMININTERVAL
             // 
-            this.textBoxEZLNTCONFIGRPRTMININTERVAL.Location = new System.Drawing.Point(1441, 276);
+            this.textBoxEZLNTCONFIGRPRTMININTERVAL.Location = new System.Drawing.Point(1461, 298);
             this.textBoxEZLNTCONFIGRPRTMININTERVAL.Name = "textBoxEZLNTCONFIGRPRTMININTERVAL";
             this.textBoxEZLNTCONFIGRPRTMININTERVAL.Size = new System.Drawing.Size(58, 20);
             this.textBoxEZLNTCONFIGRPRTMININTERVAL.TabIndex = 112;
@@ -7046,7 +7094,7 @@
             // 
             // textBoxEZLNTCONFIGRPRTATTRIBID
             // 
-            this.textBoxEZLNTCONFIGRPRTATTRIBID.Location = new System.Drawing.Point(1377, 277);
+            this.textBoxEZLNTCONFIGRPRTATTRIBID.Location = new System.Drawing.Point(1397, 299);
             this.textBoxEZLNTCONFIGRPRTATTRIBID.Name = "textBoxEZLNTCONFIGRPRTATTRIBID";
             this.textBoxEZLNTCONFIGRPRTATTRIBID.Size = new System.Drawing.Size(57, 20);
             this.textBoxEZLNTCONFIGRPRTATTRIBID.TabIndex = 111;
@@ -7057,7 +7105,7 @@
             // 
             // textBoxEZLNTCONFIGRPRTTYPE
             // 
-            this.textBoxEZLNTCONFIGRPRTTYPE.Location = new System.Drawing.Point(1319, 277);
+            this.textBoxEZLNTCONFIGRPRTTYPE.Location = new System.Drawing.Point(1339, 299);
             this.textBoxEZLNTCONFIGRPRTTYPE.Name = "textBoxEZLNTCONFIGRPRTTYPE";
             this.textBoxEZLNTCONFIGRPRTTYPE.Size = new System.Drawing.Size(53, 20);
             this.textBoxEZLNTCONFIGRPRTTYPE.TabIndex = 110;
@@ -7068,7 +7116,7 @@
             // 
             // textBoxEZLNTCONFIGRPRTCLUSTERID
             // 
-            this.textBoxEZLNTCONFIGRPRTCLUSTERID.Location = new System.Drawing.Point(1245, 277);
+            this.textBoxEZLNTCONFIGRPRTCLUSTERID.Location = new System.Drawing.Point(1265, 299);
             this.textBoxEZLNTCONFIGRPRTCLUSTERID.Name = "textBoxEZLNTCONFIGRPRTCLUSTERID";
             this.textBoxEZLNTCONFIGRPRTCLUSTERID.Size = new System.Drawing.Size(67, 20);
             this.textBoxEZLNTCONFIGRPRTCLUSTERID.TabIndex = 109;
@@ -7084,7 +7132,7 @@
             this.comboBoxEZLNTLEAVECHILDREN.Items.AddRange(new object[] {
             "DO NOT REMOVE CHILDREN",
             "REMOVE CHILDREN"});
-            this.comboBoxEZLNTLEAVECHILDREN.Location = new System.Drawing.Point(1365, 247);
+            this.comboBoxEZLNTLEAVECHILDREN.Location = new System.Drawing.Point(1385, 269);
             this.comboBoxEZLNTLEAVECHILDREN.Name = "comboBoxEZLNTLEAVECHILDREN";
             this.comboBoxEZLNTLEAVECHILDREN.Size = new System.Drawing.Size(159, 21);
             this.comboBoxEZLNTLEAVECHILDREN.TabIndex = 108;
@@ -7096,14 +7144,14 @@
             this.comboBoxEZLNTLEAVEREJOIN.Items.AddRange(new object[] {
             "DO NOT REJOIN",
             "REJOIN"});
-            this.comboBoxEZLNTLEAVEREJOIN.Location = new System.Drawing.Point(1239, 247);
+            this.comboBoxEZLNTLEAVEREJOIN.Location = new System.Drawing.Point(1259, 269);
             this.comboBoxEZLNTLEAVEREJOIN.Name = "comboBoxEZLNTLEAVEREJOIN";
             this.comboBoxEZLNTLEAVEREJOIN.Size = new System.Drawing.Size(121, 21);
             this.comboBoxEZLNTLEAVEREJOIN.TabIndex = 107;
             // 
             // textBoxEZLNTWRITEATTRIBUTEDATA
             // 
-            this.textBoxEZLNTWRITEATTRIBUTEDATA.Location = new System.Drawing.Point(1468, 125);
+            this.textBoxEZLNTWRITEATTRIBUTEDATA.Location = new System.Drawing.Point(1488, 147);
             this.textBoxEZLNTWRITEATTRIBUTEDATA.Name = "textBoxEZLNTWRITEATTRIBUTEDATA";
             this.textBoxEZLNTWRITEATTRIBUTEDATA.Size = new System.Drawing.Size(137, 20);
             this.textBoxEZLNTWRITEATTRIBUTEDATA.TabIndex = 105;
@@ -7114,7 +7162,7 @@
             // 
             // textBoxEZLNTWRITEATTRIBUTEATTRIBUTEDATATYPE
             // 
-            this.textBoxEZLNTWRITEATTRIBUTEATTRIBUTEDATATYPE.Location = new System.Drawing.Point(1400, 124);
+            this.textBoxEZLNTWRITEATTRIBUTEATTRIBUTEDATATYPE.Location = new System.Drawing.Point(1420, 146);
             this.textBoxEZLNTWRITEATTRIBUTEATTRIBUTEDATATYPE.Name = "textBoxEZLNTWRITEATTRIBUTEATTRIBUTEDATATYPE";
             this.textBoxEZLNTWRITEATTRIBUTEATTRIBUTEDATATYPE.Size = new System.Drawing.Size(62, 20);
             this.textBoxEZLNTWRITEATTRIBUTEATTRIBUTEDATATYPE.TabIndex = 104;
@@ -7125,7 +7173,7 @@
             // 
             // textBoxEZLNTWRITEATTRIBUTEATTRIBUTEID
             // 
-            this.textBoxEZLNTWRITEATTRIBUTEATTRIBUTEID.Location = new System.Drawing.Point(1325, 124);
+            this.textBoxEZLNTWRITEATTRIBUTEATTRIBUTEID.Location = new System.Drawing.Point(1345, 146);
             this.textBoxEZLNTWRITEATTRIBUTEATTRIBUTEID.Name = "textBoxEZLNTWRITEATTRIBUTEATTRIBUTEID";
             this.textBoxEZLNTWRITEATTRIBUTEATTRIBUTEID.Size = new System.Drawing.Size(69, 20);
             this.textBoxEZLNTWRITEATTRIBUTEATTRIBUTEID.TabIndex = 103;
@@ -7136,7 +7184,7 @@
             // 
             // textBoxEZLNTWRITEATTRIBUTECLUSTERID
             // 
-            this.textBoxEZLNTWRITEATTRIBUTECLUSTERID.Location = new System.Drawing.Point(1256, 124);
+            this.textBoxEZLNTWRITEATTRIBUTECLUSTERID.Location = new System.Drawing.Point(1276, 146);
             this.textBoxEZLNTWRITEATTRIBUTECLUSTERID.Name = "textBoxEZLNTWRITEATTRIBUTECLUSTERID";
             this.textBoxEZLNTWRITEATTRIBUTECLUSTERID.Size = new System.Drawing.Size(63, 20);
             this.textBoxEZLNTWRITEATTRIBUTECLUSTERID.TabIndex = 102;
@@ -7147,7 +7195,7 @@
             // 
             // textBoxEZLNTATTRIBUTEID
             // 
-            this.textBoxEZLNTATTRIBUTEID.Location = new System.Drawing.Point(1325, 94);
+            this.textBoxEZLNTATTRIBUTEID.Location = new System.Drawing.Point(1345, 116);
             this.textBoxEZLNTATTRIBUTEID.Name = "textBoxEZLNTATTRIBUTEID";
             this.textBoxEZLNTATTRIBUTEID.Size = new System.Drawing.Size(69, 20);
             this.textBoxEZLNTATTRIBUTEID.TabIndex = 100;
@@ -7158,7 +7206,7 @@
             // 
             // textBoxEZLNTREADCLUSTERID
             // 
-            this.textBoxEZLNTREADCLUSTERID.Location = new System.Drawing.Point(1256, 94);
+            this.textBoxEZLNTREADCLUSTERID.Location = new System.Drawing.Point(1276, 116);
             this.textBoxEZLNTREADCLUSTERID.Name = "textBoxEZLNTREADCLUSTERID";
             this.textBoxEZLNTREADCLUSTERID.Size = new System.Drawing.Size(63, 20);
             this.textBoxEZLNTREADCLUSTERID.TabIndex = 99;
@@ -7169,7 +7217,7 @@
             // 
             // buttonEZLNTMOVETOTEMP
             // 
-            this.buttonEZLNTMOVETOTEMP.Location = new System.Drawing.Point(1156, 505);
+            this.buttonEZLNTMOVETOTEMP.Location = new System.Drawing.Point(1176, 527);
             this.buttonEZLNTMOVETOTEMP.Name = "buttonEZLNTMOVETOTEMP";
             this.buttonEZLNTMOVETOTEMP.Size = new System.Drawing.Size(90, 22);
             this.buttonEZLNTMOVETOTEMP.TabIndex = 98;
@@ -7179,7 +7227,7 @@
             // 
             // buttonEZLNTMOVETOSAT
             // 
-            this.buttonEZLNTMOVETOSAT.Location = new System.Drawing.Point(1156, 477);
+            this.buttonEZLNTMOVETOSAT.Location = new System.Drawing.Point(1176, 499);
             this.buttonEZLNTMOVETOSAT.Name = "buttonEZLNTMOVETOSAT";
             this.buttonEZLNTMOVETOSAT.Size = new System.Drawing.Size(90, 22);
             this.buttonEZLNTMOVETOSAT.TabIndex = 97;
@@ -7189,7 +7237,7 @@
             // 
             // buttonEZLNTMOVETOCOLOR
             // 
-            this.buttonEZLNTMOVETOCOLOR.Location = new System.Drawing.Point(1156, 449);
+            this.buttonEZLNTMOVETOCOLOR.Location = new System.Drawing.Point(1176, 471);
             this.buttonEZLNTMOVETOCOLOR.Name = "buttonEZLNTMOVETOCOLOR";
             this.buttonEZLNTMOVETOCOLOR.Size = new System.Drawing.Size(90, 22);
             this.buttonEZLNTMOVETOCOLOR.TabIndex = 96;
@@ -7199,7 +7247,7 @@
             // 
             // buttonEZLNTMOVETOHUE
             // 
-            this.buttonEZLNTMOVETOHUE.Location = new System.Drawing.Point(1157, 421);
+            this.buttonEZLNTMOVETOHUE.Location = new System.Drawing.Point(1177, 443);
             this.buttonEZLNTMOVETOHUE.Name = "buttonEZLNTMOVETOHUE";
             this.buttonEZLNTMOVETOHUE.Size = new System.Drawing.Size(90, 22);
             this.buttonEZLNTMOVETOHUE.TabIndex = 95;
@@ -7209,7 +7257,7 @@
             // 
             // buttonEZLNTMOVETOLEVLEL
             // 
-            this.buttonEZLNTMOVETOLEVLEL.Location = new System.Drawing.Point(1157, 394);
+            this.buttonEZLNTMOVETOLEVLEL.Location = new System.Drawing.Point(1177, 416);
             this.buttonEZLNTMOVETOLEVLEL.Name = "buttonEZLNTMOVETOLEVLEL";
             this.buttonEZLNTMOVETOLEVLEL.Size = new System.Drawing.Size(93, 23);
             this.buttonEZLNTMOVETOLEVLEL.TabIndex = 94;
@@ -7219,7 +7267,7 @@
             // 
             // buttonEZLNTIDENTIFY
             // 
-            this.buttonEZLNTIDENTIFY.Location = new System.Drawing.Point(1157, 334);
+            this.buttonEZLNTIDENTIFY.Location = new System.Drawing.Point(1177, 356);
             this.buttonEZLNTIDENTIFY.Name = "buttonEZLNTIDENTIFY";
             this.buttonEZLNTIDENTIFY.Size = new System.Drawing.Size(93, 23);
             this.buttonEZLNTIDENTIFY.TabIndex = 50;
@@ -7229,7 +7277,7 @@
             // 
             // buttonEZLNTRESET
             // 
-            this.buttonEZLNTRESET.Location = new System.Drawing.Point(1157, 61);
+            this.buttonEZLNTRESET.Location = new System.Drawing.Point(1177, 83);
             this.buttonEZLNTRESET.Name = "buttonEZLNTRESET";
             this.buttonEZLNTRESET.Size = new System.Drawing.Size(93, 25);
             this.buttonEZLNTRESET.TabIndex = 49;
@@ -7239,7 +7287,7 @@
             // 
             // buttonEZLNTREADRPRT
             // 
-            this.buttonEZLNTREADRPRT.Location = new System.Drawing.Point(1157, 304);
+            this.buttonEZLNTREADRPRT.Location = new System.Drawing.Point(1177, 326);
             this.buttonEZLNTREADRPRT.Name = "buttonEZLNTREADRPRT";
             this.buttonEZLNTREADRPRT.Size = new System.Drawing.Size(80, 24);
             this.buttonEZLNTREADRPRT.TabIndex = 48;
@@ -7249,7 +7297,7 @@
             // 
             // buttonEZLNTCONFIGRPRT
             // 
-            this.buttonEZLNTCONFIGRPRT.Location = new System.Drawing.Point(1157, 274);
+            this.buttonEZLNTCONFIGRPRT.Location = new System.Drawing.Point(1177, 296);
             this.buttonEZLNTCONFIGRPRT.Name = "buttonEZLNTCONFIGRPRT";
             this.buttonEZLNTCONFIGRPRT.Size = new System.Drawing.Size(80, 24);
             this.buttonEZLNTCONFIGRPRT.TabIndex = 47;
@@ -7259,7 +7307,7 @@
             // 
             // buttonEZLNTLEAVE
             // 
-            this.buttonEZLNTLEAVE.Location = new System.Drawing.Point(1157, 245);
+            this.buttonEZLNTLEAVE.Location = new System.Drawing.Point(1177, 267);
             this.buttonEZLNTLEAVE.Name = "buttonEZLNTLEAVE";
             this.buttonEZLNTLEAVE.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTLEAVE.TabIndex = 46;
@@ -7269,7 +7317,7 @@
             // 
             // buttonEZLNTWRITEATTRIBUTE
             // 
-            this.buttonEZLNTWRITEATTRIBUTE.Location = new System.Drawing.Point(1157, 122);
+            this.buttonEZLNTWRITEATTRIBUTE.Location = new System.Drawing.Point(1177, 144);
             this.buttonEZLNTWRITEATTRIBUTE.Name = "buttonEZLNTWRITEATTRIBUTE";
             this.buttonEZLNTWRITEATTRIBUTE.Size = new System.Drawing.Size(92, 23);
             this.buttonEZLNTWRITEATTRIBUTE.TabIndex = 45;
@@ -7296,7 +7344,7 @@
             // 
             // textBoxEZLNTUNBINDCLUSTERID
             // 
-            this.textBoxEZLNTUNBINDCLUSTERID.Location = new System.Drawing.Point(1425, 218);
+            this.textBoxEZLNTUNBINDCLUSTERID.Location = new System.Drawing.Point(1445, 240);
             this.textBoxEZLNTUNBINDCLUSTERID.Name = "textBoxEZLNTUNBINDCLUSTERID";
             this.textBoxEZLNTUNBINDCLUSTERID.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTUNBINDCLUSTERID.TabIndex = 41;
@@ -7307,7 +7355,7 @@
             // 
             // textBoxEZLNTBINDCLUSTERID
             // 
-            this.textBoxEZLNTBINDCLUSTERID.Location = new System.Drawing.Point(1237, 217);
+            this.textBoxEZLNTBINDCLUSTERID.Location = new System.Drawing.Point(1257, 239);
             this.textBoxEZLNTBINDCLUSTERID.Name = "textBoxEZLNTBINDCLUSTERID";
             this.textBoxEZLNTBINDCLUSTERID.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTBINDCLUSTERID.TabIndex = 40;
@@ -7318,7 +7366,7 @@
             // 
             // buttonEZLNTUNBIND
             // 
-            this.buttonEZLNTUNBIND.Location = new System.Drawing.Point(1344, 216);
+            this.buttonEZLNTUNBIND.Location = new System.Drawing.Point(1364, 238);
             this.buttonEZLNTUNBIND.Name = "buttonEZLNTUNBIND";
             this.buttonEZLNTUNBIND.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTUNBIND.TabIndex = 38;
@@ -7328,7 +7376,7 @@
             // 
             // buttonEZLNTBIND
             // 
-            this.buttonEZLNTBIND.Location = new System.Drawing.Point(1157, 215);
+            this.buttonEZLNTBIND.Location = new System.Drawing.Point(1177, 237);
             this.buttonEZLNTBIND.Name = "buttonEZLNTBIND";
             this.buttonEZLNTBIND.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTBIND.TabIndex = 37;
@@ -7338,9 +7386,9 @@
             // 
             // buttonEZLNTTONGGLESTOP
             // 
-            this.buttonEZLNTTONGGLESTOP.Location = new System.Drawing.Point(1459, 151);
+            this.buttonEZLNTTONGGLESTOP.Location = new System.Drawing.Point(1634, 173);
             this.buttonEZLNTTONGGLESTOP.Name = "buttonEZLNTTONGGLESTOP";
-            this.buttonEZLNTTONGGLESTOP.Size = new System.Drawing.Size(137, 23);
+            this.buttonEZLNTTONGGLESTOP.Size = new System.Drawing.Size(113, 23);
             this.buttonEZLNTTONGGLESTOP.TabIndex = 35;
             this.buttonEZLNTTONGGLESTOP.Text = "Stop Tonggle Loop";
             this.buttonEZLNTTONGGLESTOP.UseVisualStyleBackColor = true;
@@ -7348,9 +7396,9 @@
             // 
             // buttonEZLNTTONGGLE
             // 
-            this.buttonEZLNTTONGGLE.Location = new System.Drawing.Point(1377, 151);
+            this.buttonEZLNTTONGGLE.Location = new System.Drawing.Point(1564, 173);
             this.buttonEZLNTTONGGLE.Name = "buttonEZLNTTONGGLE";
-            this.buttonEZLNTTONGGLE.Size = new System.Drawing.Size(75, 23);
+            this.buttonEZLNTTONGGLE.Size = new System.Drawing.Size(64, 23);
             this.buttonEZLNTTONGGLE.TabIndex = 34;
             this.buttonEZLNTTONGGLE.Text = "Tonggle";
             this.buttonEZLNTTONGGLE.UseVisualStyleBackColor = true;
@@ -7358,7 +7406,7 @@
             // 
             // buttonEZLNTOFF
             // 
-            this.buttonEZLNTOFF.Location = new System.Drawing.Point(1297, 151);
+            this.buttonEZLNTOFF.Location = new System.Drawing.Point(1317, 173);
             this.buttonEZLNTOFF.Name = "buttonEZLNTOFF";
             this.buttonEZLNTOFF.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTOFF.TabIndex = 33;
@@ -7368,7 +7416,7 @@
             // 
             // buttonEZLNTON
             // 
-            this.buttonEZLNTON.Location = new System.Drawing.Point(1216, 151);
+            this.buttonEZLNTON.Location = new System.Drawing.Point(1236, 173);
             this.buttonEZLNTON.Name = "buttonEZLNTON";
             this.buttonEZLNTON.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTON.TabIndex = 32;
@@ -7378,7 +7426,7 @@
             // 
             // textBoxEZLNTSETLOOP
             // 
-            this.textBoxEZLNTSETLOOP.Location = new System.Drawing.Point(1253, 28);
+            this.textBoxEZLNTSETLOOP.Location = new System.Drawing.Point(1273, 50);
             this.textBoxEZLNTSETLOOP.Name = "textBoxEZLNTSETLOOP";
             this.textBoxEZLNTSETLOOP.Size = new System.Drawing.Size(66, 20);
             this.textBoxEZLNTSETLOOP.TabIndex = 27;
@@ -7389,7 +7437,7 @@
             // 
             // buttonEZLNTSETTIMER
             // 
-            this.buttonEZLNTSETTIMER.Location = new System.Drawing.Point(1155, 28);
+            this.buttonEZLNTSETTIMER.Location = new System.Drawing.Point(1175, 50);
             this.buttonEZLNTSETTIMER.Name = "buttonEZLNTSETTIMER";
             this.buttonEZLNTSETTIMER.Size = new System.Drawing.Size(92, 23);
             this.buttonEZLNTSETTIMER.TabIndex = 26;
@@ -7399,7 +7447,7 @@
             // 
             // buttonEZLNTSTOPREAD
             // 
-            this.buttonEZLNTSTOPREAD.Location = new System.Drawing.Point(1405, 92);
+            this.buttonEZLNTSTOPREAD.Location = new System.Drawing.Point(1425, 114);
             this.buttonEZLNTSTOPREAD.Name = "buttonEZLNTSTOPREAD";
             this.buttonEZLNTSTOPREAD.Size = new System.Drawing.Size(115, 23);
             this.buttonEZLNTSTOPREAD.TabIndex = 24;
@@ -7409,7 +7457,7 @@
             // 
             // textBoxEZLNTTIMERINTERVAL
             // 
-            this.textBoxEZLNTTIMERINTERVAL.Location = new System.Drawing.Point(1325, 28);
+            this.textBoxEZLNTTIMERINTERVAL.Location = new System.Drawing.Point(1345, 50);
             this.textBoxEZLNTTIMERINTERVAL.Name = "textBoxEZLNTTIMERINTERVAL";
             this.textBoxEZLNTTIMERINTERVAL.Size = new System.Drawing.Size(74, 20);
             this.textBoxEZLNTTIMERINTERVAL.TabIndex = 23;
@@ -7421,7 +7469,7 @@
             // 
             // buttonEZLNTREADATTRIBUTE
             // 
-            this.buttonEZLNTREADATTRIBUTE.Location = new System.Drawing.Point(1157, 92);
+            this.buttonEZLNTREADATTRIBUTE.Location = new System.Drawing.Point(1177, 114);
             this.buttonEZLNTREADATTRIBUTE.Name = "buttonEZLNTREADATTRIBUTE";
             this.buttonEZLNTREADATTRIBUTE.Size = new System.Drawing.Size(92, 23);
             this.buttonEZLNTREADATTRIBUTE.TabIndex = 21;
@@ -7431,7 +7479,7 @@
             // 
             // textBoxEZLNTVIEW
             // 
-            this.textBoxEZLNTVIEW.Location = new System.Drawing.Point(1601, 366);
+            this.textBoxEZLNTVIEW.Location = new System.Drawing.Point(1621, 388);
             this.textBoxEZLNTVIEW.Name = "textBoxEZLNTVIEW";
             this.textBoxEZLNTVIEW.Size = new System.Drawing.Size(79, 20);
             this.textBoxEZLNTVIEW.TabIndex = 20;
@@ -7474,7 +7522,7 @@
             // 
             // buttonREMOVEGROUPALL
             // 
-            this.buttonREMOVEGROUPALL.Location = new System.Drawing.Point(1687, 364);
+            this.buttonREMOVEGROUPALL.Location = new System.Drawing.Point(1707, 386);
             this.buttonREMOVEGROUPALL.Name = "buttonREMOVEGROUPALL";
             this.buttonREMOVEGROUPALL.Size = new System.Drawing.Size(109, 23);
             this.buttonREMOVEGROUPALL.TabIndex = 18;
@@ -7484,7 +7532,7 @@
             // 
             // buttonEZLNTVIEWGROUP
             // 
-            this.buttonEZLNTVIEWGROUP.Location = new System.Drawing.Point(1521, 364);
+            this.buttonEZLNTVIEWGROUP.Location = new System.Drawing.Point(1541, 386);
             this.buttonEZLNTVIEWGROUP.Name = "buttonEZLNTVIEWGROUP";
             this.buttonEZLNTVIEWGROUP.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTVIEWGROUP.TabIndex = 17;
@@ -7494,7 +7542,7 @@
             // 
             // textBoxREMOVEGROUP
             // 
-            this.textBoxREMOVEGROUP.Location = new System.Drawing.Point(1441, 366);
+            this.textBoxREMOVEGROUP.Location = new System.Drawing.Point(1461, 388);
             this.textBoxREMOVEGROUP.Name = "textBoxREMOVEGROUP";
             this.textBoxREMOVEGROUP.Size = new System.Drawing.Size(74, 20);
             this.textBoxREMOVEGROUP.TabIndex = 16;
@@ -7506,7 +7554,7 @@
             // 
             // textBoxEZLNTADDGROUP
             // 
-            this.textBoxEZLNTADDGROUP.Location = new System.Drawing.Point(1239, 363);
+            this.textBoxEZLNTADDGROUP.Location = new System.Drawing.Point(1259, 385);
             this.textBoxEZLNTADDGROUP.Name = "textBoxEZLNTADDGROUP";
             this.textBoxEZLNTADDGROUP.Size = new System.Drawing.Size(79, 20);
             this.textBoxEZLNTADDGROUP.TabIndex = 15;
@@ -7517,7 +7565,7 @@
             // 
             // buttonEZLNTREMOVEGROUP
             // 
-            this.buttonEZLNTREMOVEGROUP.Location = new System.Drawing.Point(1324, 363);
+            this.buttonEZLNTREMOVEGROUP.Location = new System.Drawing.Point(1344, 385);
             this.buttonEZLNTREMOVEGROUP.Name = "buttonEZLNTREMOVEGROUP";
             this.buttonEZLNTREMOVEGROUP.Size = new System.Drawing.Size(109, 23);
             this.buttonEZLNTREMOVEGROUP.TabIndex = 14;
@@ -7527,7 +7575,7 @@
             // 
             // buttonEZLNTADDGROUP
             // 
-            this.buttonEZLNTADDGROUP.Location = new System.Drawing.Point(1157, 363);
+            this.buttonEZLNTADDGROUP.Location = new System.Drawing.Point(1177, 385);
             this.buttonEZLNTADDGROUP.Name = "buttonEZLNTADDGROUP";
             this.buttonEZLNTADDGROUP.Size = new System.Drawing.Size(75, 23);
             this.buttonEZLNTADDGROUP.TabIndex = 13;
@@ -8707,6 +8755,10 @@
             // tabPage18
             // 
             this.tabPage18.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage18.Controls.Add(this.buttonLNTGWSTOPONOFFLOOP);
+            this.tabPage18.Controls.Add(this.buttonLNTGWONOFFLOOP);
+            this.tabPage18.Controls.Add(this.labelLNTGWLOOPREMAIN);
+            this.tabPage18.Controls.Add(this.textBoxLNTGWLOOPREMAIN);
             this.tabPage18.Controls.Add(this.labelLNTGWUNICAST);
             this.tabPage18.Controls.Add(this.labelLNTGWBROADCAST);
             this.tabPage18.Controls.Add(this.buttonLNTGWBROADSTOPTONGGLE);
@@ -8800,6 +8852,92 @@
             this.tabPage18.TabIndex = 22;
             this.tabPage18.Text = "LNT GW";
             // 
+            // labelLNTGWLOOPREMAIN
+            // 
+            this.labelLNTGWLOOPREMAIN.AutoSize = true;
+            this.labelLNTGWLOOPREMAIN.Location = new System.Drawing.Point(1088, 36);
+            this.labelLNTGWLOOPREMAIN.Name = "labelLNTGWLOOPREMAIN";
+            this.labelLNTGWLOOPREMAIN.Size = new System.Drawing.Size(65, 13);
+            this.labelLNTGWLOOPREMAIN.TabIndex = 312;
+            this.labelLNTGWLOOPREMAIN.Text = "Loop Timers";
+            // 
+            // textBoxLNTGWLOOPREMAIN
+            // 
+            this.textBoxLNTGWLOOPREMAIN.Location = new System.Drawing.Point(1179, 33);
+            this.textBoxLNTGWLOOPREMAIN.Name = "textBoxLNTGWLOOPREMAIN";
+            this.textBoxLNTGWLOOPREMAIN.Size = new System.Drawing.Size(61, 20);
+            this.textBoxLNTGWLOOPREMAIN.TabIndex = 311;
+            // 
+            // labelLNTGWUNICAST
+            // 
+            this.labelLNTGWUNICAST.AutoSize = true;
+            this.labelLNTGWUNICAST.Location = new System.Drawing.Point(1092, 184);
+            this.labelLNTGWUNICAST.Name = "labelLNTGWUNICAST";
+            this.labelLNTGWUNICAST.Size = new System.Drawing.Size(43, 13);
+            this.labelLNTGWUNICAST.TabIndex = 310;
+            this.labelLNTGWUNICAST.Text = "Unicast";
+            // 
+            // labelLNTGWBROADCAST
+            // 
+            this.labelLNTGWBROADCAST.AutoSize = true;
+            this.labelLNTGWBROADCAST.Location = new System.Drawing.Point(1092, 213);
+            this.labelLNTGWBROADCAST.Name = "labelLNTGWBROADCAST";
+            this.labelLNTGWBROADCAST.Size = new System.Drawing.Size(55, 13);
+            this.labelLNTGWBROADCAST.TabIndex = 309;
+            this.labelLNTGWBROADCAST.Text = "Broadcast";
+            // 
+            // buttonLNTGWBROADSTOPTONGGLE
+            // 
+            this.buttonLNTGWBROADSTOPTONGGLE.Location = new System.Drawing.Point(1396, 208);
+            this.buttonLNTGWBROADSTOPTONGGLE.Name = "buttonLNTGWBROADSTOPTONGGLE";
+            this.buttonLNTGWBROADSTOPTONGGLE.Size = new System.Drawing.Size(137, 23);
+            this.buttonLNTGWBROADSTOPTONGGLE.TabIndex = 308;
+            this.buttonLNTGWBROADSTOPTONGGLE.Text = "Stop Tonggle Loop";
+            this.buttonLNTGWBROADSTOPTONGGLE.UseVisualStyleBackColor = true;
+            this.buttonLNTGWBROADSTOPTONGGLE.Click += new System.EventHandler(this.buttonLNTGWBROADSTOPTONGGLE_Click);
+            // 
+            // buttonLNTGWBROADTONGGLE
+            // 
+            this.buttonLNTGWBROADTONGGLE.Location = new System.Drawing.Point(1314, 208);
+            this.buttonLNTGWBROADTONGGLE.Name = "buttonLNTGWBROADTONGGLE";
+            this.buttonLNTGWBROADTONGGLE.Size = new System.Drawing.Size(75, 23);
+            this.buttonLNTGWBROADTONGGLE.TabIndex = 307;
+            this.buttonLNTGWBROADTONGGLE.Text = "Tonggle";
+            this.buttonLNTGWBROADTONGGLE.UseVisualStyleBackColor = true;
+            this.buttonLNTGWBROADTONGGLE.Click += new System.EventHandler(this.buttonLNTGWBROADTONGGLE_Click);
+            // 
+            // buttonLNTGWBROADOFF
+            // 
+            this.buttonLNTGWBROADOFF.Location = new System.Drawing.Point(1234, 208);
+            this.buttonLNTGWBROADOFF.Name = "buttonLNTGWBROADOFF";
+            this.buttonLNTGWBROADOFF.Size = new System.Drawing.Size(75, 23);
+            this.buttonLNTGWBROADOFF.TabIndex = 306;
+            this.buttonLNTGWBROADOFF.Text = "Off";
+            this.buttonLNTGWBROADOFF.UseVisualStyleBackColor = true;
+            this.buttonLNTGWBROADOFF.Click += new System.EventHandler(this.buttonLNTGWBROADOFF_Click);
+            // 
+            // buttonLNTGWBROADON
+            // 
+            this.buttonLNTGWBROADON.Location = new System.Drawing.Point(1153, 208);
+            this.buttonLNTGWBROADON.Name = "buttonLNTGWBROADON";
+            this.buttonLNTGWBROADON.Size = new System.Drawing.Size(75, 23);
+            this.buttonLNTGWBROADON.TabIndex = 305;
+            this.buttonLNTGWBROADON.Text = "On";
+            this.buttonLNTGWBROADON.UseVisualStyleBackColor = true;
+            this.buttonLNTGWBROADON.Click += new System.EventHandler(this.buttonLNTGWBROADON_Click);
+            // 
+            // comboBoxLNTGWUNICAST
+            // 
+            this.comboBoxLNTGWUNICAST.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLNTGWUNICAST.FormattingEnabled = true;
+            this.comboBoxLNTGWUNICAST.Items.AddRange(new object[] {
+            "Unicast",
+            "Broadcast"});
+            this.comboBoxLNTGWUNICAST.Location = new System.Drawing.Point(1182, 429);
+            this.comboBoxLNTGWUNICAST.Name = "comboBoxLNTGWUNICAST";
+            this.comboBoxLNTGWUNICAST.Size = new System.Drawing.Size(93, 21);
+            this.comboBoxLNTGWUNICAST.TabIndex = 304;
+            // 
             // textBoxLNTGWSENDCMD
             // 
             this.textBoxLNTGWSENDCMD.Location = new System.Drawing.Point(482, 40);
@@ -8856,6 +8994,10 @@
             this.columnHeader13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader13.Width = 127;
             // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "NxtHop";
+            // 
             // columnHeader14
             // 
             this.columnHeader14.Text = "Channel";
@@ -8884,7 +9026,7 @@
             // 
             // buttonLNTFGWDISPERMIT
             // 
-            this.buttonLNTFGWDISPERMIT.Location = new System.Drawing.Point(1262, 63);
+            this.buttonLNTFGWDISPERMIT.Location = new System.Drawing.Point(1262, 87);
             this.buttonLNTFGWDISPERMIT.Name = "buttonLNTFGWDISPERMIT";
             this.buttonLNTFGWDISPERMIT.Size = new System.Drawing.Size(122, 23);
             this.buttonLNTFGWDISPERMIT.TabIndex = 298;
@@ -8894,7 +9036,7 @@
             // 
             // buttonLNTGWPERMMIT
             // 
-            this.buttonLNTGWPERMMIT.Location = new System.Drawing.Point(1181, 63);
+            this.buttonLNTGWPERMMIT.Location = new System.Drawing.Point(1181, 87);
             this.buttonLNTGWPERMMIT.Name = "buttonLNTGWPERMMIT";
             this.buttonLNTGWPERMMIT.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWPERMMIT.TabIndex = 297;
@@ -8915,14 +9057,14 @@
             // 
             // textBoxLNTGWSETINTERVALMAX
             // 
-            this.textBoxLNTGWSETINTERVALMAX.Location = new System.Drawing.Point(1331, 36);
+            this.textBoxLNTGWSETINTERVALMAX.Location = new System.Drawing.Point(1331, 60);
             this.textBoxLNTGWSETINTERVALMAX.Name = "textBoxLNTGWSETINTERVALMAX";
             this.textBoxLNTGWSETINTERVALMAX.Size = new System.Drawing.Size(71, 20);
             this.textBoxLNTGWSETINTERVALMAX.TabIndex = 295;
             // 
             // buttonLNTGWSTOPMOVETEMP
             // 
-            this.buttonLNTGWSTOPMOVETEMP.Location = new System.Drawing.Point(1399, 520);
+            this.buttonLNTGWSTOPMOVETEMP.Location = new System.Drawing.Point(1399, 544);
             this.buttonLNTGWSTOPMOVETEMP.Name = "buttonLNTGWSTOPMOVETEMP";
             this.buttonLNTGWSTOPMOVETEMP.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWSTOPMOVETEMP.TabIndex = 294;
@@ -8932,7 +9074,7 @@
             // 
             // buttonLNTGWSTOPMOVESAT
             // 
-            this.buttonLNTGWSTOPMOVESAT.Location = new System.Drawing.Point(1399, 489);
+            this.buttonLNTGWSTOPMOVESAT.Location = new System.Drawing.Point(1399, 513);
             this.buttonLNTGWSTOPMOVESAT.Name = "buttonLNTGWSTOPMOVESAT";
             this.buttonLNTGWSTOPMOVESAT.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWSTOPMOVESAT.TabIndex = 293;
@@ -8942,7 +9084,7 @@
             // 
             // buttonLNTGWSTOPMOVECOLOR
             // 
-            this.buttonLNTGWSTOPMOVECOLOR.Location = new System.Drawing.Point(1509, 464);
+            this.buttonLNTGWSTOPMOVECOLOR.Location = new System.Drawing.Point(1509, 488);
             this.buttonLNTGWSTOPMOVECOLOR.Name = "buttonLNTGWSTOPMOVECOLOR";
             this.buttonLNTGWSTOPMOVECOLOR.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWSTOPMOVECOLOR.TabIndex = 292;
@@ -8952,7 +9094,7 @@
             // 
             // buttonLNTGWSTOPMOVEHUE
             // 
-            this.buttonLNTGWSTOPMOVEHUE.Location = new System.Drawing.Point(1509, 433);
+            this.buttonLNTGWSTOPMOVEHUE.Location = new System.Drawing.Point(1509, 457);
             this.buttonLNTGWSTOPMOVEHUE.Name = "buttonLNTGWSTOPMOVEHUE";
             this.buttonLNTGWSTOPMOVEHUE.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWSTOPMOVEHUE.TabIndex = 291;
@@ -8962,14 +9104,14 @@
             // 
             // textBoxLNTGWSETDIR
             // 
-            this.textBoxLNTGWSETDIR.Location = new System.Drawing.Point(1471, 36);
+            this.textBoxLNTGWSETDIR.Location = new System.Drawing.Point(1471, 60);
             this.textBoxLNTGWSETDIR.Name = "textBoxLNTGWSETDIR";
             this.textBoxLNTGWSETDIR.Size = new System.Drawing.Size(58, 20);
             this.textBoxLNTGWSETDIR.TabIndex = 290;
             // 
             // textBoxLNTGWSETSTEP
             // 
-            this.textBoxLNTGWSETSTEP.Location = new System.Drawing.Point(1408, 36);
+            this.textBoxLNTGWSETSTEP.Location = new System.Drawing.Point(1408, 60);
             this.textBoxLNTGWSETSTEP.Name = "textBoxLNTGWSETSTEP";
             this.textBoxLNTGWSETSTEP.Size = new System.Drawing.Size(57, 20);
             this.textBoxLNTGWSETSTEP.TabIndex = 289;
@@ -8981,14 +9123,14 @@
             this.comboBoxLNTGWLEVELWITHONOFF.Items.AddRange(new object[] {
             "WITHOUT ON/OFF",
             "WITH ON/OFF"});
-            this.comboBoxLNTGWLEVELWITHONOFF.Location = new System.Drawing.Point(1505, 404);
+            this.comboBoxLNTGWLEVELWITHONOFF.Location = new System.Drawing.Point(1505, 428);
             this.comboBoxLNTGWLEVELWITHONOFF.Name = "comboBoxLNTGWLEVELWITHONOFF";
             this.comboBoxLNTGWLEVELWITHONOFF.Size = new System.Drawing.Size(106, 21);
             this.comboBoxLNTGWLEVELWITHONOFF.TabIndex = 288;
             // 
             // buttonLNTGWSTOPMOVELEVEL
             // 
-            this.buttonLNTGWSTOPMOVELEVEL.Location = new System.Drawing.Point(1617, 402);
+            this.buttonLNTGWSTOPMOVELEVEL.Location = new System.Drawing.Point(1617, 426);
             this.buttonLNTGWSTOPMOVELEVEL.Name = "buttonLNTGWSTOPMOVELEVEL";
             this.buttonLNTGWSTOPMOVELEVEL.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWSTOPMOVELEVEL.TabIndex = 287;
@@ -8998,7 +9140,7 @@
             // 
             // buttonLNTGWSTOPIDENTIFY
             // 
-            this.buttonLNTGWSTOPIDENTIFY.Location = new System.Drawing.Point(1288, 347);
+            this.buttonLNTGWSTOPIDENTIFY.Location = new System.Drawing.Point(1288, 371);
             this.buttonLNTGWSTOPIDENTIFY.Name = "buttonLNTGWSTOPIDENTIFY";
             this.buttonLNTGWSTOPIDENTIFY.Size = new System.Drawing.Size(99, 23);
             this.buttonLNTGWSTOPIDENTIFY.TabIndex = 286;
@@ -9008,154 +9150,154 @@
             // 
             // textBoxLNTGWTEMPTIME
             // 
-            this.textBoxLNTGWTEMPTIME.Location = new System.Drawing.Point(1289, 522);
+            this.textBoxLNTGWTEMPTIME.Location = new System.Drawing.Point(1289, 546);
             this.textBoxLNTGWTEMPTIME.Name = "textBoxLNTGWTEMPTIME";
             this.textBoxLNTGWTEMPTIME.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWTEMPTIME.TabIndex = 285;
             // 
             // textBoxLNTGWTEMP
             // 
-            this.textBoxLNTGWTEMP.Location = new System.Drawing.Point(1183, 522);
+            this.textBoxLNTGWTEMP.Location = new System.Drawing.Point(1183, 546);
             this.textBoxLNTGWTEMP.Name = "textBoxLNTGWTEMP";
             this.textBoxLNTGWTEMP.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWTEMP.TabIndex = 284;
             // 
             // textBoxLNTGWSATTIME
             // 
-            this.textBoxLNTGWSATTIME.Location = new System.Drawing.Point(1289, 492);
+            this.textBoxLNTGWSATTIME.Location = new System.Drawing.Point(1289, 516);
             this.textBoxLNTGWSATTIME.Name = "textBoxLNTGWSATTIME";
             this.textBoxLNTGWSATTIME.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWSATTIME.TabIndex = 283;
             // 
             // textBoxLNTGWSAT
             // 
-            this.textBoxLNTGWSAT.Location = new System.Drawing.Point(1183, 492);
+            this.textBoxLNTGWSAT.Location = new System.Drawing.Point(1183, 516);
             this.textBoxLNTGWSAT.Name = "textBoxLNTGWSAT";
             this.textBoxLNTGWSAT.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWSAT.TabIndex = 282;
             // 
             // textBoxLNTGWCOLORTIME
             // 
-            this.textBoxLNTGWCOLORTIME.Location = new System.Drawing.Point(1399, 464);
+            this.textBoxLNTGWCOLORTIME.Location = new System.Drawing.Point(1399, 488);
             this.textBoxLNTGWCOLORTIME.Name = "textBoxLNTGWCOLORTIME";
             this.textBoxLNTGWCOLORTIME.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWCOLORTIME.TabIndex = 281;
             // 
             // textBoxLNTGWCOLORY
             // 
-            this.textBoxLNTGWCOLORY.Location = new System.Drawing.Point(1292, 462);
+            this.textBoxLNTGWCOLORY.Location = new System.Drawing.Point(1292, 486);
             this.textBoxLNTGWCOLORY.Name = "textBoxLNTGWCOLORY";
             this.textBoxLNTGWCOLORY.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWCOLORY.TabIndex = 280;
             // 
             // textBoxLNTGWCOLORX
             // 
-            this.textBoxLNTGWCOLORX.Location = new System.Drawing.Point(1184, 464);
+            this.textBoxLNTGWCOLORX.Location = new System.Drawing.Point(1184, 488);
             this.textBoxLNTGWCOLORX.Name = "textBoxLNTGWCOLORX";
             this.textBoxLNTGWCOLORX.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWCOLORX.TabIndex = 279;
             // 
             // textBoxLNTGWHUETIME
             // 
-            this.textBoxLNTGWHUETIME.Location = new System.Drawing.Point(1399, 436);
+            this.textBoxLNTGWHUETIME.Location = new System.Drawing.Point(1399, 460);
             this.textBoxLNTGWHUETIME.Name = "textBoxLNTGWHUETIME";
             this.textBoxLNTGWHUETIME.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWHUETIME.TabIndex = 278;
             // 
             // textBoxLNTGWHUEDIR
             // 
-            this.textBoxLNTGWHUEDIR.Location = new System.Drawing.Point(1292, 436);
+            this.textBoxLNTGWHUEDIR.Location = new System.Drawing.Point(1292, 460);
             this.textBoxLNTGWHUEDIR.Name = "textBoxLNTGWHUEDIR";
             this.textBoxLNTGWHUEDIR.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWHUEDIR.TabIndex = 277;
             // 
             // textBoxLNTGWHUE
             // 
-            this.textBoxLNTGWHUE.Location = new System.Drawing.Point(1182, 436);
+            this.textBoxLNTGWHUE.Location = new System.Drawing.Point(1182, 460);
             this.textBoxLNTGWHUE.Name = "textBoxLNTGWHUE";
             this.textBoxLNTGWHUE.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWHUE.TabIndex = 276;
             // 
             // textBoxLNTGWLEVELTIME
             // 
-            this.textBoxLNTGWLEVELTIME.Location = new System.Drawing.Point(1399, 405);
+            this.textBoxLNTGWLEVELTIME.Location = new System.Drawing.Point(1399, 429);
             this.textBoxLNTGWLEVELTIME.Name = "textBoxLNTGWLEVELTIME";
             this.textBoxLNTGWLEVELTIME.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWLEVELTIME.TabIndex = 275;
             // 
             // textBoxLNTGWLEVEL
             // 
-            this.textBoxLNTGWLEVEL.Location = new System.Drawing.Point(1292, 406);
+            this.textBoxLNTGWLEVEL.Location = new System.Drawing.Point(1292, 430);
             this.textBoxLNTGWLEVEL.Name = "textBoxLNTGWLEVEL";
             this.textBoxLNTGWLEVEL.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWLEVEL.TabIndex = 274;
             // 
             // textBoxLNTGWIDENTIFYTIME
             // 
-            this.textBoxLNTGWIDENTIFYTIME.Location = new System.Drawing.Point(1182, 347);
+            this.textBoxLNTGWIDENTIFYTIME.Location = new System.Drawing.Point(1182, 371);
             this.textBoxLNTGWIDENTIFYTIME.Name = "textBoxLNTGWIDENTIFYTIME";
             this.textBoxLNTGWIDENTIFYTIME.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWIDENTIFYTIME.TabIndex = 273;
             // 
             // textBoxLNTGWREADRPRTATTRIBUTEID
             // 
-            this.textBoxLNTGWREADRPRTATTRIBUTEID.Location = new System.Drawing.Point(1246, 317);
+            this.textBoxLNTGWREADRPRTATTRIBUTEID.Location = new System.Drawing.Point(1246, 341);
             this.textBoxLNTGWREADRPRTATTRIBUTEID.Name = "textBoxLNTGWREADRPRTATTRIBUTEID";
             this.textBoxLNTGWREADRPRTATTRIBUTEID.Size = new System.Drawing.Size(63, 20);
             this.textBoxLNTGWREADRPRTATTRIBUTEID.TabIndex = 272;
             // 
             // textBoxLNTGWREADRPRTCLUSTERID
             // 
-            this.textBoxLNTGWREADRPRTCLUSTERID.Location = new System.Drawing.Point(1170, 317);
+            this.textBoxLNTGWREADRPRTCLUSTERID.Location = new System.Drawing.Point(1170, 341);
             this.textBoxLNTGWREADRPRTCLUSTERID.Name = "textBoxLNTGWREADRPRTCLUSTERID";
             this.textBoxLNTGWREADRPRTCLUSTERID.Size = new System.Drawing.Size(70, 20);
             this.textBoxLNTGWREADRPRTCLUSTERID.TabIndex = 271;
             // 
             // textBoxLNTGWCONFIGRPRTCHANGE
             // 
-            this.textBoxLNTGWCONFIGRPRTCHANGE.Location = new System.Drawing.Point(1580, 287);
+            this.textBoxLNTGWCONFIGRPRTCHANGE.Location = new System.Drawing.Point(1580, 311);
             this.textBoxLNTGWCONFIGRPRTCHANGE.Name = "textBoxLNTGWCONFIGRPRTCHANGE";
             this.textBoxLNTGWCONFIGRPRTCHANGE.Size = new System.Drawing.Size(58, 20);
             this.textBoxLNTGWCONFIGRPRTCHANGE.TabIndex = 270;
             // 
             // textBoxLNTGWCONFIGRPRTTIMEOUT
             // 
-            this.textBoxLNTGWCONFIGRPRTTIMEOUT.Location = new System.Drawing.Point(1505, 286);
+            this.textBoxLNTGWCONFIGRPRTTIMEOUT.Location = new System.Drawing.Point(1505, 310);
             this.textBoxLNTGWCONFIGRPRTTIMEOUT.Name = "textBoxLNTGWCONFIGRPRTTIMEOUT";
             this.textBoxLNTGWCONFIGRPRTTIMEOUT.Size = new System.Drawing.Size(69, 20);
             this.textBoxLNTGWCONFIGRPRTTIMEOUT.TabIndex = 269;
             // 
             // textBoxLNTGWCONFIGRPRTMAXINTERVAL
             // 
-            this.textBoxLNTGWCONFIGRPRTMAXINTERVAL.Location = new System.Drawing.Point(1433, 286);
+            this.textBoxLNTGWCONFIGRPRTMAXINTERVAL.Location = new System.Drawing.Point(1433, 310);
             this.textBoxLNTGWCONFIGRPRTMAXINTERVAL.Name = "textBoxLNTGWCONFIGRPRTMAXINTERVAL";
             this.textBoxLNTGWCONFIGRPRTMAXINTERVAL.Size = new System.Drawing.Size(66, 20);
             this.textBoxLNTGWCONFIGRPRTMAXINTERVAL.TabIndex = 268;
             // 
             // textBoxLNTGWCONFIGRPRTMININTERVAL
             // 
-            this.textBoxLNTGWCONFIGRPRTMININTERVAL.Location = new System.Drawing.Point(1368, 286);
+            this.textBoxLNTGWCONFIGRPRTMININTERVAL.Location = new System.Drawing.Point(1368, 310);
             this.textBoxLNTGWCONFIGRPRTMININTERVAL.Name = "textBoxLNTGWCONFIGRPRTMININTERVAL";
             this.textBoxLNTGWCONFIGRPRTMININTERVAL.Size = new System.Drawing.Size(58, 20);
             this.textBoxLNTGWCONFIGRPRTMININTERVAL.TabIndex = 267;
             // 
             // textBoxLNTGWCONFIGRPRTTYPE
             // 
-            this.textBoxLNTGWCONFIGRPRTTYPE.Location = new System.Drawing.Point(1244, 288);
+            this.textBoxLNTGWCONFIGRPRTTYPE.Location = new System.Drawing.Point(1244, 312);
             this.textBoxLNTGWCONFIGRPRTTYPE.Name = "textBoxLNTGWCONFIGRPRTTYPE";
             this.textBoxLNTGWCONFIGRPRTTYPE.Size = new System.Drawing.Size(57, 20);
             this.textBoxLNTGWCONFIGRPRTTYPE.TabIndex = 266;
             // 
             // textBoxLNTGWCONFIGRPRTATTRIBID
             // 
-            this.textBoxLNTGWCONFIGRPRTATTRIBID.Location = new System.Drawing.Point(1309, 287);
+            this.textBoxLNTGWCONFIGRPRTATTRIBID.Location = new System.Drawing.Point(1309, 311);
             this.textBoxLNTGWCONFIGRPRTATTRIBID.Name = "textBoxLNTGWCONFIGRPRTATTRIBID";
             this.textBoxLNTGWCONFIGRPRTATTRIBID.Size = new System.Drawing.Size(53, 20);
             this.textBoxLNTGWCONFIGRPRTATTRIBID.TabIndex = 265;
             // 
             // textBoxLNTGWCONFIGRPRTCLUSTERID
             // 
-            this.textBoxLNTGWCONFIGRPRTCLUSTERID.Location = new System.Drawing.Point(1171, 287);
+            this.textBoxLNTGWCONFIGRPRTCLUSTERID.Location = new System.Drawing.Point(1171, 311);
             this.textBoxLNTGWCONFIGRPRTCLUSTERID.Name = "textBoxLNTGWCONFIGRPRTCLUSTERID";
             this.textBoxLNTGWCONFIGRPRTCLUSTERID.Size = new System.Drawing.Size(67, 20);
             this.textBoxLNTGWCONFIGRPRTCLUSTERID.TabIndex = 264;
@@ -9167,7 +9309,7 @@
             this.comboBoxLNTGWLEAVECHILDREN.Items.AddRange(new object[] {
             "DO NOT REMOVE CHILDREN",
             "REMOVE CHILDREN"});
-            this.comboBoxLNTGWLEAVECHILDREN.Location = new System.Drawing.Point(1292, 257);
+            this.comboBoxLNTGWLEAVECHILDREN.Location = new System.Drawing.Point(1292, 281);
             this.comboBoxLNTGWLEAVECHILDREN.Name = "comboBoxLNTGWLEAVECHILDREN";
             this.comboBoxLNTGWLEAVECHILDREN.Size = new System.Drawing.Size(159, 21);
             this.comboBoxLNTGWLEAVECHILDREN.TabIndex = 263;
@@ -9179,56 +9321,56 @@
             this.comboBoxLNTGWLEAVEREJOIN.Items.AddRange(new object[] {
             "DO NOT REJOIN",
             "REJOIN"});
-            this.comboBoxLNTGWLEAVEREJOIN.Location = new System.Drawing.Point(1165, 257);
+            this.comboBoxLNTGWLEAVEREJOIN.Location = new System.Drawing.Point(1165, 281);
             this.comboBoxLNTGWLEAVEREJOIN.Name = "comboBoxLNTGWLEAVEREJOIN";
             this.comboBoxLNTGWLEAVEREJOIN.Size = new System.Drawing.Size(121, 21);
             this.comboBoxLNTGWLEAVEREJOIN.TabIndex = 262;
             // 
             // textBoxLNTGWWRITEATTRIBUTEDATA
             // 
-            this.textBoxLNTGWWRITEATTRIBUTEDATA.Location = new System.Drawing.Point(1394, 126);
+            this.textBoxLNTGWWRITEATTRIBUTEDATA.Location = new System.Drawing.Point(1394, 150);
             this.textBoxLNTGWWRITEATTRIBUTEDATA.Name = "textBoxLNTGWWRITEATTRIBUTEDATA";
             this.textBoxLNTGWWRITEATTRIBUTEDATA.Size = new System.Drawing.Size(137, 20);
             this.textBoxLNTGWWRITEATTRIBUTEDATA.TabIndex = 261;
             // 
             // textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE
             // 
-            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE.Location = new System.Drawing.Point(1326, 125);
+            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE.Location = new System.Drawing.Point(1326, 149);
             this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE.Name = "textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE";
             this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE.Size = new System.Drawing.Size(62, 20);
             this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEDATATYPE.TabIndex = 260;
             // 
             // textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID
             // 
-            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID.Location = new System.Drawing.Point(1251, 125);
+            this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID.Location = new System.Drawing.Point(1251, 149);
             this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID.Name = "textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID";
             this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID.Size = new System.Drawing.Size(69, 20);
             this.textBoxLNTGWWRITEATTRIBUTEATTRIBUTEID.TabIndex = 259;
             // 
             // textBoxLNTGWWRITEATTRIBUTECLUSTERID
             // 
-            this.textBoxLNTGWWRITEATTRIBUTECLUSTERID.Location = new System.Drawing.Point(1182, 125);
+            this.textBoxLNTGWWRITEATTRIBUTECLUSTERID.Location = new System.Drawing.Point(1182, 149);
             this.textBoxLNTGWWRITEATTRIBUTECLUSTERID.Name = "textBoxLNTGWWRITEATTRIBUTECLUSTERID";
             this.textBoxLNTGWWRITEATTRIBUTECLUSTERID.Size = new System.Drawing.Size(63, 20);
             this.textBoxLNTGWWRITEATTRIBUTECLUSTERID.TabIndex = 258;
             // 
             // textBoxLNTGWATTRIBUTEID
             // 
-            this.textBoxLNTGWATTRIBUTEID.Location = new System.Drawing.Point(1251, 95);
+            this.textBoxLNTGWATTRIBUTEID.Location = new System.Drawing.Point(1251, 119);
             this.textBoxLNTGWATTRIBUTEID.Name = "textBoxLNTGWATTRIBUTEID";
             this.textBoxLNTGWATTRIBUTEID.Size = new System.Drawing.Size(69, 20);
             this.textBoxLNTGWATTRIBUTEID.TabIndex = 256;
             // 
             // textBoxLNTGWREADCLUSTERID
             // 
-            this.textBoxLNTGWREADCLUSTERID.Location = new System.Drawing.Point(1182, 95);
+            this.textBoxLNTGWREADCLUSTERID.Location = new System.Drawing.Point(1182, 119);
             this.textBoxLNTGWREADCLUSTERID.Name = "textBoxLNTGWREADCLUSTERID";
             this.textBoxLNTGWREADCLUSTERID.Size = new System.Drawing.Size(63, 20);
             this.textBoxLNTGWREADCLUSTERID.TabIndex = 255;
             // 
             // buttonLNTGWMOVETEMP
             // 
-            this.buttonLNTGWMOVETEMP.Location = new System.Drawing.Point(1079, 518);
+            this.buttonLNTGWMOVETEMP.Location = new System.Drawing.Point(1079, 542);
             this.buttonLNTGWMOVETEMP.Name = "buttonLNTGWMOVETEMP";
             this.buttonLNTGWMOVETEMP.Size = new System.Drawing.Size(90, 22);
             this.buttonLNTGWMOVETEMP.TabIndex = 254;
@@ -9238,7 +9380,7 @@
             // 
             // buttonLNTGWMOVESAT
             // 
-            this.buttonLNTGWMOVESAT.Location = new System.Drawing.Point(1083, 490);
+            this.buttonLNTGWMOVESAT.Location = new System.Drawing.Point(1083, 514);
             this.buttonLNTGWMOVESAT.Name = "buttonLNTGWMOVESAT";
             this.buttonLNTGWMOVESAT.Size = new System.Drawing.Size(90, 22);
             this.buttonLNTGWMOVESAT.TabIndex = 253;
@@ -9248,7 +9390,7 @@
             // 
             // buttonLNTGWMOVECOLOR
             // 
-            this.buttonLNTGWMOVECOLOR.Location = new System.Drawing.Point(1083, 462);
+            this.buttonLNTGWMOVECOLOR.Location = new System.Drawing.Point(1083, 486);
             this.buttonLNTGWMOVECOLOR.Name = "buttonLNTGWMOVECOLOR";
             this.buttonLNTGWMOVECOLOR.Size = new System.Drawing.Size(90, 22);
             this.buttonLNTGWMOVECOLOR.TabIndex = 252;
@@ -9258,7 +9400,7 @@
             // 
             // buttonLNTGWMOVEHUE
             // 
-            this.buttonLNTGWMOVEHUE.Location = new System.Drawing.Point(1084, 434);
+            this.buttonLNTGWMOVEHUE.Location = new System.Drawing.Point(1084, 458);
             this.buttonLNTGWMOVEHUE.Name = "buttonLNTGWMOVEHUE";
             this.buttonLNTGWMOVEHUE.Size = new System.Drawing.Size(90, 22);
             this.buttonLNTGWMOVEHUE.TabIndex = 251;
@@ -9268,7 +9410,7 @@
             // 
             // buttonLNTGWMOVELEVEL
             // 
-            this.buttonLNTGWMOVELEVEL.Location = new System.Drawing.Point(1084, 405);
+            this.buttonLNTGWMOVELEVEL.Location = new System.Drawing.Point(1084, 429);
             this.buttonLNTGWMOVELEVEL.Name = "buttonLNTGWMOVELEVEL";
             this.buttonLNTGWMOVELEVEL.Size = new System.Drawing.Size(93, 23);
             this.buttonLNTGWMOVELEVEL.TabIndex = 250;
@@ -9278,7 +9420,7 @@
             // 
             // buttonLNTGWIDENTIFY
             // 
-            this.buttonLNTGWIDENTIFY.Location = new System.Drawing.Point(1084, 344);
+            this.buttonLNTGWIDENTIFY.Location = new System.Drawing.Point(1084, 368);
             this.buttonLNTGWIDENTIFY.Name = "buttonLNTGWIDENTIFY";
             this.buttonLNTGWIDENTIFY.Size = new System.Drawing.Size(93, 23);
             this.buttonLNTGWIDENTIFY.TabIndex = 249;
@@ -9288,7 +9430,7 @@
             // 
             // buttonLNTGWRESET
             // 
-            this.buttonLNTGWRESET.Location = new System.Drawing.Point(1083, 62);
+            this.buttonLNTGWRESET.Location = new System.Drawing.Point(1083, 86);
             this.buttonLNTGWRESET.Name = "buttonLNTGWRESET";
             this.buttonLNTGWRESET.Size = new System.Drawing.Size(93, 25);
             this.buttonLNTGWRESET.TabIndex = 248;
@@ -9298,7 +9440,7 @@
             // 
             // buttonLNTGWREADRPRT
             // 
-            this.buttonLNTGWREADRPRT.Location = new System.Drawing.Point(1084, 314);
+            this.buttonLNTGWREADRPRT.Location = new System.Drawing.Point(1084, 338);
             this.buttonLNTGWREADRPRT.Name = "buttonLNTGWREADRPRT";
             this.buttonLNTGWREADRPRT.Size = new System.Drawing.Size(80, 24);
             this.buttonLNTGWREADRPRT.TabIndex = 247;
@@ -9308,7 +9450,7 @@
             // 
             // buttonLNTGWCONFIGRPRT
             // 
-            this.buttonLNTGWCONFIGRPRT.Location = new System.Drawing.Point(1084, 284);
+            this.buttonLNTGWCONFIGRPRT.Location = new System.Drawing.Point(1084, 308);
             this.buttonLNTGWCONFIGRPRT.Name = "buttonLNTGWCONFIGRPRT";
             this.buttonLNTGWCONFIGRPRT.Size = new System.Drawing.Size(80, 24);
             this.buttonLNTGWCONFIGRPRT.TabIndex = 246;
@@ -9318,7 +9460,7 @@
             // 
             // buttonLNTGWLEAVE
             // 
-            this.buttonLNTGWLEAVE.Location = new System.Drawing.Point(1084, 255);
+            this.buttonLNTGWLEAVE.Location = new System.Drawing.Point(1084, 279);
             this.buttonLNTGWLEAVE.Name = "buttonLNTGWLEAVE";
             this.buttonLNTGWLEAVE.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWLEAVE.TabIndex = 245;
@@ -9328,7 +9470,7 @@
             // 
             // buttonLNTGWWRITE
             // 
-            this.buttonLNTGWWRITE.Location = new System.Drawing.Point(1083, 123);
+            this.buttonLNTGWWRITE.Location = new System.Drawing.Point(1083, 147);
             this.buttonLNTGWWRITE.Name = "buttonLNTGWWRITE";
             this.buttonLNTGWWRITE.Size = new System.Drawing.Size(92, 23);
             this.buttonLNTGWWRITE.TabIndex = 244;
@@ -9338,21 +9480,21 @@
             // 
             // textBoxLNTGWUNBINDCLUSTERID
             // 
-            this.textBoxLNTGWUNBINDCLUSTERID.Location = new System.Drawing.Point(1351, 228);
+            this.textBoxLNTGWUNBINDCLUSTERID.Location = new System.Drawing.Point(1351, 252);
             this.textBoxLNTGWUNBINDCLUSTERID.Name = "textBoxLNTGWUNBINDCLUSTERID";
             this.textBoxLNTGWUNBINDCLUSTERID.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWUNBINDCLUSTERID.TabIndex = 243;
             // 
             // textBoxLNTGWBINDCLUSTERID
             // 
-            this.textBoxLNTGWBINDCLUSTERID.Location = new System.Drawing.Point(1164, 227);
+            this.textBoxLNTGWBINDCLUSTERID.Location = new System.Drawing.Point(1164, 251);
             this.textBoxLNTGWBINDCLUSTERID.Name = "textBoxLNTGWBINDCLUSTERID";
             this.textBoxLNTGWBINDCLUSTERID.Size = new System.Drawing.Size(100, 20);
             this.textBoxLNTGWBINDCLUSTERID.TabIndex = 242;
             // 
             // buttonLNTGWUNBIND
             // 
-            this.buttonLNTGWUNBIND.Location = new System.Drawing.Point(1270, 226);
+            this.buttonLNTGWUNBIND.Location = new System.Drawing.Point(1270, 250);
             this.buttonLNTGWUNBIND.Name = "buttonLNTGWUNBIND";
             this.buttonLNTGWUNBIND.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWUNBIND.TabIndex = 241;
@@ -9362,7 +9504,7 @@
             // 
             // buttonLNTGWBIND
             // 
-            this.buttonLNTGWBIND.Location = new System.Drawing.Point(1083, 225);
+            this.buttonLNTGWBIND.Location = new System.Drawing.Point(1083, 249);
             this.buttonLNTGWBIND.Name = "buttonLNTGWBIND";
             this.buttonLNTGWBIND.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWBIND.TabIndex = 240;
@@ -9372,7 +9514,7 @@
             // 
             // buttonLNTGWSTOPTONGGLE
             // 
-            this.buttonLNTGWSTOPTONGGLE.Location = new System.Drawing.Point(1396, 155);
+            this.buttonLNTGWSTOPTONGGLE.Location = new System.Drawing.Point(1565, 179);
             this.buttonLNTGWSTOPTONGGLE.Name = "buttonLNTGWSTOPTONGGLE";
             this.buttonLNTGWSTOPTONGGLE.Size = new System.Drawing.Size(137, 23);
             this.buttonLNTGWSTOPTONGGLE.TabIndex = 239;
@@ -9382,7 +9524,7 @@
             // 
             // buttonLNTGWTONGGLE
             // 
-            this.buttonLNTGWTONGGLE.Location = new System.Drawing.Point(1315, 155);
+            this.buttonLNTGWTONGGLE.Location = new System.Drawing.Point(1484, 179);
             this.buttonLNTGWTONGGLE.Name = "buttonLNTGWTONGGLE";
             this.buttonLNTGWTONGGLE.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWTONGGLE.TabIndex = 238;
@@ -9392,7 +9534,7 @@
             // 
             // buttonLNTGWOFF
             // 
-            this.buttonLNTGWOFF.Location = new System.Drawing.Point(1234, 155);
+            this.buttonLNTGWOFF.Location = new System.Drawing.Point(1234, 179);
             this.buttonLNTGWOFF.Name = "buttonLNTGWOFF";
             this.buttonLNTGWOFF.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWOFF.TabIndex = 237;
@@ -9402,7 +9544,7 @@
             // 
             // buttonLNTGWON
             // 
-            this.buttonLNTGWON.Location = new System.Drawing.Point(1153, 155);
+            this.buttonLNTGWON.Location = new System.Drawing.Point(1153, 179);
             this.buttonLNTGWON.Name = "buttonLNTGWON";
             this.buttonLNTGWON.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWON.TabIndex = 236;
@@ -9412,14 +9554,14 @@
             // 
             // textBoxLNTGWSETLOOP
             // 
-            this.textBoxLNTGWSETLOOP.Location = new System.Drawing.Point(1179, 36);
+            this.textBoxLNTGWSETLOOP.Location = new System.Drawing.Point(1179, 60);
             this.textBoxLNTGWSETLOOP.Name = "textBoxLNTGWSETLOOP";
             this.textBoxLNTGWSETLOOP.Size = new System.Drawing.Size(66, 20);
             this.textBoxLNTGWSETLOOP.TabIndex = 235;
             // 
             // buttonLNTGWSET
             // 
-            this.buttonLNTGWSET.Location = new System.Drawing.Point(1083, 34);
+            this.buttonLNTGWSET.Location = new System.Drawing.Point(1083, 58);
             this.buttonLNTGWSET.Name = "buttonLNTGWSET";
             this.buttonLNTGWSET.Size = new System.Drawing.Size(92, 23);
             this.buttonLNTGWSET.TabIndex = 234;
@@ -9429,7 +9571,7 @@
             // 
             // buttonLNTGWSTOPREAD
             // 
-            this.buttonLNTGWSTOPREAD.Location = new System.Drawing.Point(1326, 95);
+            this.buttonLNTGWSTOPREAD.Location = new System.Drawing.Point(1326, 119);
             this.buttonLNTGWSTOPREAD.Name = "buttonLNTGWSTOPREAD";
             this.buttonLNTGWSTOPREAD.Size = new System.Drawing.Size(115, 23);
             this.buttonLNTGWSTOPREAD.TabIndex = 233;
@@ -9439,14 +9581,14 @@
             // 
             // textBoxLNTGWTIMERINTERVAL
             // 
-            this.textBoxLNTGWTIMERINTERVAL.Location = new System.Drawing.Point(1251, 36);
+            this.textBoxLNTGWTIMERINTERVAL.Location = new System.Drawing.Point(1251, 60);
             this.textBoxLNTGWTIMERINTERVAL.Name = "textBoxLNTGWTIMERINTERVAL";
             this.textBoxLNTGWTIMERINTERVAL.Size = new System.Drawing.Size(74, 20);
             this.textBoxLNTGWTIMERINTERVAL.TabIndex = 232;
             // 
             // buttonLNTGWREAD
             // 
-            this.buttonLNTGWREAD.Location = new System.Drawing.Point(1083, 93);
+            this.buttonLNTGWREAD.Location = new System.Drawing.Point(1083, 117);
             this.buttonLNTGWREAD.Name = "buttonLNTGWREAD";
             this.buttonLNTGWREAD.Size = new System.Drawing.Size(92, 23);
             this.buttonLNTGWREAD.TabIndex = 231;
@@ -9456,14 +9598,14 @@
             // 
             // textBoxLNTGWVIEW
             // 
-            this.textBoxLNTGWVIEW.Location = new System.Drawing.Point(1528, 376);
+            this.textBoxLNTGWVIEW.Location = new System.Drawing.Point(1528, 400);
             this.textBoxLNTGWVIEW.Name = "textBoxLNTGWVIEW";
             this.textBoxLNTGWVIEW.Size = new System.Drawing.Size(79, 20);
             this.textBoxLNTGWVIEW.TabIndex = 230;
             // 
             // buttonLNTGWREMOVEGROUPALL
             // 
-            this.buttonLNTGWREMOVEGROUPALL.Location = new System.Drawing.Point(1613, 374);
+            this.buttonLNTGWREMOVEGROUPALL.Location = new System.Drawing.Point(1613, 398);
             this.buttonLNTGWREMOVEGROUPALL.Name = "buttonLNTGWREMOVEGROUPALL";
             this.buttonLNTGWREMOVEGROUPALL.Size = new System.Drawing.Size(109, 23);
             this.buttonLNTGWREMOVEGROUPALL.TabIndex = 229;
@@ -9473,7 +9615,7 @@
             // 
             // buttonLNTGWVIEWGROUP
             // 
-            this.buttonLNTGWVIEWGROUP.Location = new System.Drawing.Point(1447, 374);
+            this.buttonLNTGWVIEWGROUP.Location = new System.Drawing.Point(1447, 398);
             this.buttonLNTGWVIEWGROUP.Name = "buttonLNTGWVIEWGROUP";
             this.buttonLNTGWVIEWGROUP.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWVIEWGROUP.TabIndex = 228;
@@ -9483,21 +9625,21 @@
             // 
             // textBoxLNTGWREMOVEGROUP
             // 
-            this.textBoxLNTGWREMOVEGROUP.Location = new System.Drawing.Point(1367, 376);
+            this.textBoxLNTGWREMOVEGROUP.Location = new System.Drawing.Point(1367, 400);
             this.textBoxLNTGWREMOVEGROUP.Name = "textBoxLNTGWREMOVEGROUP";
             this.textBoxLNTGWREMOVEGROUP.Size = new System.Drawing.Size(74, 20);
             this.textBoxLNTGWREMOVEGROUP.TabIndex = 227;
             // 
             // textBoxLNTGWADDGROUP
             // 
-            this.textBoxLNTGWADDGROUP.Location = new System.Drawing.Point(1165, 373);
+            this.textBoxLNTGWADDGROUP.Location = new System.Drawing.Point(1165, 397);
             this.textBoxLNTGWADDGROUP.Name = "textBoxLNTGWADDGROUP";
             this.textBoxLNTGWADDGROUP.Size = new System.Drawing.Size(79, 20);
             this.textBoxLNTGWADDGROUP.TabIndex = 226;
             // 
             // buttonLNTGWREMOVEGROUP
             // 
-            this.buttonLNTGWREMOVEGROUP.Location = new System.Drawing.Point(1250, 373);
+            this.buttonLNTGWREMOVEGROUP.Location = new System.Drawing.Point(1250, 397);
             this.buttonLNTGWREMOVEGROUP.Name = "buttonLNTGWREMOVEGROUP";
             this.buttonLNTGWREMOVEGROUP.Size = new System.Drawing.Size(109, 23);
             this.buttonLNTGWREMOVEGROUP.TabIndex = 225;
@@ -9507,7 +9649,7 @@
             // 
             // buttonLNTGWADDGROUP
             // 
-            this.buttonLNTGWADDGROUP.Location = new System.Drawing.Point(1084, 373);
+            this.buttonLNTGWADDGROUP.Location = new System.Drawing.Point(1084, 397);
             this.buttonLNTGWADDGROUP.Name = "buttonLNTGWADDGROUP";
             this.buttonLNTGWADDGROUP.Size = new System.Drawing.Size(75, 23);
             this.buttonLNTGWADDGROUP.TabIndex = 224;
@@ -9562,79 +9704,25 @@
             this.timerReadAttribute.Interval = 60;
             this.timerReadAttribute.Tick += new System.EventHandler(this.timerReadAttribute_Tick);
             // 
-            // columnHeader11
+            // buttonLNTGWSTOPONOFFLOOP
             // 
-            this.columnHeader11.Text = "NxtHop";
+            this.buttonLNTGWSTOPONOFFLOOP.Location = new System.Drawing.Point(1398, 179);
+            this.buttonLNTGWSTOPONOFFLOOP.Name = "buttonLNTGWSTOPONOFFLOOP";
+            this.buttonLNTGWSTOPONOFFLOOP.Size = new System.Drawing.Size(80, 23);
+            this.buttonLNTGWSTOPONOFFLOOP.TabIndex = 318;
+            this.buttonLNTGWSTOPONOFFLOOP.Text = "Stop On/Off";
+            this.buttonLNTGWSTOPONOFFLOOP.UseVisualStyleBackColor = true;
+            this.buttonLNTGWSTOPONOFFLOOP.Click += new System.EventHandler(this.buttonLNTGWSTOPONOFFLOOP_Click);
             // 
-            // comboBoxLNTGWUNICAST
+            // buttonLNTGWONOFFLOOP
             // 
-            this.comboBoxLNTGWUNICAST.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxLNTGWUNICAST.FormattingEnabled = true;
-            this.comboBoxLNTGWUNICAST.Items.AddRange(new object[] {
-            "Unicast",
-            "Broadcast"});
-            this.comboBoxLNTGWUNICAST.Location = new System.Drawing.Point(1182, 405);
-            this.comboBoxLNTGWUNICAST.Name = "comboBoxLNTGWUNICAST";
-            this.comboBoxLNTGWUNICAST.Size = new System.Drawing.Size(93, 21);
-            this.comboBoxLNTGWUNICAST.TabIndex = 304;
-            // 
-            // labelLNTGWBROADCAST
-            // 
-            this.labelLNTGWBROADCAST.AutoSize = true;
-            this.labelLNTGWBROADCAST.Location = new System.Drawing.Point(1092, 189);
-            this.labelLNTGWBROADCAST.Name = "labelLNTGWBROADCAST";
-            this.labelLNTGWBROADCAST.Size = new System.Drawing.Size(55, 13);
-            this.labelLNTGWBROADCAST.TabIndex = 309;
-            this.labelLNTGWBROADCAST.Text = "Broadcast";
-            // 
-            // buttonLNTGWBROADSTOPTONGGLE
-            // 
-            this.buttonLNTGWBROADSTOPTONGGLE.Location = new System.Drawing.Point(1396, 184);
-            this.buttonLNTGWBROADSTOPTONGGLE.Name = "buttonLNTGWBROADSTOPTONGGLE";
-            this.buttonLNTGWBROADSTOPTONGGLE.Size = new System.Drawing.Size(137, 23);
-            this.buttonLNTGWBROADSTOPTONGGLE.TabIndex = 308;
-            this.buttonLNTGWBROADSTOPTONGGLE.Text = "Stop Tonggle Loop";
-            this.buttonLNTGWBROADSTOPTONGGLE.UseVisualStyleBackColor = true;
-            this.buttonLNTGWBROADSTOPTONGGLE.Click += new System.EventHandler(this.buttonLNTGWBROADSTOPTONGGLE_Click);
-            // 
-            // buttonLNTGWBROADTONGGLE
-            // 
-            this.buttonLNTGWBROADTONGGLE.Location = new System.Drawing.Point(1314, 184);
-            this.buttonLNTGWBROADTONGGLE.Name = "buttonLNTGWBROADTONGGLE";
-            this.buttonLNTGWBROADTONGGLE.Size = new System.Drawing.Size(75, 23);
-            this.buttonLNTGWBROADTONGGLE.TabIndex = 307;
-            this.buttonLNTGWBROADTONGGLE.Text = "Tonggle";
-            this.buttonLNTGWBROADTONGGLE.UseVisualStyleBackColor = true;
-            this.buttonLNTGWBROADTONGGLE.Click += new System.EventHandler(this.buttonLNTGWBROADTONGGLE_Click);
-            // 
-            // buttonLNTGWBROADOFF
-            // 
-            this.buttonLNTGWBROADOFF.Location = new System.Drawing.Point(1234, 184);
-            this.buttonLNTGWBROADOFF.Name = "buttonLNTGWBROADOFF";
-            this.buttonLNTGWBROADOFF.Size = new System.Drawing.Size(75, 23);
-            this.buttonLNTGWBROADOFF.TabIndex = 306;
-            this.buttonLNTGWBROADOFF.Text = "Off";
-            this.buttonLNTGWBROADOFF.UseVisualStyleBackColor = true;
-            this.buttonLNTGWBROADOFF.Click += new System.EventHandler(this.buttonLNTGWBROADOFF_Click);
-            // 
-            // buttonLNTGWBROADON
-            // 
-            this.buttonLNTGWBROADON.Location = new System.Drawing.Point(1153, 184);
-            this.buttonLNTGWBROADON.Name = "buttonLNTGWBROADON";
-            this.buttonLNTGWBROADON.Size = new System.Drawing.Size(75, 23);
-            this.buttonLNTGWBROADON.TabIndex = 305;
-            this.buttonLNTGWBROADON.Text = "On";
-            this.buttonLNTGWBROADON.UseVisualStyleBackColor = true;
-            this.buttonLNTGWBROADON.Click += new System.EventHandler(this.buttonLNTGWBROADON_Click);
-            // 
-            // labelLNTGWUNICAST
-            // 
-            this.labelLNTGWUNICAST.AutoSize = true;
-            this.labelLNTGWUNICAST.Location = new System.Drawing.Point(1092, 160);
-            this.labelLNTGWUNICAST.Name = "labelLNTGWUNICAST";
-            this.labelLNTGWUNICAST.Size = new System.Drawing.Size(43, 13);
-            this.labelLNTGWUNICAST.TabIndex = 310;
-            this.labelLNTGWUNICAST.Text = "Unicast";
+            this.buttonLNTGWONOFFLOOP.Location = new System.Drawing.Point(1317, 179);
+            this.buttonLNTGWONOFFLOOP.Name = "buttonLNTGWONOFFLOOP";
+            this.buttonLNTGWONOFFLOOP.Size = new System.Drawing.Size(75, 23);
+            this.buttonLNTGWONOFFLOOP.TabIndex = 317;
+            this.buttonLNTGWONOFFLOOP.Text = "On/Off";
+            this.buttonLNTGWONOFFLOOP.UseVisualStyleBackColor = true;
+            this.buttonLNTGWONOFFLOOP.Click += new System.EventHandler(this.buttonLNTGWONOFFLOOP_Click);
             // 
             // Form1
             // 
@@ -10508,6 +10596,14 @@
         private System.Windows.Forms.Button buttonLNTGWBROADTONGGLE;
         private System.Windows.Forms.Button buttonLNTGWBROADOFF;
         private System.Windows.Forms.Button buttonLNTGWBROADON;
+        private System.Windows.Forms.Label labelLNTGWLOOPREMAIN;
+        private System.Windows.Forms.TextBox textBoxLNTGWLOOPREMAIN;
+        private System.Windows.Forms.Label labelEZLNTLOOPREMAIN;
+        private System.Windows.Forms.TextBox textBoxEZLNTLOOPREMAIN;
+        private System.Windows.Forms.Button buttonEZLNTSTOPONOFFLOOP;
+        private System.Windows.Forms.Button buttonEZLNTONOFFLOOP;
+        private System.Windows.Forms.Button buttonLNTGWSTOPONOFFLOOP;
+        private System.Windows.Forms.Button buttonLNTGWONOFFLOOP;
     }
 }
 
