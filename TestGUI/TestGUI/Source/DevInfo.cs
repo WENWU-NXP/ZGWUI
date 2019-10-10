@@ -163,12 +163,13 @@ namespace DevInfo
             }
 
             Regex r = new Regex("USB Serial Port");
-           
+            Regex r2 = new Regex("NXP LPC11Uxx VCOM");
             int j = 0;
             for (int i = 0; i < COMSet.Length; i++)
             {
-                Match m = r.Match(COMSet[i]);
-                if (m.Success)
+                Match m  = r.Match(COMSet[i]);
+                Match m2 = r2.Match(COMSet[i]);
+                if (m.Success || m2.Success)
                 {
                     strArray[j] = Regex.Replace(COMSet[i], @"(.*\()(.*)(\).*)", "$2");
                     j++;

@@ -10122,7 +10122,7 @@ namespace ZGWUI
                 u8CommandID = 1;
             }
             else {
-                u8CommandID = 2;
+                u8CommandID = 0;
             }
             sendClusterOnOff(2, u16ShortAddr, 1, 1, u8CommandID);
         }
@@ -26460,10 +26460,10 @@ namespace ZGWUI
 
         private void listViewEZLNTINFO_ColumnClick(object sender, ColumnClickEventArgs e)
         {
-            int[] cols = new int[] {10,4};
+            int[] cols = new int[] {10,4,1};
             listViewEZLNTINFO.ListViewItemSorter = new ListViewItemComparer(cols,true);
             listViewEZLNTINFO.Sort();
-            updateCOMListHashTable(); ;
+            updateCOMListHashTable();
         }
 
         private void listViewEZLNTINFO_SelectedIndexChanged(object sender, EventArgs e)
@@ -26493,6 +26493,12 @@ namespace ZGWUI
             }
         }
 
-      
+        private void listViewLNTGWINFO_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            int[] cols = new int[] { 6,5,1 };
+            listViewLNTGWINFO.ListViewItemSorter = new ListViewItemComparer(cols, true);
+            listViewLNTGWINFO.Sort();
+            updateCOMListHashTable();
+        }
     }
 }

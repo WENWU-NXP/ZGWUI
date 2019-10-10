@@ -728,6 +728,8 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonLNTREMOTELOAD = new System.Windows.Forms.Button();
             this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.buttonLNTGWSTOPONOFFLOOP = new System.Windows.Forms.Button();
+            this.buttonLNTGWONOFFLOOP = new System.Windows.Forms.Button();
             this.labelLNTGWLOOPREMAIN = new System.Windows.Forms.Label();
             this.textBoxLNTGWLOOPREMAIN = new System.Windows.Forms.TextBox();
             this.labelLNTGWUNICAST = new System.Windows.Forms.Label();
@@ -831,8 +833,6 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerReadAttribute = new System.Windows.Forms.Timer(this.components);
-            this.buttonLNTGWSTOPONOFFLOOP = new System.Windows.Forms.Button();
-            this.buttonLNTGWONOFFLOOP = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -8852,6 +8852,26 @@
             this.tabPage18.TabIndex = 22;
             this.tabPage18.Text = "LNT GW";
             // 
+            // buttonLNTGWSTOPONOFFLOOP
+            // 
+            this.buttonLNTGWSTOPONOFFLOOP.Location = new System.Drawing.Point(1398, 179);
+            this.buttonLNTGWSTOPONOFFLOOP.Name = "buttonLNTGWSTOPONOFFLOOP";
+            this.buttonLNTGWSTOPONOFFLOOP.Size = new System.Drawing.Size(80, 23);
+            this.buttonLNTGWSTOPONOFFLOOP.TabIndex = 318;
+            this.buttonLNTGWSTOPONOFFLOOP.Text = "Stop On/Off";
+            this.buttonLNTGWSTOPONOFFLOOP.UseVisualStyleBackColor = true;
+            this.buttonLNTGWSTOPONOFFLOOP.Click += new System.EventHandler(this.buttonLNTGWSTOPONOFFLOOP_Click);
+            // 
+            // buttonLNTGWONOFFLOOP
+            // 
+            this.buttonLNTGWONOFFLOOP.Location = new System.Drawing.Point(1317, 179);
+            this.buttonLNTGWONOFFLOOP.Name = "buttonLNTGWONOFFLOOP";
+            this.buttonLNTGWONOFFLOOP.Size = new System.Drawing.Size(75, 23);
+            this.buttonLNTGWONOFFLOOP.TabIndex = 317;
+            this.buttonLNTGWONOFFLOOP.Text = "On/Off";
+            this.buttonLNTGWONOFFLOOP.UseVisualStyleBackColor = true;
+            this.buttonLNTGWONOFFLOOP.Click += new System.EventHandler(this.buttonLNTGWONOFFLOOP_Click);
+            // 
             // labelLNTGWLOOPREMAIN
             // 
             this.labelLNTGWLOOPREMAIN.AutoSize = true;
@@ -8976,6 +8996,7 @@
             this.listViewLNTGWINFO.TabIndex = 301;
             this.listViewLNTGWINFO.UseCompatibleStateImageBehavior = false;
             this.listViewLNTGWINFO.View = System.Windows.Forms.View.Details;
+            this.listViewLNTGWINFO.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listViewLNTGWINFO_ColumnClick);
             // 
             // Index
             // 
@@ -9703,26 +9724,6 @@
             // 
             this.timerReadAttribute.Interval = 60;
             this.timerReadAttribute.Tick += new System.EventHandler(this.timerReadAttribute_Tick);
-            // 
-            // buttonLNTGWSTOPONOFFLOOP
-            // 
-            this.buttonLNTGWSTOPONOFFLOOP.Location = new System.Drawing.Point(1398, 179);
-            this.buttonLNTGWSTOPONOFFLOOP.Name = "buttonLNTGWSTOPONOFFLOOP";
-            this.buttonLNTGWSTOPONOFFLOOP.Size = new System.Drawing.Size(80, 23);
-            this.buttonLNTGWSTOPONOFFLOOP.TabIndex = 318;
-            this.buttonLNTGWSTOPONOFFLOOP.Text = "Stop On/Off";
-            this.buttonLNTGWSTOPONOFFLOOP.UseVisualStyleBackColor = true;
-            this.buttonLNTGWSTOPONOFFLOOP.Click += new System.EventHandler(this.buttonLNTGWSTOPONOFFLOOP_Click);
-            // 
-            // buttonLNTGWONOFFLOOP
-            // 
-            this.buttonLNTGWONOFFLOOP.Location = new System.Drawing.Point(1317, 179);
-            this.buttonLNTGWONOFFLOOP.Name = "buttonLNTGWONOFFLOOP";
-            this.buttonLNTGWONOFFLOOP.Size = new System.Drawing.Size(75, 23);
-            this.buttonLNTGWONOFFLOOP.TabIndex = 317;
-            this.buttonLNTGWONOFFLOOP.Text = "On/Off";
-            this.buttonLNTGWONOFFLOOP.UseVisualStyleBackColor = true;
-            this.buttonLNTGWONOFFLOOP.Click += new System.EventHandler(this.buttonLNTGWONOFFLOOP_Click);
             // 
             // Form1
             // 
