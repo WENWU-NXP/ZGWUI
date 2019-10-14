@@ -833,6 +833,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerReadAttribute = new System.Windows.Forms.Timer(this.components);
+            this.buttonEZLNTSOCKETGETIP = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -6445,6 +6446,7 @@
             // 
             this.tabPage16.AutoScroll = true;
             this.tabPage16.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage16.Controls.Add(this.buttonEZLNTSOCKETGETIP);
             this.tabPage16.Controls.Add(this.buttonEZLNTSTOPONOFFLOOP);
             this.tabPage16.Controls.Add(this.buttonEZLNTONOFFLOOP);
             this.tabPage16.Controls.Add(this.labelEZLNTLOOPREMAIN);
@@ -6616,7 +6618,6 @@
             // 
             this.textBoxEZLNTSOCKETSEVERIP.Location = new System.Drawing.Point(330, 47);
             this.textBoxEZLNTSOCKETSEVERIP.Name = "textBoxEZLNTSOCKETSEVERIP";
-            this.textBoxEZLNTSOCKETSEVERIP.ReadOnly = true;
             this.textBoxEZLNTSOCKETSEVERIP.Size = new System.Drawing.Size(100, 20);
             this.textBoxEZLNTSOCKETSEVERIP.TabIndex = 235;
             // 
@@ -7497,6 +7498,7 @@
             this.nwkAddrJoined,
             this.Status,
             this.Loca});
+            this.listViewEZLNTGROUP.HideSelection = false;
             this.listViewEZLNTGROUP.Location = new System.Drawing.Point(835, 51);
             this.listViewEZLNTGROUP.Name = "listViewEZLNTGROUP";
             this.listViewEZLNTGROUP.Size = new System.Drawing.Size(297, 494);
@@ -7633,6 +7635,7 @@
             this.IP,
             this.PANID});
             this.listViewEZLNTINFO.FullRowSelect = true;
+            this.listViewEZLNTINFO.HideSelection = false;
             this.listViewEZLNTINFO.Location = new System.Drawing.Point(9, 81);
             this.listViewEZLNTINFO.Name = "listViewEZLNTINFO";
             this.listViewEZLNTINFO.Size = new System.Drawing.Size(820, 464);
@@ -8669,6 +8672,7 @@
             this.listViewLNTGROUPINFO.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
             this.columnHeader8});
+            this.listViewLNTGROUPINFO.HideSelection = false;
             this.listViewLNTGROUPINFO.Location = new System.Drawing.Point(517, 83);
             this.listViewLNTGROUPINFO.Name = "listViewLNTGROUPINFO";
             this.listViewLNTGROUPINFO.Size = new System.Drawing.Size(252, 474);
@@ -8700,6 +8704,7 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
+            this.listViewLNTCOMINFO.HideSelection = false;
             this.listViewLNTCOMINFO.Location = new System.Drawing.Point(15, 85);
             this.listViewLNTCOMINFO.Name = "listViewLNTCOMINFO";
             this.listViewLNTCOMINFO.Size = new System.Drawing.Size(496, 472);
@@ -8990,6 +8995,7 @@
             this.columnHeader15,
             this.columnHeader21});
             this.listViewLNTGWINFO.FullRowSelect = true;
+            this.listViewLNTGWINFO.HideSelection = false;
             this.listViewLNTGWINFO.Location = new System.Drawing.Point(17, 93);
             this.listViewLNTGWINFO.Name = "listViewLNTGWINFO";
             this.listViewLNTGWINFO.Size = new System.Drawing.Size(628, 472);
@@ -9686,6 +9692,7 @@
             this.listViewLNTGWGROUPINFO.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader9,
             this.columnHeader10});
+            this.listViewLNTGWGROUPINFO.HideSelection = false;
             this.listViewLNTGWGROUPINFO.Location = new System.Drawing.Point(809, 93);
             this.listViewLNTGWGROUPINFO.Name = "listViewLNTGWGROUPINFO";
             this.listViewLNTGWGROUPINFO.Size = new System.Drawing.Size(252, 474);
@@ -9724,6 +9731,16 @@
             // 
             this.timerReadAttribute.Interval = 60;
             this.timerReadAttribute.Tick += new System.EventHandler(this.timerReadAttribute_Tick);
+            // 
+            // buttonEZLNTSOCKETGETIP
+            // 
+            this.buttonEZLNTSOCKETGETIP.Location = new System.Drawing.Point(665, 44);
+            this.buttonEZLNTSOCKETGETIP.Name = "buttonEZLNTSOCKETGETIP";
+            this.buttonEZLNTSOCKETGETIP.Size = new System.Drawing.Size(75, 23);
+            this.buttonEZLNTSOCKETGETIP.TabIndex = 317;
+            this.buttonEZLNTSOCKETGETIP.Text = "Get IP";
+            this.buttonEZLNTSOCKETGETIP.UseVisualStyleBackColor = true;
+            this.buttonEZLNTSOCKETGETIP.Click += new System.EventHandler(this.buttonEZLNTSOCKETGETIP_Click);
             // 
             // Form1
             // 
@@ -10605,6 +10622,7 @@
         private System.Windows.Forms.Button buttonEZLNTONOFFLOOP;
         private System.Windows.Forms.Button buttonLNTGWSTOPONOFFLOOP;
         private System.Windows.Forms.Button buttonLNTGWONOFFLOOP;
+        private System.Windows.Forms.Button buttonEZLNTSOCKETGETIP;
     }
 }
 

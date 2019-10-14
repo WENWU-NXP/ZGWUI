@@ -3418,24 +3418,10 @@ namespace ZGWUI
         {
             if (asClient!=1)
             {
-                asClient = 1;  //sever
-                if (textBoxEZLNTSOCKETSEVERIP.Text == "")
-                {
-                    string resultIP = string.Empty;
-                    System.Net.IPAddress[] ips = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName()).AddressList;
-                    foreach (System.Net.IPAddress ip in ips)
-                    {
-                        if (IsCorrentIP(ip.ToString()))
-                        {
-                            resultIP = ip.ToString();
-                            break;
-                        }
-                    }
-                    textBoxEZLNTSOCKETSEVERIP.Text = resultIP;
-                }
-
+               
                 if (textBoxEZLNTSOCKETSEVERIP.Text != "")
                 {
+                    asClient = 1;  //sever
                     string ipStr = textBoxEZLNTSOCKETSEVERIP.Text;
                     IPAddress ip = IPAddress.Parse(ipStr);
 
@@ -3452,6 +3438,21 @@ namespace ZGWUI
                 }
             }
 
+        }
+
+        private void buttonEZLNTSOCKETGETIP_Click(object sender, EventArgs e)
+        {
+            string resultIP = string.Empty;
+            System.Net.IPAddress[] ips = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName()).AddressList;
+            foreach (System.Net.IPAddress ip in ips)
+            {
+                if (IsCorrentIP(ip.ToString()))
+                {
+                    resultIP = ip.ToString();
+                    richTextBoxMessageView.Text += resultIP;
+                    richTextBoxMessageView.Text += "\r\n";
+                }
+            }
         }
 
         public void Connect(IPAddress ip, int port)
@@ -26500,5 +26501,6 @@ namespace ZGWUI
             listViewLNTGWINFO.Sort();
             updateCOMListHashTable();
         }
+
     }
 }
