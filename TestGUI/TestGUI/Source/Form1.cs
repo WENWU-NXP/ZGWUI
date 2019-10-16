@@ -3466,6 +3466,12 @@ namespace ZGWUI
             {
                 Socket handler = (Socket)ar.AsyncState;
                 handler.EndConnect(ar);
+                //Thread clientReceiveThread = new Thread(ReceiveData);
+                //clientReceiveThread.IsBackground = true;
+                //clientReceiveThread.Start();
+                richTextBoxMessageView.Text += "connect success";
+                richTextBoxMessageView.Text += "\n";
+                clientSocket.BeginReceive(resultClient, 0, resultClient.Length, 0, new AsyncCallback(ReceiveCallback), null);
             }
             catch (SocketException ex)
             { }
@@ -3592,9 +3598,8 @@ namespace ZGWUI
                     try
                     {
                         // clientSocket.Connect(new IPEndPoint(ip, 8885));
-                        Connect(ip, 8885);
-                        richTextBoxMessageView.Text += "connect success";
-                        richTextBoxMessageView.Text += "\n";
+                        Connect(ip, myProt);
+        
                     }
                     catch
                     {
@@ -3602,9 +3607,9 @@ namespace ZGWUI
                         richTextBoxMessageView.Text += "\n";
                         return;
                     }
-                    Thread clientReceiveThread = new Thread(ReceiveData);
-                    clientReceiveThread.IsBackground = true;
-                    clientReceiveThread.Start();
+                    //Thread clientReceiveThread = new Thread(ReceiveData);
+                    //clientReceiveThread.IsBackground = true;
+                    //clientReceiveThread.Start();
                 }
                 else
                 {
@@ -4453,7 +4458,7 @@ namespace ZGWUI
                         item.SubItems.Add(sArray[6]);    //chip
                         item.SubItems.Add(sArray[7]);    //profile
                         item.SubItems.Add(IPAddress);    //IPAddress
-                        item.SubItems.Add(sArray[8]);    //panID
+                        item.SubItems.Add(sArray[9]);    //panID
 
 
                         if (!indexMacAddrHashTable.Contains(sArray[2]))
@@ -4529,7 +4534,7 @@ namespace ZGWUI
                 if (IsCorrentIP(ip.ToString()))
                 {
                     resultIP = ip.ToString();
-                    break;
+                    //break;
                 }
             }
             return resultIP;
@@ -4537,26 +4542,34 @@ namespace ZGWUI
 
         public void Write(ArrayList writeData)
         {
-            string IPAddress = GetIP();
-            string path = this.GetType().Assembly.Location;
-            string fileName = "RemoteNodesInfo" + "_" + IPAddress + ".txt";
-            if (!File.Exists(fileName))
+            if (textBoxEZLNTSOCKETSEVERIP.Text != "")
             {
-                StreamWriter sr = File.CreateText(fileName);
-                sr.Close();
-            }
-            StreamWriter fs = new StreamWriter(fileName);
+                string IPAddress;
+                // IPAddress = GetIP();
+                IPAddress = textBoxEZLNTSOCKETSEVERIP.Text;
+                string path = this.GetType().Assembly.Location;
+                string fileName = "RemoteNodesInfo" + "_" + IPAddress + ".txt";
+                if (!File.Exists(fileName))
+                {
+                    StreamWriter sr = File.CreateText(fileName);
+                    sr.Close();
+                }
+                StreamWriter fs = new StreamWriter(fileName);
 
-            for (int i = 0; i < writeData.Count; i++)
+                for (int i = 0; i < writeData.Count; i++)
+                {
+
+                    fs.WriteLine((string)writeData[i]);
+                }
+
+                fs.Close();
+
+                MessageBox.Show(fileName + " has been saved");
+            }
+            else
             {
-
-                fs.WriteLine((string)writeData[i]);
+                MessageBox.Show("Server IP need provide first!" );
             }
-
-            fs.Close();
-
-            MessageBox.Show(fileName + " has been saved");
-
         }
 
         private void buttonEZLNTSAVELOCAL_Click(object sender, EventArgs e)
@@ -5589,7 +5602,7 @@ namespace ZGWUI
 
                 try
                 {
-                    clientSocket.Connect(new IPEndPoint(ip, 8885));
+                    clientSocket.Connect(new IPEndPoint(ip, myProt));
                     richTextBoxMessageView.Text += "connect success";
                     richTextBoxMessageView.Text += "\n";
                 }
@@ -5614,7 +5627,7 @@ namespace ZGWUI
         }
 
         private static byte[] resultSever = new byte[1024];
-        private static int myProt = 8885;
+        private static int myProt = 8888;
        
         public void ListenClientConnect()
         {
@@ -9709,7 +9722,16 @@ namespace ZGWUI
                     listViewEZLNTINFO.Items[(int)comIndex[index]].SubItems[5].Text = ver[index] as string;
                     listViewEZLNTINFO.Items[(int)comIndex[index]].SubItems[7].Text = chip[index] as string;
                     listViewEZLNTINFO.Items[(int)comIndex[index]].SubItems[8].Text = profile[index] as string;
-                    string IPAddress = GetIP();
+                    string IPAddress ;
+                    if (textBoxEZLNTSOCKETSEVERIP.Text != "")
+                    {
+                        IPAddress = textBoxEZLNTSOCKETSEVERIP.Text;
+                    }
+                    else
+                    {
+                      //  MessageBox.Show("Server IP is empty,Get IP auto");
+                        IPAddress = GetIP();
+                    }                 
                     listViewEZLNTINFO.Items[(int)comIndex[index]].SubItems[9].Text = IPAddress;
                     listViewEZLNTINFO.Items[(int)comIndex[index]].SubItems[10].Text = panID[index] as string;
 
